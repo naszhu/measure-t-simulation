@@ -1,6 +1,6 @@
 event-based [[prospective memory Model(PM)]]
 
-[[prospective memory]]
+[[event-based prospective memory]]
 
 They dispute [[capacity sharing]] theory, endorse [[cognitive control]] 
 

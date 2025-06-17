@@ -1,0 +1,1 @@
+[[MC sampling]]: direct sample from [[CDF]], a way of getting [[Quantile]] 

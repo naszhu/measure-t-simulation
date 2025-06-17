@@ -1,0 +1,1 @@
+- my philosophy, how do I write or think? (give a direction by assuming yes of sth like i always do, or fill in all logic map that I can for this thing?) [[Question]]

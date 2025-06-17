@@ -1,0 +1,337 @@
+{
+  "main": {
+    "id": "b8692181d1fda20f",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b217829601f51c2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "405990ae3e97f48a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C1"
+            }
+          },
+          {
+            "id": "5aa3b3926ef8f715",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Output Interference in REM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Output Interference in REM"
+            }
+          },
+          {
+            "id": "b0ee10944e4d5a1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C3, 3-3.2 -old.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C3, 3-3.2 -old"
+            }
+          },
+          {
+            "id": "243838926b9a3123",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Outline-g.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Outline-g"
+            }
+          },
+          {
+            "id": "88d7856ce93ea994",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "a.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "a"
+            }
+          },
+          {
+            "id": "6f11f95f9e2d53b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C3, 3-3.2 -old.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C3, 3-3.2 -old"
+            }
+          },
+          {
+            "id": "636d70d69e0794fd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C4.6 Discussion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C4.6 Discussion"
+            }
+          },
+          {
+            "id": "ecf44473690f9bc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C4.5-test result.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C4.5-test result"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a4b0bb3da7b7d997",
+    "type": "split",
+    "children": [
+      {
+        "id": "6699acfa9f0a617a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d9f8cd535c540a8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a2d6c7fa0c799979",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "output ",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "11fa8b4f890421b5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 299.5
+  },
+  "right": {
+    "id": "d1de6df18cf5282b",
+    "type": "split",
+    "children": [
+      {
+        "id": "206af973997d4120",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9886368b07d79bed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Outline-g.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Outline-g"
+            }
+          },
+          {
+            "id": "8c8e7ebee5251d67",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Attention.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Attention"
+            }
+          },
+          {
+            "id": "7d6e2c9b1ccdffd1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "25d011be83242af2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Outline-g.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Outline-g"
+            }
+          },
+          {
+            "id": "e30c8e6f01f0d800",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "eff2a62fff0231ea",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 380.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "periodic-notes:Open today": false,
+      "obsidian-full-calendar:Open Full Calendar": false
+    }
+  },
+  "active": "243838926b9a3123",
+  "lastOpenFiles": [
+    "a.md",
+    "Outline-g.md",
+    "Output Interference in REM.md",
+    "s.md",
+    "C1.md",
+    "Dissertation ALL.md",
+    "C2.md",
+    "C3, 3-3.2 -old.md",
+    "C6, 6 - 6.2.2.md",
+    "REM.md",
+    "Law of Total Probability.md",
+    "REM deduction.md",
+    "C5.4 Model E2.md",
+    "C4.6 Discussion.md",
+    "C4.5-test result.md",
+    "C3, 3-3.2 Aim and Method.md",
+    "feature dimensions.md",
+    "journal/2025/06/2025-06-08.md",
+    "journal/2025/06/2025-06-16.md",
+    "journal/2025/05/2025-05-21.md",
+    "journal/2025/06/2025-06-05.md",
+    "journal/2025/05",
+    "journal/2025/06/2025-06-07.md",
+    "journal/2025/06/2025-06-15.md",
+    "journal/2025/06/2025-06-15 痛苦，深渊.md",
+    "Journal Template.md",
+    "journal/2025/06/2025-06-16 d.md",
+    "Pasted image 20250525203150.png",
+    "journal/2025/06",
+    "journal/2025",
+    "journal",
+    "Untitled.canvas",
+    "csl/apa.csl",
+    "csl",
+    "references/references.bib",
+    "references",
+    "Pasted image 20250602185001.png",
+    "Pasted image 20250602184946.png",
+    "Pasted image 20250602184837.png",
+    "Pasted image 20250602184301.png",
+    "Pasted image 20250602180255.png"
+  ]
+}

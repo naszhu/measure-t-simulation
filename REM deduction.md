@@ -10,7 +10,7 @@
 
 
 [[Deduction version 1]]
-[[deduction version 2]]
+[[Deduction version 2]]
 
 
 

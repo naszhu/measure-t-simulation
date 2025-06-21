@@ -1,4 +1,4 @@
-
+[[My Philosophy]]
 ### suggestion 1
 	# 表达方式1：数学符号
 	C(n,2) = n(n-1)/2 

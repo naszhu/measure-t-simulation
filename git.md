@@ -1,4 +1,4 @@
-
+[[conventional commit]]
  Open your editor to edit the last commit’s message:
 ```bash
 git commit --amend
@@ -148,4 +148,16 @@ git push origin --delete <branch-name>
 ##### Move local main pointer when in another branch
 ```bash
 git branch -f main HEAD~2
+```
+
+##### push merge to git 
+```bash
+# 1. Switch back to main
+git switch main
+
+# 2. Merge in your feature branch, forcing a merge-commit so you see the join point
+git merge --no-ff feature -m "Merge feature into main"
+
+# 3. (Optional) Push the updated main up to remote
+git push origin main
 ```

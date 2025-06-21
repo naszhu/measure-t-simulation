@@ -4,6 +4,7 @@ $$
 \newcommand{\lam}[1]{\dfrac{\fM(s_{#1})}{\fN(s_{#1})}}
 $$
 
+[[REM deduction]]
 ### A correction - sperate odds with current–list targets ($n$) and confusing–foil pool ($n'$)
 
 $$

@@ -237,12 +237,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Output Interference in REM.md",
+                "file": "journal/2025/06/2025-06-23.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Output Interference in REM"
+              "title": "2025-06-23"
             }
           },
           {
@@ -389,7 +389,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Output Interference in REM.md",
+                "file": "journal/2025/06/2025-06-23.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -399,7 +399,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Output Interference in REM"
+              "title": "Backlinks for 2025-06-23"
             }
           },
           {
@@ -408,12 +408,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Attention.md",
+                "file": "journal/2025/06/2025-06-23.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Attention"
+              "title": "Outgoing links from 2025-06-23"
             }
           },
           {
@@ -437,13 +437,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Output Interference in REM.md",
+                "file": "journal/2025/06/2025-06-23.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Output Interference in REM"
+              "title": "Outline of 2025-06-23"
             }
           },
           {
@@ -498,15 +498,24 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "chat-export (35).md",
+    "journal/2025/06/2025-06-23.md",
+    "chat-export (35) 1.md",
+    "git.md",
+    "journal/2025/06/2025-06-15.md",
+    "journal/2025/06/2025-06-20.md",
+    "journal/2025/06/2025-06-21.md",
+    "journal/2025/05/2025-05-21.md",
+    "journal/2025/06/2025-06-08.md",
+    "journal/2025/06/2025-06-07.md",
+    "journal/2025/06/2025-06-05.md",
+    "Output Interference in REM.md",
     "REM.md",
     "REM deduction.md",
-    "git.md",
-    "journal/2025/06/2025-06-21.md",
     "哥德尔不完备.md",
     "mathematics.md",
     "topos theory.md",
     "thinking method.md",
-    "journal/2025/06/2025-06-07.md",
     "new deduction.md",
     "a.md",
     "绝笔.md",
@@ -525,20 +534,11 @@
     "conversation/c-结婚？.txt",
     "conversation/c-无法结婚.txt",
     "conversation/c-结婚.txt",
-    "conventional commit.md",
     "Pasted image 20250620123915.png",
-    "journal/2025/06/2025-06-20.md",
-    "journal/2025/06/2025-06-15.md",
-    "journal/2025/06/2025-06-05.md",
-    "Sampling.md",
     "Pasted image 20250619213031.png",
     "Pasted image 20250619212941.png",
     "Pasted image 20250619212857.png",
     "Pasted image 20250619210206.png",
-    "MC sampling.md",
-    "A sample.md",
-    "pushforward measure.md",
-    "distribution.md",
     "Pasted image 20250619204841.png",
     "Pasted image 20250619204832.png",
     "Pasted image 20250619204429.png",

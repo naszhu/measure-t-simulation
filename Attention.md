@@ -10,4 +10,5 @@
 	- So actual flow is, [sensory] input => [[perceptual category]] (the function; the process???? (or the mapping from known to unknown????) =>  
 	- is latent space real world (inital stimuli) info or psych info? 
 	- [[feature space - x]]
-	- How is this related to [[REM]] ?? all process condensed in "perception" now? 
+	- How is this related to Retrieving Effectively from Memory Model (REM) ?? all process condensed in "perception" now? 
+

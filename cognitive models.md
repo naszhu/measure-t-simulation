@@ -1,0 +1,6 @@
+[[memory models]]
+
+
+[[connectionist model]]
+
+

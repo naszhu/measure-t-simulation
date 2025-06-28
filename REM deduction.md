@@ -1,5 +1,5 @@
 ## Deduction of original REM
-[[REM]]
+[[Retrieving Effectively from Memory Model (REM)]]
 [[Original REM deduction]]
 [[Explain - Why not M but n]]
 [[REM temp save 1]]

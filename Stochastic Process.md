@@ -13,3 +13,6 @@ contains [[time series]] process
 
 
 - The key aspect of a stochastic process is that the **random variables** (RVs) are **related** in some way over time (or space). Specifically, the [[relationship] ] between the RVs** can be characterized by **correlation**, **dependence**, or **transition probabilities** (how one state leads to another).
+
+
+includes [[racing model]]

@@ -4,3 +4,4 @@
 
 [[Stochastic Process]]
 
+[[exponential racing]] (racing of time), i.e., racing of separate [[Poisson process]]

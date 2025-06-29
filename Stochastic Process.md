@@ -1,5 +1,8 @@
 [[Brownian Motion (Wiener Process)]]
 [[OU process]]
+[[Poisson process]]
+
+
 
 contains [[time series]] process
 

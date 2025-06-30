@@ -5,10 +5,11 @@ about [[intention]]
 
 -> essentially is [[GCM]] + Time + capacity constraints
 
+action
 
-- {propositional representation + motor + sensor} => action-plan -> intention (a special kind of action-plan)
+- {1.propositional representation + 2.motor + 2. sensor} => [action-plan] -> [intention] (a special kind of action-plan)
 - propositional representation: [task]
-- motor + sensor: [task sets], 
+- motor (response) + sensor (stimulus ): [task sets], 
 
 I.e.,
 * [task sets]: the set of parameters (of doing a thing) 

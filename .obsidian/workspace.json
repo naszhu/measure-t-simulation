@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "systems.md",
+                "file": "distribution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "systems"
+              "title": "distribution"
             }
           },
           {
@@ -249,7 +249,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "systems.md",
+                "file": "distribution.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -259,7 +259,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for systems"
+              "title": "Backlinks for distribution"
             }
           },
           {
@@ -268,12 +268,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "systems.md",
+                "file": "distribution.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from systems"
+              "title": "Outgoing links from distribution"
             }
           },
           {
@@ -297,13 +297,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "systems.md",
+                "file": "distribution.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of systems"
+              "title": "Outline of distribution"
             }
           },
           {
@@ -370,11 +370,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e84469d12c5f831f",
+  "active": "caa9618fb9f7b686",
   "lastOpenFiles": [
+    "systems.md",
     "discrete_ct-finite_if-countable-uncountable.md",
     "Memory.md",
-    "systems.md",
     "Brownian Motion (Wiener Process).md",
     "Stochastic Process.md",
     "Untitled 1.md",

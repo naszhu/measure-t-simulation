@@ -84,7 +84,7 @@ git rebase -i HEAD~3
 #`pick` to `edit`, then save & exit:
 
 # 2. When rebase stops at your Jun 12th commit, set the new date:
-DATE=$(date -d '2025-06-17 17:20:00 +0800' '+%Y-%m-%dT%H:%M:%S%z')
+DATE=$(date -d '2025-06-22 17:20:00 +0800' '+%Y-%m-%dT%H:%M:%S%z')
 
 # 3. Amend that commit’s date without touching its message:
 GIT_COMMITTER_DATE="$DATE" git commit --amend --no-edit --date="$DATE"

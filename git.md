@@ -114,6 +114,15 @@ git push origin --force --tags
 
 ```
 
+## Branch
+
+merge branch in parallel
+```bash
+git checkout main
+git merge --no-ff simple-v-after-recall-explore \
+  -m "Merge feature simple-v-after-recall-explore into main"
+git push
+```
 
 Branch out and save
 ```bash

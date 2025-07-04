@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git.md",
+                "file": "CoinAct - hiring ads.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "CoinAct - hiring ads"
             }
           },
           {
@@ -250,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git.md",
+                "file": "CoinAct - hiring ads.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -260,7 +260,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for git"
+              "title": "Backlinks for CoinAct - hiring ads"
             }
           },
           {
@@ -269,12 +269,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "git.md",
+                "file": "CoinAct - hiring ads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from git"
+              "title": "Outgoing links from CoinAct - hiring ads"
             }
           },
           {
@@ -298,13 +298,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "git.md",
+                "file": "CoinAct - hiring ads.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of git"
+              "title": "Outline of CoinAct - hiring ads"
             }
           },
           {
@@ -373,13 +373,14 @@
   },
   "active": "caa9618fb9f7b686",
   "lastOpenFiles": [
+    "git.md",
+    "CoinAct - hiring ads.md",
     "distribution.md",
     "systems.md",
     "discrete_ct-finite_if-countable-uncountable.md",
     "Memory.md",
     "Brownian Motion (Wiener Process).md",
     "Stochastic Process.md",
-    "Untitled 1.md",
     "racing model.md",
     "exponential racing.md",
     "finite system.md",
@@ -393,7 +394,6 @@
     "control.md",
     "DeepSeek-关系中情绪照顾的困境与自救.md",
     "Untitled",
-    "git.md",
     "Untitled.md",
     "Poisson process.md",
     "Prospective Memory Decision Control (PMDC).md",

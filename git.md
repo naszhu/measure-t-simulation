@@ -24,6 +24,11 @@ git push --force-with-lease origin main
 ```
 
 ---
+#### Compare between files for specific commits
+```bash
+git diff COMMIT_ID1 COMMIT_ID2 -- path/to/yourfile.jl
+```
+
 ### Repo Issue Links
 ```
 Parent: #1220  
@@ -115,6 +120,11 @@ git push origin --force --tags
 ```
 
 ## Branch
+
+modify branch name
+```bash
+git branch -m debug-first-stage-disappear-issue35
+```
 
 merge branch in parallel
 ```bash

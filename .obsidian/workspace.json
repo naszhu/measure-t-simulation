@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CoinAct - hiring ads.md",
+                "file": "git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CoinAct - hiring ads"
+              "title": "git"
             }
           },
           {
@@ -250,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CoinAct - hiring ads.md",
+                "file": "git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -260,7 +260,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CoinAct - hiring ads"
+              "title": "Backlinks for git"
             }
           },
           {
@@ -269,12 +269,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CoinAct - hiring ads.md",
+                "file": "git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CoinAct - hiring ads"
+              "title": "Outgoing links from git"
             }
           },
           {
@@ -298,13 +298,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CoinAct - hiring ads.md",
+                "file": "git.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CoinAct - hiring ads"
+              "title": "Outline of git"
             }
           },
           {
@@ -373,8 +373,8 @@
   },
   "active": "caa9618fb9f7b686",
   "lastOpenFiles": [
-    "git.md",
     "CoinAct - hiring ads.md",
+    "git.md",
     "distribution.md",
     "systems.md",
     "discrete_ct-finite_if-countable-uncountable.md",

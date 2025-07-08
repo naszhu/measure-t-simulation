@@ -56,6 +56,10 @@ sudo apt install gh (for issue add in github)
 sudo apt install gnome-shell-extension-appindicator gnome-tweaks chrome-gnome-shell #this and the follow is to show snipaste-dropdown sub menue.... but,   tweaks is a really good thing!
 sudo apt install gnome-shell-extension-prefs gnome-shell-extension-appindicator
 sudo apt install git-filter-repo
+
+# for the zotero work with pdf arrange
+sudo apt install pdfarranger
+
 ```
 
 ### Pip installed

@@ -1,0 +1,1 @@
+- try to find the fundamental reason of why TVA structure could be used everywhere in cognition - try to get a more fundamental structure , why the 3 components, why using the format of timing each other rather than other kind of composition (by the way i remember tva used outer product, where did they use this in their current tva extended model, i.e., MIS)?

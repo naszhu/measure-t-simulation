@@ -111,40 +111,96 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "connectionist model.md",
+                "file": "Question.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "connectionist model"
+              "title": "Question"
             }
           },
           {
-            "id": "d8f19fff85e0f2e5",
+            "id": "ccb25bc9ae8b989c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cognitive models.md",
+                "file": "TODO LIST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cognitive models"
+              "title": "TODO LIST"
             }
           },
           {
-            "id": "2f3e276bb7c90eb5",
+            "id": "64554e2c0a6f7e9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Prospective Memory Decision Control (PMDC).md",
+                "file": "Physical Work.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prospective Memory Decision Control (PMDC)"
+              "title": "Physical Work"
+            }
+          },
+          {
+            "id": "d898affe56e5d2a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO LIST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TODO LIST"
+            }
+          },
+          {
+            "id": "ef01f3cc2325e162",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Poisson process.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Poisson process"
+            }
+          },
+          {
+            "id": "c944c85cacef280b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CoinAct - hiring ads.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CoinAct - hiring ads"
+            }
+          },
+          {
+            "id": "069375c9b675927e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "books to read.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "books to read"
             }
           },
           {
@@ -162,7 +218,70 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 12
+      },
+      {
+        "id": "39b9b6ae93045c1b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "90d6e29d539645c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CoinAct - hiring ads.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CoinAct - hiring ads"
+            }
+          },
+          {
+            "id": "ae5515225417f9d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CoInAct.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CoInAct"
+            }
+          },
+          {
+            "id": "6f8f58509b641256",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO LIST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TODO LIST"
+            }
+          },
+          {
+            "id": "42ffb7e6d2bd1721",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Purchase list.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Purchase list"
+            }
+          }
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -194,7 +313,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "tpdp",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,12 +334,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "d1de6df18cf5282b",
@@ -236,7 +355,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Prospective Memory Decision Control (PMDC).md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -246,7 +365,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Prospective Memory Decision Control (PMDC)"
+              "title": "Backlinks for discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -255,12 +374,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Prospective Memory Decision Control (PMDC).md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Prospective Memory Decision Control (PMDC)"
+              "title": "Outgoing links from discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -284,13 +403,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Prospective Memory Decision Control (PMDC).md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Prospective Memory Decision Control (PMDC)"
+              "title": "Outline of discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -342,7 +461,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 673.5
+    "width": 440.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -359,34 +478,36 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
-    "journal/2025/07/2025-07-04.md",
-    "git.md",
-    "journal/2025/07",
-    "CoinAct - hiring ads.md",
+    "Purchase list.md",
+    "TODO LIST.md",
     "distribution.md",
+    "My idea - ConinAct.md",
+    "CoInAct.md",
+    "CoinAct - hiring ads.md",
+    "installed stuff in my linux pc.md",
+    "journal/2025/07/2025-07-07.md",
+    "git.md",
+    "Poisson distribution.md",
+    "Poisson process.md",
+    "Pasted image 20250706182814.png",
+    "Pasted image 20250706182234.png",
+    "books to read.md",
+    "Untitled 1.md",
+    "TODO LIST - long term.md",
+    "Physical Work.md",
+    "Question.md",
+    "connectionist model.md",
+    "cognitive models.md",
+    "lateral inhibition.md",
+    "Prospective Memory Decision Control (PMDC).md",
+    "journal/2025/07/2025-07-04.md",
+    "journal/2025/07",
     "systems.md",
     "discrete_ct-finite_if-countable-uncountable.md",
     "Memory.md",
     "Brownian Motion (Wiener Process).md",
     "Stochastic Process.md",
-    "racing model.md",
-    "exponential racing.md",
-    "finite system.md",
-    "Poisson Racing Model.md",
-    "Model of Intention Selection (MIS).md",
-    "working memory (WM).md",
-    "descrete.md",
-    "set theory.md",
-    "evidence accumulation models.md",
-    "conscious.md",
-    "control.md",
-    "DeepSeek-关系中情绪照顾的困境与自救.md",
     "Untitled",
-    "Untitled.md",
-    "Poisson process.md",
-    "Prospective Memory Decision Control (PMDC).md",
-    "connectionist model.md",
-    "cognitive models.md",
     "conversation/cc-解读1.txt",
     "conversation/cc-解读2.txt",
     "conversation/这儿.txt",
@@ -403,8 +524,6 @@
     "Pasted image 20250619204841.png",
     "Pasted image 20250619204832.png",
     "Pasted image 20250619204429.png",
-    "Pasted image 20250619204411.png",
-    "Pasted image 20250525203150.png",
     "Untitled.canvas"
   ]
 }

@@ -29,7 +29,20 @@ git push --force-with-lease origin main
 git diff COMMIT_ID1 COMMIT_ID2 -- path/to/yourfile.jl
 ```
 
-### Repo Issue Links
+## Issue
+
+find issue with keyword
+```bash
+gh issue list | grep 'function'
+```
+
+[Commit ]refer to issue in another repo
+```text
+Refs naszhu/project-context#42
+```
+
+
+##### Repo Issue Links
 ```
 Parent: #1220  
 That cross-link makes it easy to navigate both ways.

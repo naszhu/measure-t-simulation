@@ -4,223 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "2b217829601f51c2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "636d70d69e0794fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Prospective Memory Decision Control (PMDC).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Prospective Memory Decision Control (PMDC)"
-            }
-          },
-          {
-            "id": "0d1494d1022a26ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "dependent racing model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "dependent racing model"
-            }
-          },
-          {
-            "id": "3dcfe33d9e99510a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Leaky Competitive Accumulator (LCA).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Leaky Competitive Accumulator (LCA)"
-            }
-          },
-          {
-            "id": "1104e64ebd9c2c19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lateral inhibition.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "lateral inhibition"
-            }
-          },
-          {
-            "id": "d688b2bba0fd3db8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "feed-forward.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "feed-forward"
-            }
-          },
-          {
-            "id": "58b8a64122efb54e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lateral inhibition.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "lateral inhibition"
-            }
-          },
-          {
-            "id": "afe0560c572042b5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "connectionist model.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "connectionist model"
-            }
-          },
-          {
-            "id": "265e61bb6e2423ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Question.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Question"
-            }
-          },
-          {
-            "id": "ccb25bc9ae8b989c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TODO LIST.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TODO LIST"
-            }
-          },
-          {
-            "id": "64554e2c0a6f7e9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physical Work.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Physical Work"
-            }
-          },
-          {
-            "id": "d898affe56e5d2a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TODO LIST.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TODO LIST"
-            }
-          },
-          {
-            "id": "ef01f3cc2325e162",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Poisson process.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Poisson process"
-            }
-          },
-          {
-            "id": "c944c85cacef280b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CoinAct - hiring ads.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CoinAct - hiring ads"
-            }
-          },
-          {
-            "id": "069375c9b675927e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "books to read.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "books to read"
-            }
-          },
-          {
-            "id": "ecf44473690f9bc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "C4.5-test result.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "C4.5-test result"
-            }
-          }
-        ],
-        "currentTab": 12
-      },
-      {
         "id": "39b9b6ae93045c1b",
         "type": "tabs",
         "children": [
@@ -230,16 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CoinAct - hiring ads.md",
+                "file": "TODO LIST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CoinAct - hiring ads"
+              "title": "TODO LIST"
             }
           },
           {
-            "id": "ae5515225417f9d3",
+            "id": "00c5ae393333d3ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -253,35 +36,35 @@
             }
           },
           {
-            "id": "6f8f58509b641256",
+            "id": "ba6abea5cb6366df",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TODO LIST.md",
+                "file": "journal/2025/07/2025-07-09.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TODO LIST"
+              "title": "2025-07-09"
             }
           },
           {
-            "id": "42ffb7e6d2bd1721",
+            "id": "4dcd64269cc37674",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Purchase list.md",
+                "file": "salary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Purchase list"
+              "title": "salary"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -313,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tpdp",
+                "query": "MIS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -334,12 +117,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 275.5004348754883
   },
   "right": {
     "id": "d1de6df18cf5282b",
@@ -355,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "journal/2025/07/2025-07-09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -365,7 +147,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for discrete_ct-finite_if-countable-uncountable"
+              "title": "Backlinks for 2025-07-09"
             }
           },
           {
@@ -374,12 +156,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "journal/2025/07/2025-07-09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from discrete_ct-finite_if-countable-uncountable"
+              "title": "Outgoing links from 2025-07-09"
             }
           },
           {
@@ -403,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "journal/2025/07/2025-07-09.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of discrete_ct-finite_if-countable-uncountable"
+              "title": "Outline of 2025-07-09"
             }
           },
           {
@@ -478,35 +260,35 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "Model of Intention Selection (MIS).md",
+    "CoInAct.md",
+    "UCPH - University of Copenhagen.md",
+    "salary.md",
+    "Application.md",
     "Purchase list.md",
     "TODO LIST.md",
-    "distribution.md",
-    "My idea - ConinAct.md",
-    "CoInAct.md",
+    "journal/2025/07/2025-07-09.md",
+    "journal/2025/07/2025-07-08.md",
     "CoinAct - hiring ads.md",
-    "installed stuff in my linux pc.md",
     "journal/2025/07/2025-07-07.md",
-    "git.md",
-    "Poisson distribution.md",
+    "journal/2025/06/2025-06-07.md",
+    "journal/2025/06/2025-06-15.md",
+    "C4.5-test result.md",
+    "books to read.md",
+    "Prospective Memory Decision Control (PMDC).md",
+    "dependent racing model.md",
+    "Leaky Competitive Accumulator (LCA).md",
+    "lateral inhibition.md",
+    "feed-forward.md",
+    "connectionist model.md",
+    "Question.md",
+    "Physical Work.md",
     "Poisson process.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
+    "distribution.md",
     "Pasted image 20250706182814.png",
     "Pasted image 20250706182234.png",
-    "books to read.md",
-    "Untitled 1.md",
-    "TODO LIST - long term.md",
-    "Physical Work.md",
-    "Question.md",
-    "connectionist model.md",
-    "cognitive models.md",
-    "lateral inhibition.md",
-    "Prospective Memory Decision Control (PMDC).md",
-    "journal/2025/07/2025-07-04.md",
     "journal/2025/07",
-    "systems.md",
-    "discrete_ct-finite_if-countable-uncountable.md",
-    "Memory.md",
-    "Brownian Motion (Wiener Process).md",
-    "Stochastic Process.md",
     "Untitled",
     "conversation/cc-解读1.txt",
     "conversation/cc-解读2.txt",

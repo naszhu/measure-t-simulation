@@ -1,5 +1,6 @@
 Grunbumn et al., 2012
 about [[intention]]
+This is = [[Theory of Visual Attention (TVA)]] model
 
 -> essentially is a hierarchical [[racing model]] , or say, a hierarchical [[Poisson racing model]]  
 

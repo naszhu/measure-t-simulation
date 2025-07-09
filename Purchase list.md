@@ -3,6 +3,7 @@
 * table
 * speaker + (webcam?) + portable microphone
 * file container
+* A good chair
 
 
 

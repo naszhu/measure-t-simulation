@@ -132,6 +132,49 @@ git push origin --force --tags
 
 ```
 
+
+#### Get all repo names  
+```bash
+gh repo list naszhu --limit 100 --json name
+ -q '.[].name'
+```
+# Notes
+One commit:
+```bash
+git notes add -m "⚠️ Known bug: off-by-one here" <bad-commit-hash>
+
+git push origin refs/notes/*
+```
+ A series of commits:
+```bash
+# Annotate all those SHAs with the same note
+commits=(
+  6cd43de
+  17777ae
+  89e265c
+  9fb5dcb
+  b11ee7c
+  9c4b2aa
+)
+
+for sha in "${commits[@]}"; do
+  git notes add -m "⚠️ Known bug: should have made p_switch to zero in checking pure influence, but forgot to do that. I went back, checked out each commit and found that the predictions change a bit but the general trend of the A)-D) are the same." "$sha"
+done
+
+# push your notes up
+git push origin refs/notes/*
+```
+
+Ways of view notes:
+```bash
+# 1) show notes inline in your log
+git log --show-notes=commits --oneline
+bash
+Copy
+Edit
+# 2) list every commit-SHA with a note, then print each note
+git notes list | awk '{print $2}' | xargs -n1 git notes show
+```
 ## Branch
 
 modify branch name
@@ -146,6 +189,13 @@ git merge --no-ff simple-v-after-recall-explore \
   -m "Merge feature simple-v-after-recall-explore into main"
 git push
 ```
+
+merge side branch without changing main head  
+```bash
+git merge --no-ff -s ours temp_branch
+```
+
+
 
 Branch out and save
 ```bash

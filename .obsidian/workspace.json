@@ -41,12 +41,68 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2025/07/2025-07-09.md",
+                "file": "CoInAct.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-07-09"
+              "title": "CoInAct"
+            }
+          },
+          {
+            "id": "ad8202a51b048869",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO LIST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TODO LIST"
+            }
+          },
+          {
+            "id": "0dfe25c578f73053",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dissertation ALL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dissertation ALL"
+            }
+          },
+          {
+            "id": "f423d08e963fe8d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO LIST.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TODO LIST"
+            }
+          },
+          {
+            "id": "85794618d4f4dd00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git"
             }
           },
           {
@@ -64,7 +120,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -137,7 +193,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "journal/2025/07/2025-07-09.md",
+                "file": "git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +203,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2025-07-09"
+              "title": "Backlinks for git"
             }
           },
           {
@@ -156,12 +212,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "journal/2025/07/2025-07-09.md",
+                "file": "git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2025-07-09"
+              "title": "Outgoing links from git"
             }
           },
           {
@@ -185,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2025/07/2025-07-09.md",
+                "file": "git.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-07-09"
+              "title": "Outline of git"
             }
           },
           {
@@ -260,14 +316,22 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
-    "Model of Intention Selection (MIS).md",
+    "Purchase list.md",
+    "TODO LIST.md",
+    "TODO LIST - long term.md",
+    "git.md",
+    "Outline-g.md",
+    "Dissertation ALL.md",
+    "journal/2025/07/2025-07-10.md",
+    "journal/2025/07/2025-07-09.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
+    "C6, 6 - 6.2.2.md",
+    "prepare.md",
     "CoInAct.md",
+    "Model of Intention Selection (MIS).md",
     "UCPH - University of Copenhagen.md",
     "salary.md",
     "Application.md",
-    "Purchase list.md",
-    "TODO LIST.md",
-    "journal/2025/07/2025-07-09.md",
     "journal/2025/07/2025-07-08.md",
     "CoinAct - hiring ads.md",
     "journal/2025/07/2025-07-07.md",
@@ -278,14 +342,6 @@
     "Prospective Memory Decision Control (PMDC).md",
     "dependent racing model.md",
     "Leaky Competitive Accumulator (LCA).md",
-    "lateral inhibition.md",
-    "feed-forward.md",
-    "connectionist model.md",
-    "Question.md",
-    "Physical Work.md",
-    "Poisson process.md",
-    "discrete_ct-finite_if-countable-uncountable.md",
-    "distribution.md",
     "Pasted image 20250706182814.png",
     "Pasted image 20250706182234.png",
     "journal/2025/07",

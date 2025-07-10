@@ -10,3 +10,7 @@
 
 [[Purchase list]]
 [[books to read]]
+
+- [ ] Find the stuff //lip stick and throat med
+- [ ] find an AI note for zoom
+

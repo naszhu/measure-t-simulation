@@ -4,7 +4,8 @@
 * speaker + (webcam?) + portable microphone
 * file container
 * A good chair
-
+Before leave:
+* get a pair of glasses (actual glasses)
 
 
 

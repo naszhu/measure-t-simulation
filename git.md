@@ -1,14 +1,25 @@
 [[conventional commit]]
 [[made md autocommit]]
 
-### GIT edit in vs code:  don't go in nano
+
+
+
+## Git config
+```bash
+git config --global gc.reflogExpire "1 year"
+nano .git/hooks/post-commit
+nano .git/hooks/pre-commit
+
+## store reflog forever
+git config --global gc.reflogExpire never
+git config --global gc.reflogExpireUnreachable never
+```
+
+#### GIT edit in vs code:  git amend etc don't go in nano but go in vs code
 ```bash
 git config --global core.editor "code --wait"
 ```
 once will write that setting into your `~/.gitconfig` and persist for all future Git commands (across shells and repos). If you ever need to change it, just re-run with a different editor or omit `--global` to set it per-repo.\
-
-
-
 ### normal git thing
 
  Open your editor to edit the last commit’s message:

@@ -4,6 +4,7 @@
 * speaker + (webcam?) + portable microphone
 * file container
 * A good chair
+* curtain ( UPF面料)
 Before leave:
 * get a pair of glasses (actual glasses)
 

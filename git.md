@@ -1,4 +1,16 @@
-[[conventional commit]]
+[[conventional commit]]]
+
+
+### GIT edit in vs code:  don't go in nano
+```bash
+git config --global core.editor "code --wait"
+```
+once will write that setting into your `~/.gitconfig` and persist for all future Git commands (across shells and repos). If you ever need to change it, just re-run with a different editor or omit `--global` to set it per-repo.\
+
+
+
+### normal git thing
+
  Open your editor to edit the last commit’s message:
 ```bash
 git commit --amend
@@ -194,8 +206,11 @@ merge side branch without changing main head
 ```bash
 git merge --no-ff -s ours temp_branch
 ```
-
-
+### revert history (go to last version)
+```bash
+git reflog
+git reset --hard HEAD@{1}
+```
 
 Branch out and save
 ```bash

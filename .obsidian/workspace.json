@@ -27,12 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CoInAct.md",
+                "file": "git.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CoInAct"
+              "title": "git"
+            }
+          },
+          {
+            "id": "9f18767fd06dd5bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "made md autocommit.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "made md autocommit"
             }
           },
           {
@@ -120,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -314,11 +328,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "85794618d4f4dd00",
+  "active": "00c5ae393333d3ef",
   "lastOpenFiles": [
-    "Purchase list.md",
+    "made md autocommit.md",
+    "Pasted image 20250711234752.png",
     "git.md",
     "TODO LIST.md",
+    "CoInAct.md",
+    "CoinAct - hiring ads.md",
+    "Purchase list.md",
     "TODO LIST - long term.md",
     "Outline-g.md",
     "Dissertation ALL.md",
@@ -327,21 +345,17 @@
     "discrete_ct-finite_if-countable-uncountable.md",
     "C6, 6 - 6.2.2.md",
     "prepare.md",
-    "CoInAct.md",
     "Model of Intention Selection (MIS).md",
     "UCPH - University of Copenhagen.md",
     "salary.md",
     "Application.md",
     "journal/2025/07/2025-07-08.md",
-    "CoinAct - hiring ads.md",
     "journal/2025/07/2025-07-07.md",
     "journal/2025/06/2025-06-07.md",
     "journal/2025/06/2025-06-15.md",
     "C4.5-test result.md",
     "books to read.md",
     "Prospective Memory Decision Control (PMDC).md",
-    "dependent racing model.md",
-    "Leaky Competitive Accumulator (LCA).md",
     "Pasted image 20250706182814.png",
     "Pasted image 20250706182234.png",
     "journal/2025/07",
@@ -361,7 +375,6 @@
     "Pasted image 20250619210206.png",
     "Pasted image 20250619204841.png",
     "Pasted image 20250619204832.png",
-    "Pasted image 20250619204429.png",
     "Untitled.canvas"
   ]
 }

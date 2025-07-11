@@ -1,5 +1,5 @@
-[[conventional commit]]]
-
+[[conventional commit]]
+[[made md autocommit]]
 
 ### GIT edit in vs code:  don't go in nano
 ```bash
@@ -188,7 +188,10 @@ Edit
 git notes list | awk '{print $2}' | xargs -n1 git notes show
 ```
 ## Branch
-
+delete commits from main (delete no-ff -s ours merged commits for example)
+```bash
+git rebase -i <commit-before-the-merge>
+```
 modify branch name
 ```bash
 git branch -m debug-first-stage-disappear-issue35

@@ -194,4 +194,3 @@ Git 自动会运行 `log_plot.sh`，把当前的 `plot1.png/plot2.png` 加进 ar
 
 ---
 # Then, changed idea add these below 
-![[Pasted image 20250711234752.png]]

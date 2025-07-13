@@ -2,6 +2,61 @@
 
 !!uninstall openai for general env.
 
+## Fonts
+```bash
+sudo mkdir -p /usr/share/fonts/truetype/custom
+sudo cp YourFont.ttf /usr/share/fonts/truetype/custom/
+sudo fc-cache -fv
+```
+
+Font forge
+```bash
+sudo apt install fontforge
+fontforge -lang=ff -c '
+  Open("midi.ttf");
+  # PSName, FamilyName, StyleName, FullName：PSName 必须 ASCII，Family/FullName 可以中英混合
+  SetFontNames("MiDiShuFa", "misishufa-ziti", "Regular", "midishufaziti-Regular");
+  Generate("mf-fixed.ttf");
+  Close();
+  Quit();
+'
+
+
+sudo cp ltjx-fixed.ttf /usr/share/fonts/truetype/custom/ltjx.ttf
+sudo fc-cache -r -v
+
+
+fc-list | grep -i YourFont
+```
+### libreoffice
+
+Ubuntu 22.04 的 backports 仓库里也包含了更新版的 LibreOffice： (donesn't work)
+
+```bash
+sudo apt update sudo apt install -t jammy-backports libreoffice
+```
+
+- 这会直接从官方 backports 拉取更新，不需要额外添加 PPA
+
+
+One that works: uninstall apt version install snap version
+```bash
+sudo apt remove --purge libreoffice*
+sudo snap install libreoffice --classic
+```
+Above too slow:
+### . Download and install the official LibreOffice tarball
+
+1. Grab the latest Linux .tar.gz from https://www.libreoffice.org/download/
+    
+2. Extract and install the .deb files:
+
+```bash
+tar xf LibreOffice_*.tar.gz cd LibreOffice_*/DEBS sudo dpkg -i *.deb
+```
+Because you’re pulling straight from LibreOffice’s own mirror, you may get better throughput.
+
+
 ### R
 ```bash
 #!/bin/bash
@@ -60,6 +115,7 @@ sudo apt install git-filter-repo
 # for the zotero work with pdf arrange
 sudo apt install pdfarranger
 
+sudo apt install fontforge
 ```
 
 ### Pip installed

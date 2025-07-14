@@ -1,9 +1,23 @@
 [[conventional commit]]
 [[made md autocommit]]
 
+```bash
+# reflog grep
+git reflog | grep 'commit'
 
+```
+Tag
+```bash
+# show tag with notes/comments
+ git tag -n 
+ 
+git tag -a v1.0-l 8a5c5ae7f174b5b4bca38f927917a6012e7419fe -m "v1.0 exact with only add of log scripts"
+```
 
-
+Pick a SHA and make the current all files exact the same to that (so can commit)
+```
+git restore --source=<SHA> .
+```
 ## Git config
 ```bash
 git config --global gc.reflogExpire "1 year"

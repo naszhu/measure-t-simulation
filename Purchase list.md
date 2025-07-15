@@ -5,6 +5,7 @@
 * file container
 * A good chair
 * curtain ( UPF面料)
+* 棒球帽
 Before leave:
 * get a pair of glasses (actual glasses)
 

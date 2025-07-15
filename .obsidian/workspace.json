@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "00c5ae393333d3ef",
+            "id": "3482719c8e2280b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -370,16 +370,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "00c5ae393333d3ef",
+  "active": "3482719c8e2280b7",
   "lastOpenFiles": [
-    "journal/2025/07/2025-07-12.md",
     "Purchase list.md",
+    "TODO LIST.md",
     "git.md",
+    "made md autocommit.md",
+    "conventional commit.md",
+    "journal/2025/07/2025-07-12.md",
     "格言.md",
     "CoinAct - hiring ads.md",
     "installed stuff in my linux pc.md",
     "C3.3 Analaysis strategy.md",
-    "made md autocommit.md",
     "Pasted image 20250712201229.png",
     "Pasted image 20250712201146.png",
     "Pasted image 20250712201138.png",
@@ -391,7 +393,6 @@
     "Pasted image 20250712192926.png",
     "Pasted image 20250712184328.png",
     "Saved Commands.md",
-    "TODO LIST.md",
     "CoInAct.md",
     "TODO LIST - long term.md",
     "Outline-g.md",
@@ -407,7 +408,6 @@
     "Application.md",
     "journal/2025/07/2025-07-08.md",
     "journal/2025/07/2025-07-07.md",
-    "journal/2025/06/2025-06-07.md",
     "journal/2025/07",
     "Untitled",
     "conversation/cc-解读1.txt",

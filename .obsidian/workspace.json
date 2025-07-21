@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git.md",
+                "file": "journal/2025/07/2025-07-21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "2025-07-21"
             }
           },
           {
@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "my address.md",
+                "file": "journal/2025/07/2025-07-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "my address"
+              "title": "2025-07-12"
             }
           },
           {
@@ -190,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -263,7 +263,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "my address.md",
+                "file": "journal/2025/07/2025-07-21.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -273,7 +273,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for my address"
+              "title": "Backlinks for 2025-07-21"
             }
           },
           {
@@ -282,12 +282,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "my address.md",
+                "file": "journal/2025/07/2025-07-21.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from my address"
+              "title": "Outgoing links from 2025-07-21"
             }
           },
           {
@@ -311,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "my address.md",
+                "file": "journal/2025/07/2025-07-21.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of my address"
+              "title": "Outline of 2025-07-21"
             }
           },
           {
@@ -384,15 +384,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "81416f8a351c84ca",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
     "git.md",
+    "journal/2025/07/2025-07-21.md",
+    "conventional commit.md",
+    "made md autocommit.md",
+    "journal/2025/07/2025-07-12.md",
     "my address.md",
     "Purchase list.md",
     "TODO LIST.md",
-    "made md autocommit.md",
-    "conventional commit.md",
-    "journal/2025/07/2025-07-12.md",
     "格言.md",
     "CoinAct - hiring ads.md",
     "installed stuff in my linux pc.md",
@@ -421,7 +422,6 @@
     "UCPH - University of Copenhagen.md",
     "salary.md",
     "Application.md",
-    "journal/2025/07/2025-07-08.md",
     "journal/2025/07",
     "Untitled",
     "conversation/cc-解读1.txt",

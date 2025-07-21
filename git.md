@@ -1,10 +1,19 @@
 [[conventional commit]]
 [[made md autocommit]]
 
+### commit amend add
+```bash
+git amend-add -m "test"
+```
+
 ```bash
 # reflog grep
 git reflog | grep 'commit'
 
+```
+
+```bash
+git cherry-pick -n "test"
 ```
 Tag
 ```bash
@@ -96,13 +105,30 @@ That cross-link makes it easy to navigate both ways.
 ```txt
 Refs other-owner/other-repo#42
 ```
+
+# Auth
+```bash
+#----rewrote commit date by author date
+
+#git filter-branch -f --env-filter '
+
+git filter-branch --env-filter '
+export GIT_COMMITTER_DATE="$GIT_AUTHOR_DATE"
+' --tag-name-filter cat -- --all
+
+git log --pretty=format:"%h | %ad | %cd | %s" --date=iso
+
+
+git config --global alias.rebase-auth 'rebase -i --committer-date-is-author-date'
+git rebase-auth HEAD~10
+
+```
 ##### Insert between commits:
 
 ```bash
 # 1. Stash your un-committed changes
 git add .
 git stash
-
 # 2. Start an interactive rebase over the last two commits
 git rebase -i HEAD~2
 ```

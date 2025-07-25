@@ -22,3 +22,5 @@ This depends on the domain definition!
 Example: A = {1, 2, ∅}  
 • ∅ ⊆ A ✓ ([subset] relation)  
 • ∅ ∈ A ✓ ([membership] relation)
+
+[[2025-07-25]] More on Space (thought in ChongQing)

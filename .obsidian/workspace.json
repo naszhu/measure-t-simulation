@@ -36,6 +36,72 @@
             }
           },
           {
+            "id": "7fa5eca639a59ce2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "git"
+            }
+          },
+          {
+            "id": "22b5fa3cf5ca75c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Signal Detection Theory (SDT).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Signal Detection Theory (SDT)"
+            }
+          },
+          {
+            "id": "61c552a7f4b4249a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "d4e87a2cb0194e2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "CoInAct.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CoInAct"
+            }
+          },
+          {
+            "id": "9e1c2586296de0e0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "MC sampling.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "MC sampling"
+            }
+          },
+          {
             "id": "81416f8a351c84ca",
             "type": "leaf",
             "state": {
@@ -190,7 +256,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -311,13 +377,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "set theory.md",
+                "file": "MC sampling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of set theory"
+              "title": "Outline of MC sampling"
             }
           },
           {
@@ -383,23 +449,32 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "3482719c8e2280b7",
+  "active": "9e1c2586296de0e0",
   "lastOpenFiles": [
-    "discrete_ct-finite_if-countable-uncountable.md",
+    "A sample.md",
+    "Sampling.md",
+    "CoinAct - hiring ads.md",
+    "CoInAct.md",
+    "distribution.md",
+    "Categorical Distribution.md",
+    "数位板.md",
+    "Signal Detection Theory (SDT).md",
+    "git.md",
+    "Softlinks.md",
+    "Autostart.md",
     "set theory.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
     "Space.md",
     "journal/2025/07/2025-07-25.md",
     "books to read.md",
     "journal/2025/07/2025-07-21.md",
     "journal/2025/07/2025-07-12.md",
-    "git.md",
     "conventional commit.md",
     "made md autocommit.md",
     "my address.md",
     "Purchase list.md",
     "TODO LIST.md",
     "格言.md",
-    "CoinAct - hiring ads.md",
     "installed stuff in my linux pc.md",
     "C3.3 Analaysis strategy.md",
     "Pasted image 20250712201229.png",
@@ -412,15 +487,6 @@
     "Pasted image 20250712192933.png",
     "Pasted image 20250712192926.png",
     "Pasted image 20250712184328.png",
-    "Saved Commands.md",
-    "CoInAct.md",
-    "TODO LIST - long term.md",
-    "Outline-g.md",
-    "Dissertation ALL.md",
-    "journal/2025/07/2025-07-10.md",
-    "journal/2025/07/2025-07-09.md",
-    "C6, 6 - 6.2.2.md",
-    "prepare.md",
     "journal/2025/07",
     "Untitled",
     "conversation/cc-解读1.txt",

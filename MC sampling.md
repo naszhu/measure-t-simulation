@@ -11,7 +11,7 @@
 
 e.g.,: [[Sampling]]: 
 
-Partition $0,1$$0,1$$0,1$ into nnn intervals of length pip_ipi​:
+Partition $0,1$$0,1$$0,1$ into n intervals of length pi
 
 ![[Pasted image 20250619204411.png]]
   

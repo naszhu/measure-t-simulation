@@ -10,7 +10,7 @@ contains [[time series]] process
 ### definition:
 
 - A **stochastic process** is usually defined as a collection of [[random variable]]s indexed by [[TIME]] or some other dimension.
-
+![[Pasted image 20250728192328.png]]
 - **Unknown Outcomes**: The future states of a stochastic process are not fully determined by the past; they are probabilistic in nature.
 
 

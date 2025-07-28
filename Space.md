@@ -1,6 +1,6 @@
 [[Probability Space]]
 
-[[feature space - x]]
+[[state space - x]]
 
 [[Sample space - Omega]]
 

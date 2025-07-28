@@ -2,7 +2,7 @@
 
 [[Measure - P]] (second derivative)
 
-All similarity related calc is under [[feature space - x]]
+All similarity related calc is under [[state space - x]]
 
 - similarity matrix doesn't directly capture [[density]]
 ### One understandign

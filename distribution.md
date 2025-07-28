@@ -20,3 +20,15 @@ p: can be a parameter (like that in binomial)
 [[Binomial Distribution]], extension is [[Multinomial Distribution]]
 ![[Pasted image 20250619204841.png]]
 ![[Pasted image 20250619204832.png]]
+
+## sampling
+[[population distribution]]
+[[sampling distribution]]
+
+**Sampling context**:
+
+- **Population distribution**: P_X (distribution on 𝒳)
+    
+- **Sampling distribution**: Distribution of a _statistic_ (e.g., sample mean)
+    
+    - Derived from multiple draws from P_X

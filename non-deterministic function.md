@@ -1,3 +1,3 @@
 ![[Pasted image 20250728194046.png]]
-
-[[stochastic kernel or stochastic mapping]]
+[[random variable]]
+[[Stochastic kernel (a.k.a. stochastic mapping)]]

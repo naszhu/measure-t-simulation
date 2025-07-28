@@ -21,3 +21,6 @@
 
 
 It contains [[parameter space]] as well, and could have the [[event space]] for sigma-algebra
+
+## a chart
+![[Pasted image 20250728200859.png]]

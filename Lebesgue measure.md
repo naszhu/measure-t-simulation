@@ -1,0 +1,1 @@
+![[Pasted image 20250728203655.png]]defines [[density]]

@@ -8,7 +8,10 @@ You can say, that the original [[Measure - P]] on [[Sample space - Omega]] is P,
 
 But, what is the way to write f_X(x)? what this f is? ([[Question]])
 
+## caution: typically people deal with state space
 
+P is irrelevant 
+![[Pasted image 20250728203604.png]]
 ### a) The probability measure
 
 - Formally you have a probability space (Ω,F,P)

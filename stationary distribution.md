@@ -1,0 +1,1 @@
+a special distribution for a [[Markov Chain (MC)]] such that if the chain starts with its stationary distribution, the marginal distribution of all states at any time will always be the stationary distribution.

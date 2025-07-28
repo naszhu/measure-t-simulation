@@ -1,5 +1,6 @@
 [[pushforward measure]]
 [[measure]]
+[[P_X]]
 
 This is value of an [[area]].
 
@@ -13,7 +14,7 @@ This is value of an [[area]].
 $P(X∈[a,b])=P(\{ω:X(ω)∈[a,b]\})$
 
 # definition and some properties
-A **measure** PP is a **function** (specifically, a _set function_):
+A **measure** P is a **function** (specifically, a _set function_):
 
 P:F→[0,1]
 

@@ -11,7 +11,12 @@ it's called [[feature space]] as well
     
 - $\mathcal{X}$ is the **[[codomain]]** of X, where probability distributions are defined.
 
-
+## differentiation vs. data
+1. **State space vs. data**:
+    
+    - 𝒳 = set of possible data values (e.g., ℝ for heights)
+        
+    - **Data** = realized values {x₁,...,xₙ} ⊂ 𝒳
 # side Q
 [[feature dimensions]] (x, y, z,... the axis)
 

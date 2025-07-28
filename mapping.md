@@ -1,2 +1,2 @@
 [[Mapping function - X]]
-[[stochastic kernel or stochastic mapping]]
+[[Stochastic kernel (a.k.a. stochastic mapping)]]

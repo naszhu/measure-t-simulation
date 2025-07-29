@@ -4,7 +4,7 @@ it is about the possiblity of a very small range of value, almost like "a point"
 
 ![[Pasted image 20250728203913.png]]
 
-definition of density needs a [[reference measure]], and are defined only for P_X on [[state space - x]]
+definition of density needs a [[reference measure]], and are defined only for P_X on [[state space - mathcal{X}]]
 
 [[TODO LIST - long term]]I now understand most of [[continuous]] density, but not really for [[descrete]] density
 

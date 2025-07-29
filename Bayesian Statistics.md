@@ -10,3 +10,8 @@
     - **[[likelihood]]**: Kernel k(θ, A) = P(X ∈ A | θ) [[Stochastic kernel (a.k.a. stochastic mapping)]]
         
     - **Posterior**: P(θ ∈ B | X = x)
+
+[[kernel]]
+
+## example 
+![[Pasted image 20250729012701.png]]

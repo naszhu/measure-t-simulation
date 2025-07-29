@@ -1,0 +1,1 @@
+An element ω∈Ω (a single outcome).

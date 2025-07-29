@@ -1,6 +1,6 @@
 [[Probability Space]]
 
-[[state space - x]]
+[[state space - mathcal{X}]]
 
 [[Sample space - Omega]]
 

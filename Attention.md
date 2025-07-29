@@ -9,6 +9,6 @@
 	- encoding? real world info to pysch info? 
 	- So actual flow is, [sensory] input => [[perceptual category]] (the function; the process???? (or the mapping from known to unknown????) =>  
 	- is latent space real world (inital stimuli) info or psych info? 
-	- [[state space - x]]
+	- [[state space - mathcal{X}]]
 	- How is this related to Retrieving Effectively from Memory Model (REM) ?? all process condensed in "perception" now? 
 

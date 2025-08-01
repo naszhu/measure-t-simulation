@@ -260,6 +260,11 @@ merge side branch without changing main head
 ```bash
 git merge --no-ff -s ours temp_branch
 ```
+
+delete all branches that has been merged
+```bash
+git branch --merged main | grep -v '^\*' | grep -v 'main' | xargs git branch -d
+```
 ### revert history (go to last version)
 ```bash
 git reflog

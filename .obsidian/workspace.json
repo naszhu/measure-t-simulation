@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git.md",
+                "file": "journal/2025/08/2025-08-07.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git"
+              "title": "2025-08-07"
             }
           }
         ],
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git.md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for git"
+              "title": "Backlinks for discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -124,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "git.md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from git"
+              "title": "Outgoing links from discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "git.md",
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of git"
+              "title": "Outline of discrete_ct-finite_if-countable-uncountable"
             }
           },
           {
@@ -211,7 +211,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 279.5
+    "width": 660.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -225,8 +225,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0675000dd05681c6",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "journal/2025/08/2025-08-07.md",
+    "journal/2025/08/2025-08-06.md",
+    "journal/2025/06/2025-06-07.md",
+    "journal/2025/07/2025-07-22.md",
+    "journal/2025/07/2025-07-07.md",
+    "journal/2025/06/2025-06-08.md",
+    "journal/2025/07/2025-07-25.md",
+    "journal/2025/08",
+    "journal/2025/07/2025-07-12.md",
+    "journal/2025/05/2025-05-19.md",
+    "git.md",
     "conversation/chat-export (44).md",
     "non-deterministic function.md",
     "Stochastic kernel (a.k.a. stochastic mapping).md",
@@ -243,23 +254,13 @@
     "codomain.md",
     "event.md",
     "Probability Space.md",
-    "parameter.md",
-    "git.md",
     "Untitled.canvas",
-    "Appendix - REM deduction.md",
     "Pasted image 20250729012701.png",
     "Untitled",
-    "Law of Large Numbers (LLN).md",
-    "kernel.md",
-    "posterior.md",
     "Pasted image 20250729012922.png",
     "Pasted image 20250729012643.png",
     "Pasted image 20250729012630.png",
     "Pasted image 20250729012309.png",
-    "sample.md",
-    "Original REM deduction.md",
-    "event space.md",
-    "pushforward measure.md",
     "Pasted image 20250729010539.png",
     "Pasted image 20250729010317.png",
     "Pasted image 20250728211900.png",
@@ -272,7 +273,6 @@
     "conversation/这儿.txt",
     "conversation/想给你的是璀璨星空 你收到的是暴乱星海.txt",
     "conversation/这儿 (1).txt",
-    "conversation/c-焦急他的没有放松.txt",
-    "conversation/c-过去的历史.txt"
+    "conversation/c-焦急他的没有放松.txt"
   ]
 }

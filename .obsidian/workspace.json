@@ -4,35 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "9a11b0265c64250d",
+        "id": "e7dd28c885fd8e03",
         "type": "tabs",
         "children": [
           {
-            "id": "6d77fce581a46b76",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "0675000dd05681c6",
+            "id": "5c585cd3fa4ebd8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2025/08/2025-08-07.md",
+                "file": "evidence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-08-07"
+              "title": "evidence"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -64,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "warwick",
+                "query": "evidence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -85,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -105,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "evidence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for discrete_ct-finite_if-countable-uncountable"
+              "title": "Backlinks for evidence"
             }
           },
           {
@@ -124,12 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "evidence.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from discrete_ct-finite_if-countable-uncountable"
+              "title": "Outgoing links from evidence"
             }
           },
           {
@@ -153,13 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "file": "evidence.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of discrete_ct-finite_if-countable-uncountable"
+              "title": "Outline of evidence"
             }
           },
           {
@@ -211,7 +201,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 660.5
+    "width": 567.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -227,7 +217,26 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "evidence accumulation models.md",
+    "Bayesian Statistics.md",
+    "Stochastic kernel (a.k.a. stochastic mapping).md",
+    "prior.md",
+    "evidence.md",
+    "posterior.md",
+    "state space - mathcal{X}.md",
+    "kernel.md",
+    "kernal.md",
+    "Lebesgue measure.md",
+    "measure.md",
+    "measurable space.md",
+    "Mapping function - X.md",
+    "random variable.md",
+    "randomness.md",
+    "Dissertation outline.md",
+    "journal/2025/07/2025-07-21.md",
+    "ε.md",
     "journal/2025/08/2025-08-07.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
     "journal/2025/08/2025-08-06.md",
     "journal/2025/06/2025-06-07.md",
     "journal/2025/07/2025-07-22.md",
@@ -235,25 +244,6 @@
     "journal/2025/06/2025-06-08.md",
     "journal/2025/07/2025-07-25.md",
     "journal/2025/08",
-    "journal/2025/07/2025-07-12.md",
-    "journal/2025/05/2025-05-19.md",
-    "git.md",
-    "conversation/chat-export (44).md",
-    "non-deterministic function.md",
-    "Stochastic kernel (a.k.a. stochastic mapping).md",
-    "Markov Chain (MC).md",
-    "Sampling.md",
-    "MCMC.md",
-    "prior.md",
-    "density.md",
-    "Measure - P.md",
-    "P_X.md",
-    "measure.md",
-    "Bayesian Statistics.md",
-    "domain.md",
-    "codomain.md",
-    "event.md",
-    "Probability Space.md",
     "Untitled.canvas",
     "Pasted image 20250729012701.png",
     "Untitled",

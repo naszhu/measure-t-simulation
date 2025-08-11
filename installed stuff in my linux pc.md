@@ -2,6 +2,13 @@
 
 !!uninstall openai for general env.
 
+#### for pdf147 read
+```bash
+# Ubuntu/Debian: 
+sudo apt-get install libzbar0 
+
+```
+
 ## Fonts
 ```bash
 sudo mkdir -p /usr/share/fonts/truetype/custom
@@ -56,6 +63,10 @@ tar xf LibreOffice_*.tar.gz cd LibreOffice_*/DEBS sudo dpkg -i *.deb
 ```
 Because you’re pulling straight from LibreOffice’s own mirror, you may get better throughput.
 
+#### chmod
+```bash
+chmod +x ~/start_cursor_with_proxy.sh
+```
 
 ### R
 ```bash

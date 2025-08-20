@@ -2,12 +2,18 @@
 
 !!uninstall openai for general env.
 
+[[2025-08-17]] [[voice to type - dumb v]] [[voice to type - smart v]]
+
+
 #### for pdf147 read
 ```bash
 # Ubuntu/Debian: 
 sudo apt-get install libzbar0 
 
 ```
+
+#### restart, refresh shell
+- GNOME on Xorg: press Alt+F2, type r, Enter. This restarts the shell and refreshes icons.
 
 ## Fonts
 ```bash
@@ -129,10 +135,31 @@ sudo apt install pdfarranger
 sudo apt install fontforge
 ```
 
+```bash
+# cursor ide
+curl https://cursor.com/install -fsS | bash
+
+#1. Add ~/.local/bin to your PATH:
+#   For bash:
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+#2. Start using Cursor Agent:
+   cursor-agent
+ 
+```
+
+
+
+
+
 ### Pip installed
 ```bash
 pip install radian # this is for better R experience 
 ```
+
+
+
 ### snipaste:
 use_appindicator = true #add this in:
 nano /home/lea/.snipaste/config.ini
@@ -370,4 +397,57 @@ nano ~/.bashrc
 	export JULIA_NUM_THREADS=22;
 	
 	export JULIA_NUM_THREADS=4 
+```
+
+
+#### changed things
+I've successfully fixed your icon setup! Here's what we accomplished:
+
+Make icon to zotero and obesidian
+```text
+I've successfully fixed your icon setup! Here's what we accomplished:
+
+### ✅ Zotero Icon - FIXED
+
+- Icon installed: zotero-zotero.png (128x128) in your local icon directory
+
+- Autostart file updated: Added Icon=zotero-zotero to ~/.config/autostart/zotero.desktop
+
+- Status: Working properly
+
+### ✅ Obsidian Icon - FIXED
+
+- Icon set: Using Icon=text-editor (a generic text editor icon that should work with most icon themes)
+
+- Autostart file updated: Added Icon=text-editor to ~/.config/autostart/obsidian.desktop
+
+- Status: Working with generic icon
+
+### 🔧 What Was Fixed
+
+1. Path issues: Your original command had incorrect file paths
+
+2. Icon installation: Properly installed Zotero icon using xdg-icon-resource
+
+3. Desktop file updates: Added proper Icon= entries to both autostart files
+
+4. Icon cache: Updated icon caches to ensure changes take effect
+
+### 🎯 Current Status
+
+Both applications should now display proper icons in your system tray, autostart manager, and other places where icons are shown.
+
+### �� Optional: Better Obsidian Icon
+
+If you want a more specific Obsidian icon, you have a few options:
+
+1. Download an Obsidian icon: You can download an Obsidian icon from the internet and install it manually
+
+2. Use a different generic icon: Change Icon=text-editor to something like Icon=document-edit or Icon=text-x-generic
+
+3. Create a custom icon: Extract an icon from the Obsidian AppImage using a different method
+
+The current setup should work well for most purposes. The icons will now appear properly in your system, and both applications should start with the correct icons when they autostart.
+
+Would you like me to help you with any of the optional improvements, or are you satisfied with the current working setup?
 ```

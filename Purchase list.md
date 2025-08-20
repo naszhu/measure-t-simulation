@@ -6,8 +6,11 @@
 * A good chair
 * curtain ( UPF面料)
 * 棒球帽
+* 辣椒
 Before leave:
 * get a pair of glasses (actual glasses)
+* 扩展坞
+* phone mount
 
 
 

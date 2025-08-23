@@ -447,12 +447,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "小狗身材尺寸.md",
+                "file": "books to read.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "小狗身材尺寸"
+              "title": "books to read"
             }
           }
         ],
@@ -488,7 +488,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "purchase",
+                "query": "books",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -650,10 +650,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e84469d12c5f831f",
+  "active": "e56b79475849b02e",
   "lastOpenFiles": [
-    "voice to type - smart v.md",
+    "space concept exploration chat.md",
     "小狗身材尺寸.md",
+    "voice to type - smart v.md",
     "installed stuff in my linux pc.md",
     "journal/2025/08/2025-08-17.md",
     "voice to type - dumb v.md",
@@ -681,7 +682,6 @@
     "MDS.md",
     "git.md",
     "Archived GPT Chats.md",
-    "Similarity Q initial touch.md",
     "journal/2025/08",
     "Untitled.canvas",
     "Pasted image 20250729012701.png",

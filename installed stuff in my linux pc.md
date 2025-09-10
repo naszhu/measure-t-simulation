@@ -149,8 +149,12 @@ source ~/.bashrc
  
 ```
 
+```bash
+# in trying to make the mouse work
+sudo apt install libinput-tools
+sudo apt install evtest
 
-
+```
 
 
 ### Pip installed

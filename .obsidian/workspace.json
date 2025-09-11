@@ -35,8 +35,7 @@
               "title": "Draft-intro2"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "probability theory",
+                "query": "scann",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -233,12 +232,14 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "Draft-intro2.md",
+    "Purchase list.md",
+    "journal/2025/09/2025-09-11.md",
     "citations.md",
     "Untitled.base",
     "journal/2025/09/2025-09-10.md",
     "journal/2025/09/2025-09-03.md",
     "familiarity vs. recall.md",
-    "Draft-intro2.md",
     "state space - mathcal{X}.md",
     "Untitled 1.md",
     "Draft-intro1.md",
@@ -258,7 +259,6 @@
     "journal/2025/08/2025-08-17.md",
     "installed stuff in my linux pc.md",
     "voice to type - smart v.md",
-    "Probability theory.md",
     "journal/2025/09",
     "Pasted image 20250815005001.png",
     "Pasted image 20250815004950.png",

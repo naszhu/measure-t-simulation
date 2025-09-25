@@ -284,16 +284,6 @@
             }
           },
           {
-            "id": "eff2a62fff0231ea",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
             "id": "2433848e7404478d",
             "type": "leaf",
             "state": {
@@ -316,9 +306,19 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "eff2a62fff0231ea",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -339,6 +339,7 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "discrete_ct-finite_if-countable-uncountable.md",
     "journal/2025/09/2025-09-21.md",
     "journal/2025/09/2025-09-19.md",
     "journal/2025/09/2025-09-03.md",
@@ -373,7 +374,6 @@
     "C3, 3-3.2 Aim and Method.md",
     "C3, 3-3.2 -old.md",
     "Dissertation outline.md",
-    "journal/2025/09/2025-09-12.md",
     "Untitled 2.base",
     "Untitled 1.base",
     "Untitled.base",

@@ -1,4 +1,5 @@
 - _随机变量_ X 本质上是一个确定性函数 $X:\Omega\to\mathcal X$。the randomness coming from we don't know $\omega$ 
+* a random variable is not “the randomness itself” — it’s a _lens_ you apply to the raw outcome space.
 
 
 random variable vs. [[parameter]]

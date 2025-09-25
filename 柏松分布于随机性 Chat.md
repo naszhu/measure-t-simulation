@@ -1,4 +1,5 @@
 [[Poisson distribution]]
+[[Poisson process]]
 [[Stochastic Process]]
 
 [[Archived GPT Chats]]

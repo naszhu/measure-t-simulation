@@ -6,6 +6,7 @@
       {
         "id": "a7c38e20ceaea042",
         "type": "tabs",
+        "dimension": 82.78829604130809,
         "children": [
           {
             "id": "b7d3051e559d2efb",
@@ -13,39 +14,68 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dissertation ALL.md",
+                "file": "journal/2025/09/2025-09-21.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dissertation ALL"
+              "title": "2025-09-21"
             }
           },
           {
-            "id": "be212d75da12c45a",
+            "id": "5e6e9ca0a6f46265",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "E1.md",
+                "file": "柏松分布于随机性 Chat.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "E1"
+              "title": "柏松分布于随机性 Chat"
             }
           },
           {
-            "id": "c5c0f7cea3b6c36d",
+            "id": "5b04fa7cb7975273",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Untitled 3.base",
-                "viewName": "Table"
+                "file": "Poisson distribution.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled 3"
+              "icon": "lucide-file",
+              "title": "Poisson distribution"
+            }
+          },
+          {
+            "id": "1c886cb3f5d8ba50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Binomial Distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Binomial Distribution"
+            }
+          },
+          {
+            "id": "6e17b158186e4b0e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Poisson distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Poisson distribution"
             }
           },
           {
@@ -76,12 +106,12 @@
               "title": "C3, 3-3.2 -old"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "521eccf6eae1bcf4",
         "type": "tabs",
+        "dimension": 17.21170395869191,
         "children": [
           {
             "id": "72e47b81993ebd33",
@@ -144,7 +174,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "state space",
+                "query": "proxy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -292,7 +322,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 437.5
+    "width": 535.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -309,36 +339,44 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
-    "Untitled 4.base",
     "journal/2025/09/2025-09-21.md",
-    "Outline-g.md",
+    "journal/2025/09/2025-09-19.md",
+    "journal/2025/09/2025-09-03.md",
+    "C2.md",
+    "installed stuff in my linux pc.md",
+    "C5.3 model e1.md",
+    "Dissertation ALL.md",
+    "Purchase list.md",
+    "Untitled 3.base",
+    "Poisson process.md",
+    "Pasted image 20250923173755.png",
+    "Poisson distribution.md",
+    "柏松分布于随机性 Chat.md",
+    "Binomial Distribution.md",
+    "Pasted image 20250922193451.png",
+    "random variable.md",
+    "Pasted image 20250922193123.png",
+    "distribution.md",
+    "Untitled 7.base",
+    "descrete.md",
+    "countable.md",
+    "history-temp.md",
+    "Pasted image 20250921182332.png",
+    "Untitled 6.base",
+    "Untitled 5.base",
     "E1.md",
+    "Untitled 4.base",
+    "Outline-g.md",
     "stochastic kernel /test.md",
     "stochastic kernel /Untitled.md",
-    "Dissertation ALL.md",
-    "Untitled 3.base",
     "C4, 4 to 4.2.md",
     "C3, 3-3.2 Aim and Method.md",
     "C3, 3-3.2 -old.md",
     "Dissertation outline.md",
     "journal/2025/09/2025-09-12.md",
-    "journal/2025/09/2025-09-11.md",
-    "Draft-intro2.md",
-    "state space - mathcal{X}.md",
     "Untitled 2.base",
-    "Bayesian Statistics.md",
-    "likelihood.md",
     "Untitled 1.base",
-    "citations.md",
-    "Purchase list.md",
     "Untitled.base",
-    "journal/2025/09/2025-09-10.md",
-    "journal/2025/09/2025-09-03.md",
-    "familiarity vs. recall.md",
-    "Untitled 1.md",
-    "Draft-intro1.md",
-    "My Philosophy.md",
-    "Question.md",
     "journal/2025/09",
     "Pasted image 20250815005001.png",
     "Pasted image 20250815004950.png",
@@ -347,13 +385,6 @@
     "journal/2025/08",
     "Untitled.canvas",
     "Pasted image 20250729012701.png",
-    "Untitled",
-    "Pasted image 20250729012922.png",
-    "Pasted image 20250729012643.png",
-    "Pasted image 20250729012630.png",
-    "Pasted image 20250729012309.png",
-    "Pasted image 20250729010539.png",
-    "stochastic kernel ",
-    "journal/2025/07"
+    "Pasted image 20250729012922.png"
   ]
 }

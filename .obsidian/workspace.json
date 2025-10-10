@@ -6,7 +6,7 @@
       {
         "id": "a7c38e20ceaea042",
         "type": "tabs",
-        "dimension": 32.48053392658509,
+        "dimension": 64.47602131438721,
         "children": [
           {
             "id": "b7d3051e559d2efb",
@@ -126,7 +126,7 @@
       {
         "id": "521eccf6eae1bcf4",
         "type": "tabs",
-        "dimension": 67.5194660734149,
+        "dimension": 35.52397868561279,
         "children": [
           {
             "id": "72e47b81993ebd33",
@@ -351,7 +351,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e84469d12c5f831f",
+  "active": "a57f50fbff2db439",
   "lastOpenFiles": [
     "Pasted image 20251008193304.png",
     "Pasted image 20251008193247.png",

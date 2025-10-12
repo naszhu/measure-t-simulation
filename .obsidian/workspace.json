@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Embedding.md",
+                "file": "journal/2025/10/2025-10-12.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Embedding"
+              "title": "2025-10-12"
             }
           },
           {
@@ -351,8 +351,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a57f50fbff2db439",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "journal/2025/10/2025-10-12.md",
+    "Embedding.md",
     "Pasted image 20251008193304.png",
     "Pasted image 20251008193247.png",
     "chat-export (57).md",
@@ -386,7 +388,6 @@
     "Untitled 7.base",
     "descrete.md",
     "countable.md",
-    "history-temp.md",
     "Pasted image 20250921182332.png",
     "Untitled 6.base",
     "Untitled 5.base",
@@ -398,7 +399,6 @@
     "Pasted image 20250815004950.png",
     "Pasted image 20250815004935.png",
     "Pasted image 20250815004933.png",
-    "Untitled.canvas",
-    "Pasted image 20250729012701.png"
+    "Untitled.canvas"
   ]
 }

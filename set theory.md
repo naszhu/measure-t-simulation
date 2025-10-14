@@ -1,5 +1,43 @@
-**Universal Set Ω and Empty Set ∅:**  
+---
+
+---
+
+---
   
+## **1. Sum vs. Product in set theory (and vector spaces)**
+### **Product in set theory**
+
+[[product space]]
+If $A, B$ are sets,
+
+$$
+
+A \times B = \{(a,b): a\in A,\ b\in B\}.
+
+$$
+
+That’s the set of **ordered pairs**.
+
+If $|A|=m$ and $|B|=n$, then $|A\times B| = m\times n$.
+Intuitively:
+- Each point in $A\times B$ combines one element from each set.
+- It creates a *grid* (like coordinates).
+### **Sum (disjoint union) in set theory**
+[[sum space]]
+$$
+
+A \sqcup B = (\{0\}\times A) \cup (\{1\}\times B).
+
+$$
+That’s the **disjoint union** — the set of all elements from $A$ and from $B$, but tagged so we know which set they came from.
+If $|A|=m$ and $|B|=n$, then $|A\sqcup B|=m+n$.
+Intuitively:
+- You’re *stacking* sets side-by-side, not connecting elements pairwise.
+- Elements of $A$ and $B$ coexist but don’t fuse into joint coordinates.
+
+---
+**Universal Set Ω and Empty Set ∅:**  
+
 **Definition:**  
 • Ω = universal set (contains all elements in the domain)  
 • ∅ = empty set (contains no elements)  
@@ -24,3 +62,4 @@ Example: A = {1, 2, ∅}
 • ∅ ∈ A ✓ ([membership] relation)
 
 [[2025-07-25]] More on Space (thought in ChongQing)
+

@@ -28,12 +28,222 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2025/10/2025-10-12.md",
+                "file": "distribution.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-10-12"
+              "title": "distribution"
+            }
+          },
+          {
+            "id": "836971126db5577f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Poisson distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Poisson distribution"
+            }
+          },
+          {
+            "id": "93fa4057d7e6e73c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "distribution"
+            }
+          },
+          {
+            "id": "660116bb75d6d85c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Stochastic Process.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stochastic Process"
+            }
+          },
+          {
+            "id": "22c2440dca7f7400",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "simple random walk.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "simple random walk"
+            }
+          },
+          {
+            "id": "510a7c654cc4bfc9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Poisson distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Poisson distribution"
+            }
+          },
+          {
+            "id": "3effc9da6607db1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Gamma (Erlang) distribution.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Gamma (Erlang) distribution"
+            }
+          },
+          {
+            "id": "a6d8ee3db83e356e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Model of Intention Selection (MIS).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Model of Intention Selection (MIS)"
+            }
+          },
+          {
+            "id": "4f746d46e6588370",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "product space"
+            }
+          },
+          {
+            "id": "d42a2c5336bf1c56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "sum space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "sum space"
+            }
+          },
+          {
+            "id": "3963b48bc5936593",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "product space"
+            }
+          },
+          {
+            "id": "81135fd8b44abcdf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "set theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "set theory"
+            }
+          },
+          {
+            "id": "e1534c63e771818a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "product space"
+            }
+          },
+          {
+            "id": "2d0d4d6100500f8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Space"
+            }
+          },
+          {
+            "id": "bc2ae7ec9230166f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "product space"
+            }
+          },
+          {
+            "id": "f0f056a71a0e6cf8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Space"
             }
           },
           {
@@ -121,7 +331,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 16
       },
       {
         "id": "521eccf6eae1bcf4",
@@ -155,9 +365,23 @@
               "icon": "lucide-file",
               "title": "Application"
             }
+          },
+          {
+            "id": "7b86ba7367a9c313",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "writing ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "writing ideas"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -189,8 +413,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
-                "matchingCase": false,
+                "query": "space",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
@@ -210,7 +434,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -336,7 +561,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 664.5
+    "width": 210.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -351,54 +576,54 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e84469d12c5f831f",
+  "active": "7b86ba7367a9c313",
   "lastOpenFiles": [
+    "Application.md",
+    "writing ideas.md",
+    "Space.md",
+    "Pasted image 20251014125344.png",
+    "Pasted image 20251014125200.png",
+    "Pasted image 20251014124851.png",
+    "product space.md",
+    "Pasted image 20251014124709.png",
+    "Pasted image 20251014124658.png",
+    "sum space.md",
+    "Pasted image 20251014124647.png",
+    "embedded space.md",
+    "Pasted image 20251014124622.png",
+    "Pasted image 20251014124554.png",
+    "Pasted image 20251014124547.png",
+    "Pasted image 20251014124506.png",
+    "factorized.md",
+    "set theory.md",
+    "Model of Intention Selection (MIS).md",
+    "Poisson distribution.md",
+    "Gamma (Erlang) distribution.md",
+    "simple random walk.md",
+    "Stochastic Process.md",
+    "stochastic process.md",
+    "distribution.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
     "journal/2025/10/2025-10-12.md",
     "Embedding.md",
-    "Pasted image 20251008193304.png",
-    "Pasted image 20251008193247.png",
     "chat-export (57).md",
     "journal/2025/10/2025-10-01.md",
     "journal/2025/10",
     "git.md",
-    "Application.md",
     "AC my model Chat.md",
     "journal/2025/09/2025-09-21.md",
     "Untitled",
     "voice to type - dumb v.md",
     "journal/2025/09/2025-09-03.md",
     "voice to type - smart v.md",
-    "discrete_ct-finite_if-countable-uncountable.md",
-    "journal/2025/09/2025-09-19.md",
-    "C2.md",
-    "installed stuff in my linux pc.md",
-    "C5.3 model e1.md",
-    "Dissertation ALL.md",
-    "Purchase list.md",
     "Untitled 3.base",
-    "Poisson process.md",
-    "Pasted image 20250923173755.png",
-    "Poisson distribution.md",
-    "柏松分布于随机性 Chat.md",
-    "Binomial Distribution.md",
-    "Pasted image 20250922193451.png",
-    "random variable.md",
-    "Pasted image 20250922193123.png",
-    "distribution.md",
     "Untitled 7.base",
-    "descrete.md",
-    "countable.md",
-    "Pasted image 20250921182332.png",
     "Untitled 6.base",
     "Untitled 5.base",
     "Untitled 4.base",
     "Untitled 2.base",
     "Untitled 1.base",
     "Untitled.base",
-    "Pasted image 20250815005001.png",
-    "Pasted image 20250815004950.png",
-    "Pasted image 20250815004935.png",
-    "Pasted image 20250815004933.png",
     "Untitled.canvas"
   ]
 }

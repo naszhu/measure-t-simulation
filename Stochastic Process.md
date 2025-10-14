@@ -2,7 +2,7 @@
 [[OU process]]
 [[Poisson process]]
 
-
+[[simple random walk]]
 
 contains [[time series]] process
 

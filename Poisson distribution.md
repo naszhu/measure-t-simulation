@@ -1,5 +1,7 @@
 [[Poisson process]]
 
+[[distribution]]
+
 [[countable]]
 [[descrete]]
 [[柏松分布于随机性 Chat]] chat history
@@ -66,3 +68,55 @@ when you let the number of trials go to infinity while making each trial’s suc
 - **匀速性**：在同样长度的时间段里，撒豆子的期望次数一样。
     
     > 也就是说，如果 1 分钟平均撒 3 颗，那么每个 20 秒的期望是 1 颗。
+    
+
+----
+### From Poisson (count) to Gamma (waiting time)
+
+Let \( N(t) \) be a homogeneous Poisson process with constant rate \( \lambda \).
+
+#### 1. Poisson view — distribution of counts
+The number of events observed by time \( t \) is:
+
+$$
+P(N(t) = k) = \frac{(\lambda t)^k e^{-\lambda t}}{k!}, \quad k = 0, 1, 2, \ldots
+$$
+
+#### 2. Waiting-time view — distribution of finishing time
+Let \( T_k \) denote the *time of the k-th event*:
+
+$$
+T_k = \sum_{i=1}^{k} E_i, \quad E_i \stackrel{iid}{\sim} \text{Exp}(\lambda)
+$$
+
+Then the pdf of \( T_k \) is the [[Gamma (Erlang) distribution]]:
+
+$$
+f_{T_k}(t) = \frac{\lambda^k t^{k-1} e^{-\lambda t}}{(k-1)!}, \quad t > 0
+$$
+
+#### 3. Relationship between the two
+These two views describe the same process:
+
+$$
+P(N(t) \ge k) = P(T_k \le t)
+$$
+
+and differentiating w.r.t. \( t \) converts between them.
+
+Hence:
+
+- The **Poisson distribution** gives the *probability of k events by time t*.
+- The **Gamma distribution** gives the *distribution of the time for k events*.
+
+They are dual descriptions of the same Poisson process.
+
+
+---
+## Poisson and exponential
+![[Pasted image 20251014114928.png]]
+“The probability that **no event has happened yet** by time _t_ is the same as the probability that **the waiting time until the first event** is **longer than _t_**.”
+
+
+![[Pasted image 20251014114951.png]]
+![[Pasted image 20251014115256.png]]

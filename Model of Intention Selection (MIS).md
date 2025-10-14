@@ -27,3 +27,7 @@ $\lambda(\chi _i,k_j)$, while
 	-   $k\in K$, $K=\{k_{AD},k_{MC},k_{p}\}$: 
 	- [attention, motor, proposition]
 
+
+
+![[output (3).png]]
+Race example

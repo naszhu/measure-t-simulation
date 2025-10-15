@@ -2,6 +2,8 @@ Grunbumn et al., 2012
 about [[intention]]
 This is = [[Theory of Visual Attention (TVA)]] model
 
+[[meeting oct15]]
+
 -> essentially is a hierarchical [[racing model]] , or say, a hierarchical [[Poisson racing model]]  
 
 -> essentially is [[GCM]] + Time + capacity constraints

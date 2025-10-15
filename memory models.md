@@ -10,3 +10,5 @@
 [[Prospective Memory Decision Control (PMDC)]]
 
 [[prospective memory Model(PM)]]
+
+[[single-proess]] vs. [[dual-process]]

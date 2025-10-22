@@ -16,7 +16,7 @@
 
 
 ### Set theory view
-
+![[output (11).png]]
 ![[Pasted image 20251014125200.png]]
 
 ### Spacial view

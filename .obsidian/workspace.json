@@ -13,26 +13,40 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dissertation outline.md",
+                "file": "class notes for students/lession0_1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dissertation outline"
+              "title": "lession0_1"
             }
           },
           {
-            "id": "45264ef5f6742e88",
+            "id": "5c1d3a51174073d4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "single-proess.md",
+                "file": "generator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "single-proess"
+              "title": "generator"
+            }
+          },
+          {
+            "id": "e8ccbcc678e21ad0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "parallel processing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "parallel processing"
             }
           },
           {
@@ -55,30 +69,43 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Model of Intention Selection (MIS).md",
+                "file": "writing ideas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Model of Intention Selection (MIS)"
+              "title": "writing ideas"
             }
           },
           {
-            "id": "37261e543eea7c59",
+            "id": "55c7b2fff08b4f04",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "writing ideas.md",
-                "bFile": "writing ideas.md",
-                "aRef": ""
+                "file": "embedded space.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: writing ideas"
+              "icon": "lucide-file",
+              "title": "embedded space"
+            }
+          },
+          {
+            "id": "c6ed460df0d468bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "factorized.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "factorized"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +137,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MIS",
-                "matchingCase": true,
+                "query": "parallel processing",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
                 "extraContext": false,
@@ -131,8 +158,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -200,13 +226,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "installed stuff in my linux pc.md",
+                "file": "class notes for students/lession0_1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of installed stuff in my linux pc"
+              "title": "Outline of lession0_1"
             }
           },
           {
@@ -258,7 +284,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 586.5
+    "width": 548.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -273,54 +299,54 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "37261e543eea7c59",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "Obsidian Vault.code-workspace",
+    "Myideas/context_unified_operator.md",
+    "Myideas",
+    "stochastic kernel /Myideas",
+    "class notes for students/lesson2-note-assignment.md",
+    "class notes for students/lesson0_class_notes.md",
+    "class notes for students/jose_class0_notes_assignments.md",
+    "journal/2025/10/2025-10-15.md",
+    "class notes for students/lession0_1.md",
+    "Untitled 2.md",
+    "class notes for students",
+    "parallel processing.md",
+    "generator.md",
+    "Pasted image 20251015204108.png",
+    "conversation/mis_meeting_slides (1).md",
+    "Untitled 9.base",
+    "factorized.md",
+    "Untitled 8.base",
+    "mis_meeting_slides (1).md",
+    "Space.md",
+    "output (11).png",
+    "Dissertation outline.md",
+    "single-proess.md",
+    "embedded space.md",
+    "my unified framework.md",
+    "Pasted image 20251015091447.png",
+    "Pasted image 20251015091446.png",
+    "writing ideas.md",
     "Model of Intention Selection (MIS).md",
     "My idea - ConinAct.md",
     "meeting oct15.md",
     "Pasted image 20251015090107.png",
-    "single-proess.md",
     "Pasted image 20251015085854.png",
     "Pasted image 20251015085853.png",
     "memory models.md",
     "dual-process.md",
-    "Dissertation outline.md",
-    "Application.md",
-    "writing ideas.md",
+    "conversation/Application.md",
     "C3, 3-3.2 -old.md",
-    "C3, 3-3.2 Aim and Method.md",
-    "Poisson distribution.md",
-    "Binomial Distribution.md",
-    "柏松分布于随机性 Chat.md",
-    "journal/2025/10/2025-10-01.md",
-    "distribution.md",
-    "Stochastic Process.md",
-    "simple random walk.md",
-    "Gamma (Erlang) distribution.md",
-    "product space.md",
-    "sum space.md",
-    "set theory.md",
-    "Space.md",
     "Pasted image 20251014125344.png",
     "Pasted image 20251014125200.png",
     "Pasted image 20251014124851.png",
-    "Pasted image 20251014124709.png",
-    "Pasted image 20251014124658.png",
-    "Pasted image 20251014124647.png",
-    "embedded space.md",
-    "Pasted image 20251014124622.png",
-    "factorized.md",
-    "stochastic process.md",
     "journal/2025/10",
-    "Untitled",
     "Untitled 3.base",
     "Untitled 7.base",
     "Untitled 6.base",
     "Untitled 5.base",
-    "Untitled 4.base",
-    "Untitled 2.base",
-    "Untitled 1.base",
-    "Untitled.base",
     "Untitled.canvas"
   ]
 }

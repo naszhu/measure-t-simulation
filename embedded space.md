@@ -1,1 +1,2 @@
+[[Space]]
 ![[Pasted image 20251014124622.png]]

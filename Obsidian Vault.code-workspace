@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorTheme": "GitHub Light",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
+    "editor.lineHeight": 1.6,
+    "workbench.colorCustomizations": {
+      "editor.background": "#fafafa",
+      "sideBar.background": "#f5f5f5",
+      "activityBar.background": "#f0f0f0"
+    }
+  }
+}

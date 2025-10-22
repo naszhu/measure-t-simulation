@@ -1,5 +1,43 @@
 [[outer product]]  
 [[Space]]
+is also [[function space]]
+
+### Product space
+Given two sets $A$ and $B$:
+
+$$
+A \times B = \{(a,b) \mid a\in A, b\in B\}
+$$
+
+Each element $(a,b)$ can be viewed as a **function**  
+$$
+f:\{1,2\}\to A\cup B, \quad f(1)=a,\ f(2)=b.
+$$
+
+Hence:  
+- The *pair (a,b)* is one *function* that selects one value from each set.  
+- The whole Cartesian product $A×B$ is then the *set of all such 2-point functions*.  
+
+So yes: **product space = function space from an index set to component sets.**
+
+---
+
+## 2. Generalization
+
+For any family of sets $\{X_i\}_{i\in I}$:  
+$$
+\prod_{i\in I} X_i = \{f : I \to \bigcup_{i\in I} X_i \mid f(i)\in X_i\ \forall i\}
+$$
+
+This is the **general product definition in set theory**,  
+and it *is* exactly a **function space** over index set $I$.  
+
+- Domain of functions → index set $I$ (labels of coordinates)  
+- Codomain → union of all $X_i$  
+- Constraint → each coordinate must land in the corresponding component $X_i$
+
+So when $I=\{1,2\}$, this reduces to your intuition:  
+each “line” (pair) is a function assigning coordinate 1 → some A-value, coordinate 2 → some B-value.  
 
 ### spatial view 
 ![[Pasted image 20251014124658.png]]

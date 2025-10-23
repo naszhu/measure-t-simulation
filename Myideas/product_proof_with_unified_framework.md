@@ -4,15 +4,15 @@
 
 The lemma chain from the *set-theoretic product construction* exposes the logical scaffolding underlying memory operators in the unified short-term memory (STM) framework. Each lemma specifies a structural property that corresponds to an operator-level transformation in the cognitive model.
 
-| Lemma  | Mathematical Principle             | Cognitive Operator                                                            | Function in STM Equation                                                       |
-| ------ | ---------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| **A1** | Existence & Symmetry of Product    | **Encoding space construction**                                               | Defines the total representational manifold ($A \times B = f_t \otimes \psi_t$). |
-| **A2** | Function & Single-valuedness       | **Encoding operator** ($f_t = \Phi_{item}(x_t)$, $\psi_t = \Phi_{context}(y_t)$) | Guarantees well-defined one-to-one mapping at encoding.                        |
-| **A3** | Canonical product refinement       | **Context drift operator** ($\psi_{t+1} = A_t\psi_t + B_t f_t$)                 | Expands context per event; creates disjoint subspaces.                         |
-| **A4** | Collapse / projection              | **Cue overlap operator**                                                      | Defines retrieval cue generalization (collapse of drifted contexts).           |
-| **A5** | Inverse relation                   | **Retrieval operator** ($a(i \mid \text{cue}) = f_i^\top W\psi(\text{cue})$)                                                    | Inverts encoding to recover items given contextual cues. |
-| **A6** | Common refinement / unit alignment | **Feature normalization / similarity metric**                                 | Ensures comparability of feature grains between item and context spaces.       |
-| **A7** | Aggregation                        | **Decision or accumulation operator** (EBRW, REM)                             | Integrates local evidence into global retrieval probability.                   |
+| Lemma  | Mathematical Principle             | Cognitive Operator                                                               | Function in STM Equation                                                         |
+| ------ | ---------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **A1** | Existence & Symmetry of Product    | **Encoding space construction**                                                  | Defines the total representational manifold ($A \times B = f_t \otimes \psi_t$). |
+| **A2** | Function & Single-valuedness       | **Encoding operator** ($f_t = \Phi_{item}(x_t)$, $\psi_t = \Phi_{context}(y_t)$) | Guarantees well-defined one-to-one mapping at encoding.                          |
+| **A3** | Canonical product refinement       | **Context drift operator** ($\psi_{t+1} = A_t\psi_t + B_t f_t$)                  | Expands context per event; creates disjoint subspaces.                           |
+| **A4** | Collapse / projection              | **Cue overlap operator**                                                         | Defines retrieval cue generalization (collapse of drifted contexts).             |
+| **A5** | Inverse relation                   | **Retrieval operator** ($a(i \mid \text{cue}) = f_i^\top W\psi(\text{cue})$)     | Inverts encoding to recover items given contextual cues.                         |
+| **A6** | Common refinement / unit alignment | **Feature normalization / similarity metric**                                    | Ensures comparability of feature grains between item and context spaces.         |
+| **A7** | Aggregation                        | **Decision or accumulation operator** (EBRW, REM)                                | Integrates local evidence into global retrieval probability.                     |
 
 Together, these lemmas form the *operator logic* of the STM equation:
 

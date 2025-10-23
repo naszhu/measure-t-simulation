@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "function.md",
+                "file": "bijective.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "function"
+              "title": "bijective"
             }
           },
           {
@@ -222,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "product space",
+                "query": "biject",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -312,13 +312,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "function.md",
+                "file": "bijective.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of function"
+              "title": "Outline of bijective"
             }
           },
           {
@@ -387,6 +387,18 @@
   },
   "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "Myideas/AIM model copy.md",
+    "Myideas/RAW inverse proof.md",
+    "Myideas/critique of AIM.md",
+    "Myideas/Untitled.md",
+    "Myideas/AIM model.md",
+    "journal/2025/10/2025-10-22.md",
+    "Untitled 10.base",
+    "Pasted image 20251023093725.png",
+    "Pasted image 20251023093723.png",
+    "function.md",
+    "Myideas/measure_theoryproof pure.md",
+    "Myideas/measure_theory_proof.md",
     "Myideas/SCCM.md",
     "Myideas/product_proof_with_unified_framework.md",
     "Myideas/product_proof.md",
@@ -414,25 +426,13 @@
     "journal/2025/10/2025-10-15.md",
     "class notes for students",
     "parallel processing.md",
-    "generator.md",
     "Pasted image 20251015204108.png",
-    "conversation/mis_meeting_slides (1).md",
     "Untitled 9.base",
-    "factorized.md",
     "Untitled 8.base",
-    "mis_meeting_slides (1).md",
-    "Space.md",
     "output (11).png",
-    "Dissertation outline.md",
-    "single-proess.md",
-    "embedded space.md",
-    "my unified framework.md",
-    "Pasted image 20251015091447.png",
-    "Pasted image 20251015091446.png",
     "journal/2025/10",
     "Untitled 3.base",
     "Untitled 7.base",
-    "Untitled 6.base",
     "Untitled.canvas"
   ]
 }

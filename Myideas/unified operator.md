@@ -44,15 +44,7 @@ This operator defines a multidimensional functional space from which all major S
 
 Each major STM model can be expressed as a specific instantiation of the unified operator equation $W = \sum_{t=1}^{T}\gamma_t f_t \otimes \psi_t$ with particular forms for $f_t$, $\psi_t$, and $\gamma_t$:
 
-### REM (Retrieving Effectively from Memory)
-**Unified Form:**
-- $f_t$ = feature vector for item $t$ (high-dimensional binary features)
-- $\psi_t$ = context vector (evolves via drift: $\psi_{t+1} = \rho\psi_t + \eta f_t$)
-- $\gamma_t$ = encoding strength (constant or novelty-weighted)
-- $W = \sum_{t=1}^{T} f_t \otimes \psi_t$
-
-**Key Features:** Stochastic sampling from similarity distributions; context drift creates temporal contiguity effects.
-
+[[REM in operator]]
 ### TCM (Temporal Context Model)
 **Unified Form:**
 - $f_t$ = item vector (orthogonal or similarity-based)
@@ -345,11 +337,11 @@ where decay operators $D_f,D_\psi$ act on items, contexts, or both.
 
 | Level              | Mathematical Form                    | Typical Model | Conceptual Meaning                 |        |                                  |
 | ------------------ | ------------------------------------ | ------------- | ---------------------------------- | ------ | -------------------------------- |
-| Temporal metric    | $D_\psi = e^{-\lambda|t_i - t_j|}$ | SIMPLE | Time-based discriminability loss |
-| Context drift      | $\psi_{t+1} = \rho\psi_t + \eta f_t$ | TCM           | Gradual context decorrelation      |
-| Encoding weight    | $\gamma_t = n_t$ (novelty gating)    | SOB           | Attention/novelty-driven loss      |
-| Decision weighting | $a_t = e^{-\lambda t}$               | EBRW          | Evidence decay during accumulation |
-| Weight decay       | $W_{t+1} = (1-\lambda)W_t+\dots$     | ACT-R, SAM    | Connection-strength decay          |
+| Temporal metric    | $D_\psi = e^{-\lambda                \| t_i - t_j     \| }$                                 | SIMPLE | Time-based discriminability loss |
+| Context drift      | $\psi_{t+1} = \rho\psi_t + \eta f_t$ | TCM           | Gradual context decorrelation      |        |                                  |
+| Encoding weight    | $\gamma_t = n_t$ (novelty gating)    | SOB           | Attention/novelty-driven loss      |        |                                  |
+| Decision weighting | $a_t = e^{-\lambda t}$               | EBRW          | Evidence decay during accumulation |        |                                  |
+| Weight decay       | $W_{t+1} = (1-\lambda)W_t+\dots$     | ACT-R, SAM    | Connection-strength decay          |        |                                  |
 
 Each represents the same formal process: *loss of representational alignment* between item and context spaces.
 

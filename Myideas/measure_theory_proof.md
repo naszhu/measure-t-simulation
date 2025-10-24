@@ -24,15 +24,15 @@ Thus, all models implicitly fix representational *granularity*. They cannot desc
 
 ### 3.1 Definition
 
-Let memory be a measure space ((\Omega, \mathcal{F}, \mu)), where (\mu) quantifies representational density (activation, precision, or available cognitive resource).
+Let memory be a measure space $(\Omega, \mathcal{F}, \mu)$, where $\mu$ quantifies representational density (activation, precision, or available cognitive resource).
 
 Encoding and retrieval then act as **measure-transforming operators**:
-[\mu_{t+1} = T_t \mu_t,]
-where (T_t) may preserve, contract, or redistribute the total measure.
+$$\mu_{t+1} = T_t \mu_t$$
+where $T_t$ may preserve, contract, or redistribute the total measure.
 
 ### 3.2 Interpretation
 
-* **Operator view (classic models):** memory evolves through vector transformations ((W, D_f, D_\psi)).
+* **Operator view (classic models):** memory evolves through vector transformations $(W, D_f, D_\psi)$.
 * **Measure view (proposed):** memory evolves through density redistribution across representational space.
 
 **Drift**, **forgetting**, and **interference** correspond not merely to vector changes but to changes in *the density measure* over representational states.
@@ -45,12 +45,12 @@ where (T_t) may preserve, contract, or redistribute the total measure.
 
 Memory dynamics are **measure-preserving refinements** followed by **operator-induced compressions**:
 
-[\mu_{t+1} = D_t (R_t \mu_t),]
+$$\mu_{t+1} = D_t (R_t \mu_t)$$
 
 where:
 
-* (R_t): refinement operator (adds granularity, splits representational atoms),
-* (D_t): decay/compression operator (reduces total measure or merges subspaces).
+* $R_t$: refinement operator (adds granularity, splits representational atoms),
+* $D_t$: decay/compression operator (reduces total measure or merges subspaces).
 
 ### 4.2 Psychological Interpretation
 
@@ -71,13 +71,13 @@ where:
 
 ## 5. Formal Structure
 
-Let each encoded trace be represented by a local measure patch (\mu_i) with total mass (m_i). Then:
+Let each encoded trace be represented by a local measure patch $\mu_i$ with total mass $m_i$. Then:
 
-1. **Encoding (refinement)**: (\mu_i^{enc} = R_i(\mu_{i-1}) = \mu_{i-1} \ast K_i), where (K_i) is a refinement kernel that increases representational resolution.
-2. **Maintenance**: (\mu_i^{maint} = (1 - \lambda)\mu_i^{enc} + \lambda\eta), conserving total mass but diffusing it.
+1. **Encoding (refinement)**: $\mu_i^{enc} = R_i(\mu_{i-1}) = \mu_{i-1} \ast K_i$, where $K_i$ is a refinement kernel that increases representational resolution.
+2. **Maintenance**: $\mu_i^{maint} = (1 - \lambda)\mu_i^{enc} + \lambda\eta$, conserving total mass but diffusing it.
 3. **Retrieval**: similarity is defined as measure overlap:
-   [a(i|cue) = \int f_i(x) f_{cue}(x),d\mu(x).]
-4. **Forgetting (compression)**: (\mu_{t+1}^{comp} = D_t(\mu_t) = \int K_t(x,y),d\mu_t(y)), with (K_t) a contraction kernel.
+   $$a(i|cue) = \int f_i(x) f_{cue}(x) \, d\mu(x)$$
+4. **Forgetting (compression)**: $\mu_{t+1}^{comp} = D_t(\mu_t) = \int K_t(x,y) \, d\mu_t(y)$, with $K_t$ a contraction kernel.
 
 ---
 
@@ -86,7 +86,7 @@ Let each encoded trace be represented by a local measure patch (\mu_i) with tota
 1. **Dynamic Granularity:** Representational units will vary in resolution across encoding and test. Neural representational similarity (RSA) matrices should show *progressive smoothing* with delay.
 2. **Nonlinear Forgetting:** Forgetting curves follow *measure compression dynamics*, typically sub-exponential rather than power-law.
 3. **List-Context Dependence:** Overlap between refined and compressed measures predicts asymmetric interference between short and long lists.
-4. **Memory Capacity as Conservation Law:** Total representational mass ((\int d\mu)) remains constant; only redistributed—explaining resource-like constraints.
+4. **Memory Capacity as Conservation Law:** Total representational mass $(\int d\mu)$ remains constant; only redistributed—explaining resource-like constraints.
 
 ---
 

@@ -1,6 +1,8 @@
 **Title:** A Projection-Based Interpretation of the Environmental Base Rate in REM
-
+[[Deese–Roediger–McDermott (DRM)]]
 ---
+
+![[Pasted image 20251025153410.png]]
 
 ### 1. Conceptual Overview
 

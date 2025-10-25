@@ -3,6 +3,7 @@
 
 You can say, that the original [[Measure - P]] on [[Sample space - Omega]] is P, and then you say the pushforward measure after pushing P through X onto x ([[state space - mathcal{X}]]), would be written as P_X; 
 
+![[Pasted image 20251025153247.png]]
 # definition
 - $P_X$ is the **pushforward measure** on $\mathcal{X}$ (the state space of ). It is defined as $P_X(A)=P(X^{−1}(A))$.
 

@@ -83,40 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Myideas/unified operator.md",
+                "file": "journal/2025/09/2025-09-01.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "unified operator"
-            }
-          },
-          {
-            "id": "90a918c48b2c7702",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Myideas/RAW inverse proof.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "RAW inverse proof"
-            }
-          },
-          {
-            "id": "0b93305b506cdd66",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Myideas/REM Projection.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "REM Projection"
+              "title": "2025-09-01"
             }
           },
           {
@@ -218,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -250,7 +222,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rem",
+                "query": "biject",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -339,13 +311,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "journal/2025/10/2025-10-22.md",
+                "file": "journal/2025/09/2025-09-01.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-10-22"
+              "title": "Outline of 2025-09-01"
             }
           },
           {
@@ -356,6 +328,16 @@
               "state": {},
               "icon": "calendar-glyph",
               "title": "Calendar"
+            }
+          },
+          {
+            "id": "e84469d12c5f831f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -373,16 +355,6 @@
             }
           },
           {
-            "id": "e84469d12c5f831f",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "eff2a62fff0231ea",
             "type": "leaf",
             "state": {
@@ -393,11 +365,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 354.5
+    "width": 397.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -412,33 +384,38 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0b93305b506cdd66",
+  "active": "e30c8e6f01f0d800",
   "lastOpenFiles": [
-    "Myideas/AIM model.md",
+    "journal/2025/08/2025-08-11.md",
+    "journal/2025/09/2025-09-01.md",
     "Myideas/REM Projection.md",
+    "Pasted image 20251025153410.png",
+    "Pasted image 20251025153401.png",
+    "Pasted image 20251025153247.png",
+    "Myideas/RAW inverse proof.md",
+    "Untitled 12.base",
+    "bijective.md",
     "Untitled 2.md",
     "RAW into doc inverse proof.md",
-    "Myideas/RAW inverse proof.md",
-    "Myideas/unified operator.md",
-    "Myideas/familrity versus recall.md",
     "Pasted image 20251024145848.png",
-    "Original REM deduction.md",
-    "REM deduction.md",
+    "Myideas/familrity versus recall.md",
     "REM in operator.md",
-    "Myideas/measure_theory_proof.md",
+    "Myideas/unified operator.md",
+    "Myideas/contextunified_operator.md",
     "Untitled 11.base",
-    "Myideas/measure_theoryproof pure.md",
-    "Untitled.md",
     "Myideas/AIM model copy.md",
     "Myideas/critique of AIM.md",
-    "Myideas/product_proof_with_unified_framework.md",
-    "Untitled 10.base",
-    "mis_meeting_slides (1).md",
+    "Myideas/Untitled.md",
+    "Myideas/AIM model.md",
     "journal/2025/10/2025-10-22.md",
+    "Untitled 10.base",
     "Pasted image 20251023093725.png",
     "Pasted image 20251023093723.png",
     "function.md",
+    "Myideas/measure_theoryproof pure.md",
+    "Myideas/measure_theory_proof.md",
     "Myideas/SCCM.md",
+    "Myideas/product_proof_with_unified_framework.md",
     "Myideas/product_proof.md",
     "Myideas/newproof.md",
     "injective.md",
@@ -448,18 +425,13 @@
     "Pasted image 20251022155012.png",
     "surjective.md",
     "Pasted image 20251022154947.png",
-    "bijective.md",
-    "Pasted image 20251022154445.png",
-    "Pasted image 20251022154431.png",
     "Obsidian Vault.code-workspace",
     "Myideas",
     "stochastic kernel /Myideas",
     "class notes for students",
-    "Pasted image 20251015204108.png",
     "Untitled 9.base",
     "Untitled 8.base",
     "journal/2025/10",
-    "Untitled 3.base",
     "Untitled.canvas"
   ]
 }

@@ -1,0 +1,451 @@
+{
+  "main": {
+    "id": "b8692181d1fda20f",
+    "type": "split",
+    "children": [
+      {
+        "id": "521eccf6eae1bcf4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72e47b81993ebd33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "product space"
+            }
+          },
+          {
+            "id": "64285f07919fc71a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "surjective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "surjective"
+            }
+          },
+          {
+            "id": "185e977eed759e4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "surjective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "surjective"
+            }
+          },
+          {
+            "id": "6fee4b55d6a3a3cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "well-defined function.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "well-defined function"
+            }
+          },
+          {
+            "id": "4b5a4f32756c9e06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "injective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "injective"
+            }
+          },
+          {
+            "id": "dcf0770fe4111caf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "journal/2025/10/2025-10-25.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-10-25"
+            }
+          },
+          {
+            "id": "9a67f2aedafa6390",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "prompt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "prompt"
+            }
+          },
+          {
+            "id": "b52b8c165a2b2667",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "function space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "function space"
+            }
+          },
+          {
+            "id": "5c1d3a51174073d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "generator.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "generator"
+            }
+          },
+          {
+            "id": "e8ccbcc678e21ad0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "parallel processing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "parallel processing"
+            }
+          },
+          {
+            "id": "0ffe74f87991f237",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "memory models.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "memory models"
+            }
+          },
+          {
+            "id": "3f6b2aca67ce6ad9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "writing ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "writing ideas"
+            }
+          },
+          {
+            "id": "55c7b2fff08b4f04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "embedded space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "embedded space"
+            }
+          },
+          {
+            "id": "c6ed460df0d468bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "factorized.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "factorized"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a4b0bb3da7b7d997",
+    "type": "split",
+    "children": [
+      {
+        "id": "6699acfa9f0a617a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5d9f8cd535c540a8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a2d6c7fa0c799979",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "biject",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "11fa8b4f890421b5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "d1de6df18cf5282b",
+    "type": "split",
+    "children": [
+      {
+        "id": "206af973997d4120",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9886368b07d79bed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "E1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for E1"
+            }
+          },
+          {
+            "id": "8c8e7ebee5251d67",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "E1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from E1"
+            }
+          },
+          {
+            "id": "7d6e2c9b1ccdffd1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "25d011be83242af2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "prompt.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of prompt"
+            }
+          },
+          {
+            "id": "e30c8e6f01f0d800",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "e84469d12c5f831f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "2433848e7404478d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "discrete_ct-finite_if-countable-uncountable.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "discrete_ct-finite_if-countable-uncountable"
+            }
+          },
+          {
+            "id": "eff2a62fff0231ea",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 397.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-git:Open Git source control": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "e84469d12c5f831f",
+  "lastOpenFiles": [
+    "Pasted image 20251026144547.png",
+    "joint distribution.md",
+    "Pasted image 20251026144455.png",
+    "Pasted image 20251026144446.png",
+    "surface.md",
+    "journal/2025/10/2025-10-25.md",
+    "prompt.md",
+    "journal/2025/07/2025-07-18.md",
+    "discrete_ct-finite_if-countable-uncountable.md",
+    "journal/2025/09/2025-09-01.md",
+    "journal/2025/08/2025-08-11.md",
+    "Myideas/REM Projection.md",
+    "Pasted image 20251025153410.png",
+    "Pasted image 20251025153401.png",
+    "Pasted image 20251025153247.png",
+    "Myideas/RAW inverse proof.md",
+    "Untitled 12.base",
+    "bijective.md",
+    "RAW into doc inverse proof.md",
+    "Pasted image 20251024145848.png",
+    "Myideas/familrity versus recall.md",
+    "REM in operator.md",
+    "Myideas/unified operator.md",
+    "Myideas/contextunified_operator.md",
+    "Untitled 11.base",
+    "Myideas/AIM model copy.md",
+    "Myideas/critique of AIM.md",
+    "Myideas/Untitled.md",
+    "Myideas/AIM model.md",
+    "journal/2025/10/2025-10-22.md",
+    "Untitled 10.base",
+    "Pasted image 20251023093725.png",
+    "Pasted image 20251023093723.png",
+    "function.md",
+    "Myideas/measure_theoryproof pure.md",
+    "Myideas/measure_theory_proof.md",
+    "Myideas/SCCM.md",
+    "Pasted image 20251022161435.png",
+    "Pasted image 20251022155029.png",
+    "Obsidian Vault.code-workspace",
+    "Myideas",
+    "stochastic kernel /Myideas",
+    "class notes for students",
+    "Untitled 9.base",
+    "Untitled 8.base",
+    "journal/2025/10",
+    "Untitled.canvas"
+  ]
+}

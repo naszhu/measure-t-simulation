@@ -1,7 +1,7 @@
 [[outer product]]  
 [[Space]]
 is also [[function space]]
-
+乘积是面积 画xy轴cover所有xy轴区域，x×y 是所有连线的点的数量 连续值为面积
 ### Product space
 Given two sets $A$ and $B$:
 

@@ -1,3 +1,7 @@
+空间不是先天存在的背景，而是集合在相互作用、扩展与塌缩中被生成的秩序。
+
+几何，是集合之间关系的语言。
+
 [[Probability Space]]
 
 [[state space - mathcal{X}]]

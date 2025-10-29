@@ -9,3 +9,5 @@
 - I trust obesidian, i want it to save my WM space, but.. it actually, if i let free, i got the habit of taking notes of things, not use my WM, then i never proceeds
 
 [[TODO LIST]]
+
+- why should threshold exist what is threshold 

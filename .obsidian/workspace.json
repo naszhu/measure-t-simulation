@@ -4,20 +4,193 @@
     "type": "split",
     "children": [
       {
-        "id": "167161f8676b7adf",
+        "id": "521eccf6eae1bcf4",
         "type": "tabs",
         "children": [
           {
-            "id": "1a89a16ab70e6ba4",
+            "id": "72e47b81993ebd33",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "product space.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "product space"
+            }
+          },
+          {
+            "id": "64285f07919fc71a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "surjective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "surjective"
+            }
+          },
+          {
+            "id": "185e977eed759e4c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "surjective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "surjective"
+            }
+          },
+          {
+            "id": "6fee4b55d6a3a3cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "well-defined function.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "well-defined function"
+            }
+          },
+          {
+            "id": "4b5a4f32756c9e06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "injective.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "injective"
+            }
+          },
+          {
+            "id": "dcf0770fe4111caf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Question.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Question"
+            }
+          },
+          {
+            "id": "b52b8c165a2b2667",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "function space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "function space"
+            }
+          },
+          {
+            "id": "5c1d3a51174073d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "generator.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "generator"
+            }
+          },
+          {
+            "id": "e8ccbcc678e21ad0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "parallel processing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "parallel processing"
+            }
+          },
+          {
+            "id": "0ffe74f87991f237",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "memory models.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "memory models"
+            }
+          },
+          {
+            "id": "3f6b2aca67ce6ad9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "writing ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "writing ideas"
+            }
+          },
+          {
+            "id": "55c7b2fff08b4f04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "embedded space.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "embedded space"
+            }
+          },
+          {
+            "id": "c6ed460df0d468bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "factorized.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "factorized"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -192,7 +365,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -211,54 +384,54 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "1a89a16ab70e6ba4",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
-    "factorized.md",
-    "embedded space.md",
-    "writing ideas.md",
-    "memory models.md",
-    "parallel processing.md",
-    "generator.md",
-    "function space.md",
-    "product space.md",
-    "surjective.md",
-    "well-defined function.md",
-    "injective.md",
-    "Myideas/critique unified operator.md",
-    "Signal Detection Theory (SDT).md",
+    "Myideas/measure theory model.tex",
+    "Myideas/measure theory model from SDT.tex",
+    "Myideas/measure theory model from SDT.md",
+    "Myideas/unified_operator (9).pdf",
+    "Myideas/measure theory model.md",
+    "Myideas/memory/what if no measure based memory.md",
+    "what can set memory theory solve.md",
+    "Myideas/IFM inverse in set theory.md",
+    "Myideas/Untitled.md",
+    "model summary/van denberg Ma resource rational.md",
+    "model summary/Untitled.md",
+    "Pasted image 20251101185301.png",
+    "Myideas/memory/memory is measurable.md",
+    "Myideas/memory",
+    "Pasted image 20251101184953.png",
+    "Pasted image 20251101184751.png",
+    "decision rules.md",
+    "Pasted image 20251101183747.png",
+    "Pasted image 20251101183148.png",
+    "kernal.md",
+    "journal/2025/11/2025-11-01.md",
+    "journal/2025/11",
+    "mass.md",
+    "Pasted image 20251101181418.png",
+    "Pasted image 20251101180913.png",
+    "Pasted image 20251101180143.png",
+    "Radon–Nikodym.md",
+    "Pasted image 20251101180051.png",
+    "Untitled 3.md",
+    "Pasted image 20251101174022.png",
+    "Luce Choice.md",
+    "class notes for students/lesson0-note Ada.md",
+    "class notes for students/lesson0-note.md",
+    "model summary/SIMPLE.md",
+    "SIMPLE.md",
+    "model summary/Botvinick & Plaut (2006).md",
+    "class notes for students/dec 1 note chongba.md",
+    "class notes for students/lesson2-chongba-script.md",
+    "model summary",
     "class notes for students/lesson1_chongba_notes.md",
     "class notes for students/oct 30 note for report style writing.md",
-    "Myideas/Unified Operator.md",
-    "Myideas/AIM model.md",
-    "Myideas/RAW inverse proof.md",
-    "ROC curve.md",
-    "Pasted image 20251030123734.png",
-    "SDT signal detection theory.md",
-    "Question.md",
     "Untitled 16.base",
     "Untitled 15.base",
-    "geometric.md",
-    "surface.md",
-    "Lebesgue measure.md",
-    "outer measure.md",
-    "differential 微分.md",
-    "Pasted image 20251027172355.png",
-    "Pasted image 20251027172324.png",
-    "Pasted image 20251027171500.png",
-    "Pasted image 20251027171116.png",
-    "Pasted image 20251027170013.png",
     "Untitled 14.base",
     "Untitled 13.base",
-    "Pasted image 20251026144547.png",
-    "Pasted image 20251026144455.png",
-    "Pasted image 20251026144446.png",
-    "Pasted image 20251025153410.png",
     "Untitled 12.base",
-    "Untitled 11.base",
-    "Untitled 10.base",
-    "Obsidian Vault.code-workspace",
-    "Myideas",
-    "stochastic kernel /Myideas",
     "Untitled.canvas"
   ]
 }

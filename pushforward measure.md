@@ -6,8 +6,12 @@ You can say, that the original [[Measure - P]] on [[Sample space - Omega]] is P,
 ![[Pasted image 20251025153247.png]]
 # definition
 - $P_X$ is the **pushforward measure** on $\mathcal{X}$ (the state space of ). It is defined as $P_X(A)=P(X^{−1}(A))$.
+or 
+![[Pasted image 20251101180913.png]]
 
 But, what is the way to write f_X(x)? what this f is? ([[Question]])
+
+
 
 ## caution: typically people deal with state space
 

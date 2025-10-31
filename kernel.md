@@ -1,4 +1,4 @@
-
+!! **defining a way to transform one measure into another**.
 ## difference between kernel and marginal distribution
 
 | **Concept**               | **Definition**                                                                                                                                   | **Example**                                                   |
@@ -35,3 +35,7 @@
     $P_{θ,X}(C×A)=∫_Ck(θ,A)dP_θ(θ)$
     
 - Posterior obtained via conditioning
+
+
+Formally
+![[Pasted image 20251101181418.png]]

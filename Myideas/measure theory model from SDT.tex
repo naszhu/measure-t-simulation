@@ -1,0 +1,1397 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Theorem environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{example}{Example}[section]
+
+% Custom commands
+\newcommand{\measure}{\mu}
+\newcommand{\oldmeasure}{\mu_{\text{old}}}
+\newcommand{\newmeasure}{\mu_{\text{new}}}
+\newcommand{\studymeasure}{\mu_{\text{study}}}
+\newcommand{\testmeasure}{\mu_{\text{test}}}
+\newcommand{\contentspace}{\Omega_{\mathcal{F}}}
+\newcommand{\contextspace}{\Omega_{\mathcal{C}}}
+\newcommand{\pushforward}[2]{#1_{\#}#2}
+\newcommand{\radonnikodym}{\frac{d\nu}{d\mu}}
+
+\title{From Signal Detection to Measure-Theoretic Memory: A Unified Framework}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction: From Familiarity Distributions to Measure Transformations}
+
+Signal Detection Theory (SDT) has been the foundational framework for recognition memory for over half a century (Green \& Swets, 1966; Macmillan \& Creelman, 2005). At its core, SDT interprets recognition judgments as comparing two probability distributions: the \textbf{familiarity distribution for old items} $P_{\text{old}}(f)$ and the \textbf{familiarity distribution for new items} $P_{\text{new}}(f)$. The decision to respond ``old'' or ``new'' depends on whether the observed familiarity value falls above or below a criterion threshold.
+
+This paper argues that SDT's simple but powerful structure---\textbf{comparing two probability measures}---can be generalized to encompass all of memory theory. Recognition, recall, forgetting, and context-dependent retrieval all emerge as \textbf{transformations of measures} between content space (items, features) and context space (temporal positions, contextual states). SDT's familiarity distributions are \textbf{marginal measures} of a richer joint structure; memory models differ not in their fundamental ontology, but in \textbf{which measure transformations they employ} and \textbf{where these transformations are applied}.
+
+\subsection{The Central Thesis}
+
+\textbf{All memory processes (encoding, retrieval, forgetting, generalization) can be expressed as transformations of probability measures between content and context spaces---generalizing SDT's measure-comparison structure through richer transformations (push-forward, kernel, density change).}
+
+This measure-theoretic perspective provides:
+\begin{itemize}
+    \item \textbf{Theoretical grounding:} SDT provides the simplest measure-comparison form; all memory models extend this structure
+    \item \textbf{Unification:} A common mathematical language linking SDT to TCM, REM, SIMPLE, CRU, and other models
+    \item \textbf{Generativity:} A framework for constructing new models by combining transformation types
+    \item \textbf{Geometric intuition:} Memory judgments as measure comparisons across representational manifolds
+\end{itemize}
+
+\subsection{From SDT to General Memory Models}
+
+SDT considers only \textbf{one dimension} (familiarity) and compares two \textbf{marginal measures} (old vs. new). Memory models extend this structure by:
+
+\begin{enumerate}
+    \item \textbf{Adding context dimension:} Joint measures $\mu(x, \psi)$ over content $\times$ context space
+    \item \textbf{Richer transformations:} Push-forward (deterministic drift), kernel (stochastic retrieval), density change (attentional weighting)
+    \item \textbf{Temporal dynamics:} Measures evolve over time via transformation sequences
+    \item \textbf{Conditional retrieval:} Recall emerges as conditional measures $\mu(x|\psi)$ given specific contexts
+\end{enumerate}
+
+\textbf{The Unified Claim:} SDT is the \textbf{1D marginal limit} of a general measure-transformation framework. All memory models are \textbf{extensions} of SDT's measure-comparison structure to higher-dimensional spaces and richer transformations.
+
+\section{SDT as Measure Comparison}
+
+\subsection{Formal Definition of SDT}
+
+\begin{definition}[Signal Detection Theory]
+In SDT, recognition memory is modeled by:
+
+\begin{enumerate}
+    \item \textbf{Two probability measures} on a \textbf{familiarity space} $\Omega_F$:
+    \begin{itemize}
+        \item $\oldmeasure$: Probability measure for old (studied) items
+        \item $\newmeasure$: Probability measure for new (unstudied) items
+    \end{itemize}
+    
+    \item \textbf{Decision rule:} Respond ``old'' if the observed familiarity value $f$ satisfies:
+    \begin{equation}
+        \frac{d\oldmeasure}{d\newmeasure}(f) > c
+    \end{equation}
+    where $c$ is the decision criterion (likelihood ratio threshold).
+\end{enumerate}
+
+\textbf{Assumptions:}
+\begin{itemize}
+    \item Both measures are \textbf{absolutely continuous} with respect to a base measure (typically Lebesgue measure)
+    \item They have \textbf{densities} $p_{\text{old}}(f) = \frac{d\oldmeasure}{df}$ and $p_{\text{new}}(f) = \frac{d\newmeasure}{df}$
+    \item The decision rule is based on the \textbf{likelihood ratio} $\frac{p_{\text{old}}(f)}{p_{\text{new}}(f)}$
+\end{itemize}
+\end{definition}
+
+\subsection{SDT's Geometric Structure}
+
+\textbf{Geometric Interpretation:}
+
+SDT compares two measures along a \textbf{single axis} (familiarity). The decision corresponds to:
+
+\begin{enumerate}
+    \item \textbf{Measuring familiarity} $f$ for the test probe
+    \item \textbf{Comparing densities} $p_{\text{old}}(f)$ vs. $p_{\text{new}}(f)$
+    \item \textbf{Threshold decision} based on likelihood ratio
+\end{enumerate}
+
+\textbf{Visualization:}
+
+The classic SDT plot shows two \textbf{overlapping distributions} along the familiarity axis:
+\begin{itemize}
+    \item $p_{\text{old}}(f)$: typically shifted to the right (higher familiarity)
+    \item $p_{\text{new}}(f)$: typically centered at lower familiarity values
+    \item \textbf{Criterion $c$:} vertical line separating ``old'' and ``new'' responses
+\end{itemize}
+
+\subsection{SDT as Marginal Measure Comparison}
+
+\textbf{Key Insight:} SDT's measures $\oldmeasure$ and $\newmeasure$ are \textbf{marginal measures} of a richer joint structure.
+
+\textbf{Joint Measure Construction:}
+
+Suppose memory is encoded as a \textbf{joint measure} $\studymeasure(x, \psi)$ over content space $\contentspace$ (items, features) and context space $\contextspace$ (temporal positions, contextual states).
+
+\textbf{Marginal Measures:}
+\begin{itemize}
+    \item \textbf{Old items:} $\oldmeasure(dx) = \int_{\contextspace} d\studymeasure(x, \psi)$ (marginal over context for studied items)
+    \item \textbf{New items:} $\newmeasure(dx) = \int_{\contextspace} d\mu_{\text{unstudied}}(x, \psi)$ (marginal for unstudied items)
+\end{itemize}
+
+\textbf{SDT's Recognition Decision:}
+
+Recognition becomes a comparison of these marginal measures:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f) > c
+\end{equation}
+where $f$ is the familiarity value computed from the probe.
+
+\subsection{SDT as Limit Case of Joint Measures}
+
+\begin{theorem}[SDT as Marginal Projection]
+SDT's familiarity comparison is the \textbf{marginal projection} of a joint measure-comparison structure when:
+
+\begin{enumerate}
+    \item Context space $\contextspace$ is \textbf{one-dimensional} (or collapsed to a single point)
+    \item The joint measure factors as: $\studymeasure(dx, d\psi) = \mu_{\mathcal{F}}(dx) \otimes \mu_{\mathcal{C}}(d\psi)$ (separable)
+    \item Recognition operates on \textbf{marginal familiarity}: $f = \int_{\contextspace} \langle \text{probe}, x \rangle \, d\studymeasure(x, \psi)$
+\end{enumerate}
+\end{theorem}
+
+\textbf{Proof Sketch:}
+
+When context space is trivial ($\contextspace = \{\text{point}\}$), the joint measure reduces to:
+\begin{equation}
+\studymeasure(dx, d\psi) = \mu_{\mathcal{F}}(dx) \otimes \delta_{\text{point}}(d\psi) = \oldmeasure(dx)
+\end{equation}
+
+Recognition becomes:
+\begin{equation}
+\text{Recognition} = \int_{\contentspace} \langle \text{probe}, x \rangle \, d\oldmeasure(x)
+\end{equation}
+which is exactly SDT's familiarity computation. The decision rule:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f) > c
+\end{equation}
+follows directly from the likelihood ratio test.
+
+\textbf{Conclusion:} SDT is the \textbf{1D marginal case} of a general measure $\mu(x, \psi)$ when context is ignored or collapsed.
+
+\section{Extending SDT to Context--Content Measure Space}
+
+\subsection{Measurable Spaces for Memory}
+
+\begin{definition}[Memory Space Structure]
+Extend SDT's one-dimensional familiarity space to a \textbf{joint measurable space}:
+
+\begin{itemize}
+    \item \textbf{Content space:} $(\contentspace, \mathcal{B}_{\mathcal{F}})$ representing items, features, or stimuli
+    \item \textbf{Context space:} $(\contextspace, \mathcal{B}_{\mathcal{C}})$ representing temporal positions, contextual states, or episodic markers
+    \item \textbf{Joint space:} $(\contentspace \times \contextspace, \mathcal{B}_{\mathcal{F}} \otimes \mathcal{B}_{\mathcal{C}})$
+\end{itemize}
+
+\textbf{SDT Correspondence:}
+\begin{itemize}
+    \item SDT's familiarity space = \textbf{1D projection} of $\contentspace$
+    \item SDT ignores context = \textbf{marginalization} over $\contextspace$
+\end{itemize}
+\end{definition}
+
+\subsection{Joint Encoding Measure}
+
+\begin{definition}[Study-Phase Measure]
+During study, a sequence of items $\{x_t\}_{t=1}^{T}$ is encoded, producing:
+\begin{itemize}
+    \item \textbf{Item vectors:} $\{f_t\}$ in $\contentspace$
+    \item \textbf{Context vectors:} $\{\psi_t\}$ in $\contextspace$
+\end{itemize}
+
+The \textbf{study-phase measure} $\studymeasure$ is defined on $\contentspace \times \contextspace$ as:
+\begin{equation}
+\studymeasure(A \times B) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_A(f_t) \mathbb{1}_B(\psi_t)
+\end{equation}
+where $\gamma_t$ is the encoding strength at time $t$, and $\mathbb{1}_A$ is the indicator function.
+
+\textbf{For continuous models:} $\studymeasure$ may have a density:
+\begin{equation}
+d\studymeasure(f, \psi) = w(f, \psi) \, d(f, \psi)
+\end{equation}
+where $w(f, \psi)$ is the Radon--Nikodym derivative with respect to a base measure (e.g., Lebesgue or counting measure).
+\end{definition}
+
+\subsection{Recognition as Measure Comparison}
+
+\textbf{Extension of SDT's Decision Rule:}
+
+In SDT, recognition compares two marginal measures: $\oldmeasure$ vs. $\newmeasure$.
+
+\textbf{Generalized Recognition:}
+
+Recognition now compares:
+\begin{itemize}
+    \item \textbf{Study measure:} $\studymeasure(f, \psi)$ (joint measure over content $\times$ context)
+    \item \textbf{Test measure:} $\testmeasure(f, \psi) = \pushforward{T}{\studymeasure}(f, \psi)$ (transformed study measure via push-forward $T$)
+\end{itemize}
+
+\textbf{Decision Criterion:}
+
+Instead of simple likelihood ratio, recognition uses \textbf{measure divergence}:
+\begin{equation}
+\text{Respond ``old'' if } D(\studymeasure, \testmeasure) < \text{threshold}
+\end{equation}
+where $D$ is a divergence measure (e.g., KL divergence, Wasserstein distance, total variation).
+
+\textbf{SDT as Special Case:}
+
+When context is collapsed and test measure = study measure:
+\begin{equation}
+\testmeasure = \studymeasure = \oldmeasure
+\end{equation}
+Then recognition becomes:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f) > c
+\end{equation}
+which is exactly SDT's likelihood ratio rule.
+
+\subsection{Psychological Concepts as Measure-Theoretic Objects}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Psychological Concept} & \textbf{Mathematical Object} & \textbf{SDT Analogue} \\
+\midrule
+\textbf{Familiarity} & Marginal density overlap: $\int_{\mathcal{C}} d\studymeasure(f, \psi)$ & $p_{\text{old}}(f)$ vs. $p_{\text{new}}(f)$ \\
+\textbf{Context reinstatement} & Push-forward of measure: $\pushforward{T}{\studymeasure}$ & Shift in familiarity distribution \\
+\textbf{Retrieval similarity} & Kernel inner product: $\int K(\text{cue}, d\psi) \, d\studymeasure(f, \psi)$ & Expectation under familiarity kernel \\
+\textbf{Forgetting} & Reduction of measure overlap or total mass: $\|\studymeasure - \testmeasure\|$ & Divergence of $p_{\text{old}}$ from original form \\
+\textbf{Recognition} & Comparison of marginal measures & Likelihood ratio comparison \\
+\textbf{Recall} & Conditional measure restriction: $\mu(f \mid \psi = \psi(\text{cue}))$ & Restricted SDT on conditional familiarity \\
+\bottomrule
+\end{tabular}
+\caption{Psychological concepts mapped to measure-theoretic objects}
+\end{table}
+
+\subsection{From SDT to Unified Framework}
+
+\textbf{SDT's Structure:}
+\begin{itemize}
+    \item \textbf{Two measures:} $\oldmeasure$, $\newmeasure$ on familiarity space
+    \item \textbf{Decision:} Likelihood ratio comparison
+\end{itemize}
+
+\textbf{Generalized Framework:}
+\begin{itemize}
+    \item \textbf{Joint measures:} $\studymeasure(f, \psi)$, $\testmeasure(f, \psi)$ on content $\times$ context space
+    \item \textbf{Transformations:} Push-forward, kernel, density change
+    \item \textbf{Decision:} Measure divergence comparison
+\end{itemize}
+
+\textbf{Key Insight:} SDT provides the \textbf{simplest form} of measure comparison; all memory models extend this structure by:
+\begin{enumerate}
+    \item Adding context dimension
+    \item Using richer transformations
+    \item Considering temporal dynamics
+\end{enumerate}
+
+\section{Three Measure Transformations in Memory}
+
+SDT's simple measure comparison (likelihood ratio) can be generalized to three fundamental \textbf{measure transformation types}. These transformations govern how the study-phase measure evolves during encoding, retrieval, and forgetting.
+
+\subsection{Push-Forward (Deterministic Context Change)}
+
+\begin{definition}[Push-Forward Transformation]
+Given a measurable map $T: \Omega \to \Omega'$ and a measure $\mu$ on $\Omega$, the \textbf{push-forward measure} $\pushforward{T}{\mu}$ on $\Omega'$ is defined as:
+\begin{equation}
+(\pushforward{T}{\mu})(B) = \mu(T^{-1}(B))
+\end{equation}
+for all measurable sets $B \subseteq \Omega'$.
+\end{definition}
+
+\textbf{Psychological Interpretation:} Push-forward transformations represent \textbf{deterministic context evolution}---context drift, encoding mappings, or spatial transformations of representations.
+
+\textbf{SDT Connection:} In SDT, familiarity distributions are static. Push-forward allows these distributions to \textbf{shift and evolve} over time.
+
+\textbf{Memory Applications:}
+
+\begin{enumerate}
+    \item \textbf{TCM (Temporal Context Model):}
+    \begin{itemize}
+        \item Context drift: $\psi_{t+1} = T_t(\psi_t) = \rho\psi_t + \eta f_t$
+        \item Push-forward: $\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, \psi_{t+1})}$
+        \item \textbf{SDT Analogue:} Old distribution shifts over time as context drifts
+    \end{itemize}
+    
+    \item \textbf{CRU (Context Retrieval and Updating):}
+    \begin{itemize}
+        \item Context as mixture: $\psi_t = \sum_{k<t} \alpha_{tk} f_k = T_t(\{f_j\}_{j<t})$
+        \item Push-forward: $\mu_t = \pushforward{T_t}{\mu_{t-1}} + \delta_{(f_t, T_t(\{f_j\}_{j<t}))}$
+        \item \textbf{SDT Analogue:} Distribution shape changes as context becomes weighted combination of items
+    \end{itemize}
+    
+    \item \textbf{SIMPLE (Temporal Compression):}
+    \begin{itemize}
+        \item Temporal log-transform: $T: t \mapsto \log(t)$
+        \item Push-forward: $\mu_{\text{compressed}} = \pushforward{\log}{\mu_{\text{temporal}}}$
+        \item \textbf{SDT Analogue:} Familiarity distribution rescaled via metric distortion
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Formal Connection to SDT:}
+
+In SDT, old and new distributions are \textbf{fixed}. Push-forward allows the \textbf{old distribution to evolve}:
+\begin{equation}
+\oldmeasure(t) = \pushforward{T_t}{\oldmeasure(0)}
+\end{equation}
+where $T_t$ represents context drift or transformation up to time $t$. Recognition then compares:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure(t)}{d\newmeasure}(f) > c
+\end{equation}
+
+\subsection{Kernel Transformation (Probabilistic Retrieval)}
+
+\begin{definition}[Kernel Transformation]
+A \textbf{kernel transformation} maps a measure $\mu$ to a new measure $\nu$ via a transition kernel $K(x, \cdot)$:
+\begin{equation}
+\nu(A) = \int_{\Omega} K(x, A) \, d\mu(x)
+\end{equation}
+where $K(x, \cdot)$ is a probability measure on $\Omega$ for each $x$.
+\end{definition}
+
+\textbf{Psychological Interpretation:} Kernel transformations represent \textbf{stochastic retrieval processes}---probabilistic sampling from similarity distributions, retrieval noise, or context-dependent activation.
+
+\textbf{SDT Connection:} SDT's familiarity distributions are \textbf{deterministic}. Kernel transformations allow \textbf{probabilistic retrieval}---each retrieval samples from a distribution over possible familiarity values.
+
+\textbf{Memory Applications:}
+
+\begin{enumerate}
+    \item \textbf{REM (Retrieving Effectively from Memory):}
+    \begin{itemize}
+        \item Similarity-based sampling: $K_\sigma(\psi(\text{cue}), d\psi') = \mathcal{N}(\psi(\text{cue}), \sigma^2 I)(d\psi')$
+        \item Kernel transformation: $\nu = \int K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)$
+        \item \textbf{SDT Analogue:} Familiarity computed as \textbf{expectation over samples} from similarity distribution
+    \end{itemize}
+    
+    \item \textbf{EBRW (Exemplar-Based Random Walk):}
+    \begin{itemize}
+        \item Similarity kernel: $K_s(f_i, df) = s(f_i, f) \, d\mu_{\text{items}}(f)$
+        \item Evidence accumulation: $\nu_n(df) = \sum_{m=1}^{n} K_s(f_{\text{probe}}, df)$
+        \item \textbf{SDT Analogue:} Familiarity accumulates stochastically via similarity-weighted sampling
+    \end{itemize}
+    
+    \item \textbf{Global Matching Models:}
+    \begin{itemize}
+        \item Global familiarity: $F = \int K(\text{probe}, df) \, d\studymeasure(f, \psi)$
+        \item \textbf{SDT Analogue:} Familiarity is kernel-smoothed expectation over entire study measure
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Formal Connection to SDT:}
+
+In SDT, familiarity is \textbf{deterministic} given the probe. Kernel transformation makes it \textbf{probabilistic}:
+\begin{equation}
+F \sim \int K(\text{probe}, df) \, d\oldmeasure(f)
+\end{equation}
+
+Recognition decision becomes:
+\begin{equation}
+\text{Respond ``old'' if } \mathbb{E}[F] = \int f \cdot K(\text{probe}, df) \, d\oldmeasure(f) > \text{threshold}
+\end{equation}
+
+As kernel bandwidth $\sigma^2 \to 0$, kernel becomes Dirac delta, recovering SDT's deterministic case.
+
+\subsection{Density Change (Attention / Decay)}
+
+\begin{definition}[Density Change / Radon--Nikodym Derivative]
+Given two measures $\mu$ and $\nu$ on $(\Omega, \mathcal{B})$ where $\nu \ll \mu$ (absolute continuity), the \textbf{Radon--Nikodym derivative} $w = \radonnikodym$ satisfies:
+\begin{equation}
+\nu(A) = \int_A w(x) \, d\mu(x)
+\end{equation}
+\end{definition}
+
+\textbf{Psychological Interpretation:} Density changes represent \textbf{attentional weighting}, \textbf{rehearsal effects}, or \textbf{selective emphasis}---reweighting the importance of different parts of the measure.
+
+\textbf{SDT Connection:} In SDT, old and new distributions have \textbf{fixed shapes}. Density changes allow distributions to \textbf{shift mass}---some items become more salient (higher density), others fade (lower density).
+
+\textbf{Memory Applications:}
+
+\begin{enumerate}
+    \item \textbf{SOB (Serial Order in a Box):}
+    \begin{itemize}
+        \item Novelty-weighted encoding: $\gamma_t = n_t$ (novelty of item $t$)
+        \item Density change: $d\mu_{\text{weighted}}(f, \psi) = n(f, \psi) \cdot d\studymeasure(f, \psi)$
+        \item \textbf{SDT Analogue:} Old distribution shape changes---novel items get higher density, repeated items get lower density
+    \end{itemize}
+    
+    \item \textbf{Page \& Norris Primacy Model:}
+    \begin{itemize}
+        \item Primacy gradient: $\gamma_t = e^{-\lambda t}$
+        \item Density change: $d\mu_{\text{primacy}}(f, \psi) = e^{-\lambda t(f, \psi)} \cdot d\studymeasure(f, \psi)$
+        \item \textbf{SDT Analogue:} Old distribution weighted by position---early items get higher density
+    \end{itemize}
+    
+    \item \textbf{Trace Decay Models:}
+    \begin{itemize}
+        \item Exponential decay: $d\mu_{\text{decayed}}(f, \psi) = e^{-\lambda(T-t)} \cdot d\studymeasure(f, \psi)$
+        \item \textbf{SDT Analogue:} Old distribution \textbf{shrinks} (total mass decreases) over time
+    \end{itemize}
+\end{enumerate}
+
+\textbf{Formal Connection to SDT:}
+
+In SDT, old distribution $p_{\text{old}}(f)$ is \textbf{fixed}. Density change allows it to \textbf{evolve}:
+\begin{equation}
+p_{\text{old}}(f, t) = w(f, t) \cdot p_{\text{old}}(f, 0)
+\end{equation}
+where $w(f, t)$ is the weight function. Recognition compares:
+\begin{equation}
+\text{Respond ``old'' if } \frac{w(f, t) \cdot p_{\text{old}}(f, 0)}{p_{\text{new}}(f)} > c
+\end{equation}
+
+Total mass of old distribution: $\|\oldmeasure(t)\| = \int w(f, t) \, d\oldmeasure(f, 0)$ decreases if $w(f, t) < 1$ (decay).
+
+\subsection{Composition of Transformations}
+
+Memory processes often involve \textbf{compositions} of the three transformation types:
+
+\begin{example}[TCM with Retrieval Noise]
+Push-forward (context drift) followed by kernel (stochastic retrieval):
+\begin{equation}
+\mu_{\text{retrieval}} = K_\sigma(\psi(\text{cue}), \cdot) \circ \pushforward{T_T \circ \cdots \circ T_1}{\mu_0}
+\end{equation}
+
+\textbf{SDT Interpretation:} Old distribution evolves via context drift, then retrieval samples stochastically from this evolved distribution.
+\end{example}
+
+\begin{example}[Weighted Sampling]
+Density change (novelty weighting) followed by kernel (sampling):
+\begin{equation}
+d\mu_{\text{sampled}}(f, \psi) = K(\psi(\text{cue}), d\psi) \cdot w(f, \psi) \, d\studymeasure(f, \psi)
+\end{equation}
+
+\textbf{SDT Interpretation:} Old distribution weighted by novelty, then familiarity computed via kernel sampling.
+\end{example}
+
+\subsection{Summary: Transformations and SDT}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Transformation Type} & \textbf{SDT Analogue} & \textbf{Memory Process} & \textbf{Representative Models} \\
+\midrule
+\textbf{Push-Forward} & Distribution shift & Context drift, encoding mapping & TCM, CRU, SIMPLE \\
+\textbf{Kernel} & Probabilistic sampling & Stochastic retrieval & REM, EBRW, Global-matching \\
+\textbf{Density Change} & Distribution reshaping & Attention, decay, weighting & SOB, Primacy, Trace decay \\
+\bottomrule
+\end{tabular}
+\caption{Measure transformation types and their SDT analogues}
+\end{table}
+
+\textbf{Key Insight:} SDT's simple measure comparison becomes a \textbf{rich algebra of transformations} when extended to joint content $\times$ context space.
+
+\section{Classical Models as Measure Transformations}
+
+This section shows how major memory models extend SDT's measure-comparison structure through different transformation types.
+
+\subsection{REM / EBRW: Kernel Transform on Measure}
+
+\textbf{REM (Retrieving Effectively from Memory):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Study measure: $\studymeasure(df, d\psi) = \sum_{t=1}^{T} \gamma_t \delta_{f_t}(df) \delta_{\psi_t}(d\psi)$
+    \item Retrieval kernel: $K_\sigma(\psi(\text{cue}), d\psi') = \mathcal{N}(\psi(\text{cue}), \sigma^2 I)(d\psi')$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Kernel transformation: $\nu = \int K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)$
+    \item Familiarity: $F = \int \langle \text{probe}, f \rangle \, d\nu(f)$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution = study measure marginalized over context
+    \item Retrieval samples stochastically via kernel: $F \sim \int K_\sigma(\psi(\text{cue}), d\psi) \, d\oldmeasure(f, \psi)$
+    \item Recognition: Compare expectation $\mathbb{E}[F]$ against threshold
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Familiarity is \textbf{deterministic} given probe
+    \item REM: Familiarity is \textbf{probabilistic} (expectation over kernel samples)
+    \item As $\sigma^2 \to 0$, kernel becomes Dirac delta $\to$ recovers SDT
+\end{itemize}
+
+\textbf{EBRW (Exemplar-Based Random Walk):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Study measure: $\studymeasure(df) = \sum_{t=1}^{T} \delta_{f_t}(df)$ (item-only measure)
+    \item Similarity kernel: $K_s(f_i, df) = s(f_i, f) \, d\mu_{\text{items}}(f)$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Evidence accumulation: $\nu_n(df) = \sum_{m=1}^{n} K_s(f_{\text{probe}}, df)$
+    \item Decision: Compare $\|\nu_n\|$ against threshold
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution = $\studymeasure$ on item space
+    \item Familiarity accumulates via similarity-weighted sampling
+    \item Recognition: Compare accumulated familiarity against criterion
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Single familiarity value per probe
+    \item EBRW: \textbf{Dynamic accumulation} of familiarity over time (RT model)
+\end{itemize}
+
+\subsection{SIMPLE: Density Scaling in Temporal Metric}
+
+\textbf{SIMPLE (Scale-Invariant Memory, Perception, and Learning):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Study measure: $\studymeasure(df, dt) = \sum_{t=1}^{T} \gamma_t \delta_{f_t}(df) \delta_{t}(dt)$ (item $\times$ time measure)
+    \item Temporal metric: $d_\lambda(t_i, t_j) = e^{-\lambda|\log t_i - \log t_j|}$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Density scaling: $d\mu_{\text{compressed}}(f, t) = d_\lambda(t_{\text{probe}}, t) \cdot d\studymeasure(f, t)$
+    \item Familiarity: $F = \int \langle \text{probe}, f \rangle \, d\mu_{\text{compressed}}(f, t)$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution: $p_{\text{old}}(f, t)$ on familiarity $\times$ time
+    \item Temporal compression: Distribution rescaled by temporal distance metric
+    \item Recognition: Compare compressed distribution against new distribution
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Familiarity distributions are \textbf{static} (no temporal dimension)
+    \item SIMPLE: Distributions \textbf{rescale} based on temporal distance
+    \item Forgetting = reduction in distribution overlap due to temporal compression
+\end{itemize}
+
+\subsection{TCM / CRU: Push-Forward of Measure Under Context Drift}
+
+\textbf{TCM (Temporal Context Model):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Initial measure: $\mu_0(df, d\psi)$
+    \item Context evolution: $T_t(\psi) = \rho\psi + \eta f_t$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Push-forward: $\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, T_t(\psi_t))}$
+    \item Final measure: $\mu_T = \pushforward{T_T \circ \cdots \circ T_1}{\mu_0} + \sum_{t=1}^{T} \delta_{(f_t, \psi_t)}$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution: $p_{\text{old}}(f, \psi)$ on familiarity $\times$ context
+    \item Context drift: Distribution shifts via push-forward: $p_{\text{old}}(f, \psi, t+1) = \pushforward{T_t}{p_{\text{old}}(f, \psi, t)}$
+    \item Recognition: Compare evolved distribution against new distribution
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Distributions are \textbf{static} (no context drift)
+    \item TCM: Distributions \textbf{evolve} via deterministic push-forward
+    \item Captures sequential dependencies and contiguity effects
+\end{itemize}
+
+\textbf{CRU (Context Retrieval and Updating):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Context as mixture: $\psi_t = \sum_{k<t} \alpha_{tk} f_k$
+    \item Defines linear transformation: $T_t: \mathcal{F}^{t-1} \to \mathcal{C}$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Push-forward: $\mu_t = \pushforward{T_t}{\mu_{t-1}} + \delta_{(f_t, T_t(\{f_j\}_{j<t}))}$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution shape changes as context becomes weighted combination of items
+    \item Distribution evolution: $p_{\text{old}}(f, \psi, t) = \pushforward{T_t}{p_{\text{old}}(f, \psi, t-1)}$
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Distributions have \textbf{fixed shape}
+    \item CRU: Distributions \textbf{reshape} as context updates
+\end{itemize}
+
+\subsection{SAM / Associative Models: Direct Self-Associative Operator}
+
+\textbf{SAM (Search of Associative Memory):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Self-associative measure: $\mu_{\text{assoc}}(df_i, df_j) = \sum_{t} \gamma_t \delta_{f_t \otimes f_t}(df_i, df_j)$
+    \item Item-item measure on product space $\mathcal{F} \times \mathcal{F}$
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Direct associative retrieval: $F = \int \langle \text{probe}, f_i \rangle \langle \text{probe}, f_j \rangle \, d\mu_{\text{assoc}}(f_i, f_j)$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution: $p_{\text{old}}(f_i, f_j)$ on item-item space
+    \item Familiarity: Self-associative strength (diagonal of distribution)
+    \item Recognition: Compare associative strength against threshold
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Unidimensional familiarity
+    \item SAM: \textbf{Bidimensional} familiarity (item $\times$ item associations)
+\end{itemize}
+
+\subsection{Connectionist / SOB: Recurrent Push-Forward with Feedback Kernel}
+
+\textbf{SOB (Serial Order in a Box):}
+
+\textbf{Measure Structure:}
+\begin{itemize}
+    \item Study measure: $\studymeasure(df, d\psi) = \sum_{t=1}^{T} n_t \delta_{f_t}(df) \delta_{\psi_t}(d\psi)$
+    \item Novelty weights: $\gamma_t = n_t$ (novelty of item $t$)
+\end{itemize}
+
+\textbf{Transformation:}
+\begin{itemize}
+    \item Density change: $d\mu_{\text{weighted}}(f, \psi) = n(f, \psi) \cdot d\studymeasure(f, \psi)$
+    \item Context evolution: $\psi_{t+1} = T_t(\psi_t, f_t)$ (feedback)
+    \item Push-forward: $\mu_{t+1} = \pushforward{T_t}{\mu_t} + n_{t+1} \delta_{(f_{t+1}, \psi_{t+1})}$
+\end{itemize}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution: $p_{\text{old}}(f, \psi)$ weighted by novelty
+    \item Distribution shape changes as context updates with feedback
+    \item Recognition: Compare novelty-weighted distribution against new
+\end{itemize}
+
+\textbf{Extension beyond SDT:}
+\begin{itemize}
+    \item SDT: Distributions have \textbf{fixed weights}
+    \item SOB: Distributions \textbf{reweight} based on novelty
+    \item Captures similarity effects and serial position curves
+\end{itemize}
+
+\subsection{Summary Table: Models as SDT Extensions}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll}
+\toprule
+\textbf{Model Family} & \textbf{Transformation Type} & \textbf{SDT Analogue} & \textbf{Extension} \\
+\midrule
+\textbf{REM / EBRW} & Kernel transform on $\mu$ & Probabilistic likelihood comparison & Stochastic sampling, RT accumulation \\
+\textbf{SIMPLE} & Density scaling in temporal metric & Variance rescaling of SDT distributions & Temporal compression, scale invariance \\
+\textbf{TCM / CRU} & Push-forward of $\mu$ under context drift & Shift of old distribution in context dimension & Sequential dependencies, contiguity \\
+\textbf{SAM} & Direct self-associative operator & Measure on item-item manifold & Bidimensional associations \\
+\textbf{SOB / Connectionist} & Recurrent push-forward with feedback kernel & Time-evolving SDT manifold & Novelty weighting, similarity effects \\
+\bottomrule
+\end{tabular}
+\caption{Memory models as extensions of SDT}
+\end{table}
+
+\textbf{Key Insight:} All models extend SDT's measure-comparison structure by:
+\begin{enumerate}
+    \item Adding context dimension (joint measures)
+    \item Using richer transformations (push-forward, kernel, density change)
+    \item Considering temporal dynamics (measure evolution)
+\end{enumerate}
+
+\section{From Recognition to Recall: Conditional Measure Restriction}
+
+\subsection{Recognition: Global Measure Comparison}
+
+\textbf{SDT's Recognition:}
+
+In SDT, recognition compares two \textbf{marginal measures}:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f) > c
+\end{equation}
+where $f$ is familiarity computed from the probe, and measures are \textbf{marginalized over all contexts}.
+
+\textbf{Generalized Recognition:}
+
+With joint measures $\studymeasure(f, \psi)$ and $\testmeasure(f, \psi)$, recognition compares:
+\begin{equation}
+\text{Respond ``old'' if } \frac{\int_{\mathcal{C}} d\studymeasure(f, \psi)}{\int_{\mathcal{C}} d\mu_{\text{new}}(f, \psi)} > c
+\end{equation}
+This integrates over \textbf{all possible contexts} $\psi \in \mathcal{C}$.
+
+\subsection{Recall: Conditional Measure Restriction}
+
+\begin{definition}[Conditional Measure]
+Given a joint measure $\mu$ on $\contentspace \times \contextspace$ and a specific context value $\psi(\text{cue}) \in \contextspace$, the \textbf{conditional measure} $\mu(\cdot \mid \psi = \psi(\text{cue}))$ on $\contentspace$ is defined as:
+\begin{equation}
+\mu(A \mid \psi = \psi(\text{cue})) = \frac{\mu(A \times \{\psi(\text{cue})\})}{\mu_{\mathcal{C}}(\{\psi(\text{cue})\})}
+\end{equation}
+where $\mu_{\mathcal{C}}$ is the context marginal.
+\end{definition}
+
+\textbf{Recall Decision:}
+
+Recall operates on the \textbf{conditional measure} given the cue context:
+\begin{equation}
+\text{Recall item $i$ if } \int_{\contentspace} \langle f_i, f \rangle \, d\studymeasure(f \mid \psi = \psi(\text{cue})) > \text{threshold}
+\end{equation}
+This restricts to \textbf{only items associated with context $\psi(\text{cue})$}.
+
+\subsection{Recall as Restricted SDT}
+
+\begin{theorem}[Recall as Conditional SDT]
+Recall is a \textbf{restricted SDT} where the decision is made on the conditional measure instead of the marginal one.
+\end{theorem}
+
+\textbf{Formal Statement:}
+
+\textbf{Recognition (SDT):}
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f) > c
+\end{equation}
+where $\oldmeasure(df) = \int_{\mathcal{C}} d\studymeasure(f, \psi)$ (marginal over all contexts).
+
+\textbf{Recall:}
+\begin{equation}
+\text{Recall item $i$ if } \frac{d\studymeasure(\cdot \mid \psi(\text{cue}))}{d\mu_{\text{new}}(\cdot \mid \psi(\text{cue}))}(f_i) > c
+\end{equation}
+where $\studymeasure(\cdot \mid \psi(\text{cue}))$ is conditional on specific context.
+
+\textbf{Proof:}
+
+Recognition integrates over all contexts:
+\begin{equation}
+\oldmeasure(df) = \int_{\mathcal{C}} d\studymeasure(f, \psi)
+\end{equation}
+
+Recall conditions on specific context:
+\begin{equation}
+\studymeasure(df \mid \psi(\text{cue})) = \frac{\studymeasure(df \times \{\psi(\text{cue})\})}{\mu_{\mathcal{C}}(\{\psi(\text{cue})\})}
+\end{equation}
+
+If $\mu_{\mathcal{C}}(\{\psi(\text{cue})\}) > 0$, then:
+\begin{equation}
+\studymeasure(df \mid \psi(\text{cue})) = \lim_{\sigma \to 0} \frac{\int K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)}{\int K_\sigma(\psi(\text{cue}), d\psi) \, d\mu_{\mathcal{C}}(\psi)}
+\end{equation}
+where $K_\sigma(\psi(\text{cue}), \cdot)$ is a kernel with bandwidth $\sigma^2$.
+
+As $\sigma^2 \to 0$, the kernel approaches Dirac delta, and:
+\begin{equation}
+\studymeasure(df \mid \psi(\text{cue})) = \frac{\delta_{\psi(\text{cue})} \circ \studymeasure(df)}{\mu_{\mathcal{C}}(\{\psi(\text{cue})\})}
+\end{equation}
+
+Recognition uses marginal measure; recall uses conditional measure. \qed
+
+\subsection{Kernel Bandwidth and Contextual Resolution}
+
+\begin{definition}[Kernel Bandwidth]
+The \textbf{kernel bandwidth} $\sigma^2$ controls the \textbf{contextual resolution} of retrieval:
+
+\begin{itemize}
+    \item \textbf{Large $\sigma^2$ (broad kernel):} Low resolution, many contexts contribute $\to$ \textbf{recognition}
+    \item \textbf{Small $\sigma^2$ (narrow kernel):} High resolution, few contexts contribute $\to$ \textbf{recall}
+    \item \textbf{$\sigma^2 \to 0$ (Dirac kernel):} Perfect resolution, single context $\to$ \textbf{pure recall}
+\end{itemize}
+\end{definition}
+
+\textbf{Kernel-Based Retrieval:}
+\begin{equation}
+\text{Activation}(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+
+\textbf{Limit Behavior:}
+
+As $\sigma^2 \to 0$:
+\begin{equation}
+\lim_{\sigma \to 0} \int K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi) = \int_{\contentspace} \langle f_i, f \rangle \, d\studymeasure(f \mid \psi(\text{cue}))
+\end{equation}
+which is exactly recall activation.
+
+\textbf{SDT Curve Dependence on Bandwidth:}
+
+The SDT curve (ROC curve) depends on contextual resolution:
+
+\begin{itemize}
+    \item \textbf{Recognition ($\sigma^2 > 0$):} Broad kernel $\to$ many items contribute $\to$ high hit rate but high false alarm rate
+    \item \textbf{Recall ($\sigma^2 \to 0$):} Narrow kernel $\to$ few items contribute $\to$ lower hit rate but lower false alarm rate
+\end{itemize}
+
+\subsection{Recognition--Recall Continuum}
+
+\begin{proposition}[Recognition--Recall Continuum]
+Recognition and recall are \textbf{the same operation} at different kernel bandwidths:
+\begin{equation}
+\text{Recognition}(\sigma^2 > 0) \to \text{Recall}(\sigma^2 \to 0)
+\end{equation}
+\end{proposition}
+
+\textbf{Formal Statement:}
+\begin{equation}
+\text{Activation}(i|\text{cue}, \sigma^2) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+is a \textbf{continuous function} of $\sigma^2$:
+
+\begin{itemize}
+    \item At $\sigma^2 = \infty$: Uniform kernel $\to$ pure item-based recognition (no context)
+    \item At $\sigma^2 > 0$: Broad kernel $\to$ context-mediated recognition
+    \item At $\sigma^2 \to 0$: Dirac kernel $\to$ pure recall (context-specific)
+\end{itemize}
+
+\textbf{Empirical Prediction:}
+
+Tasks requiring \textbf{precise context matching} (recall) should show:
+\begin{itemize}
+    \item Lower hit rates (fewer items match narrow context)
+    \item Lower false alarm rates (fewer distractors match narrow context)
+    \item Higher precision (items that match are more likely correct)
+\end{itemize}
+
+\textbf{Tasks requiring broad matching} (recognition) should show:
+\begin{itemize}
+    \item Higher hit rates (more items match broad context)
+    \item Higher false alarm rates (more distractors match broad context)
+    \item Lower precision (matches are less selective)
+\end{itemize}
+
+\section{Forgetting as Measure Divergence}
+
+\subsection{Forgetting: Increasing Divergence Between Measures}
+
+\textbf{Core Principle:} Forgetting arises from \textbf{increasing divergence} between study-phase and test-phase measures.
+
+\begin{definition}[Measure Divergence]
+Given two measures $\studymeasure$ and $\testmeasure$ on the same measurable space, \textbf{forgetting} can be quantified as:
+\begin{equation}
+\text{Forgetting}(\Delta t) = D(\studymeasure, \testmeasure(\Delta t))
+\end{equation}
+where $D$ is a divergence measure (e.g., KL divergence, total variation, Wasserstein distance) and $\Delta t = t_{\text{test}} - t_{\text{study}}$.
+\end{definition}
+
+\textbf{SDT Connection:}
+
+In SDT, forgetting manifests as:
+\begin{itemize}
+    \item \textbf{Shift} of old distribution (trace decay)
+    \item \textbf{Compression} of old distribution (distinctiveness loss)
+    \item \textbf{Overlap} between old and new distributions (interference)
+\end{itemize}
+
+All of these can be quantified as \textbf{divergence measures}.
+
+\subsection{Forms of Forgetting as Specific Transformations}
+
+\subsubsection{Trace Decay: Scaling of Measure Mass}
+
+\textbf{Mathematical Form:}
+\begin{equation}
+\mu_{\text{decayed}}(\Delta t)(A) = e^{-\lambda \Delta t} \studymeasure(A)
+\end{equation}
+
+\textbf{Divergence:}
+\begin{equation}
+D(\studymeasure, \mu_{\text{decayed}}(\Delta t)) = |1 - e^{-\lambda \Delta t}| \cdot \|\studymeasure\|
+\end{equation}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution \textbf{shrinks} (total mass decreases)
+    \item Likelihood ratio $\frac{p_{\text{old}}(f, \Delta t)}{p_{\text{new}}(f)} = e^{-\lambda \Delta t} \cdot \frac{p_{\text{old}}(f, 0)}{p_{\text{new}}(f)}$ decreases
+    \item Recognition accuracy decreases as $\Delta t$ increases
+\end{itemize}
+
+\textbf{Empirical Forgetting Function:}
+\begin{equation}
+F(\Delta t) = e^{-\lambda \Delta t}
+\end{equation}
+Exponential decay of memory strength.
+
+\subsubsection{Interference: Non-Orthogonality of Supports}
+
+\textbf{Mathematical Form:}
+
+Forgetting via interference occurs when:
+\begin{equation}
+\text{support}(\studymeasure) \cap \text{support}(\mu_{\text{competitors}}) \neq \emptyset
+\end{equation}
+
+\textbf{Divergence:}
+
+Total variation distance:
+\begin{equation}
+D(\studymeasure, \testmeasure) = \|\studymeasure - \testmeasure\|_{\text{TV}} = \sup_{A} |\studymeasure(A) - \testmeasure(A)|
+\end{equation}
+where $\testmeasure$ includes competitors from new lists.
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution \textbf{overlaps} with competitor distributions
+    \item Likelihood ratio decreases due to overlap: $\frac{p_{\text{old}}(f)}{p_{\text{new}}(f)} \approx \frac{p_{\text{old}}(f)}{p_{\text{old}}(f) + p_{\text{competitors}}(f)}$
+    \item Recognition accuracy decreases as overlap increases
+\end{itemize}
+
+\textbf{Empirical Forgetting Function:}
+\begin{equation}
+F(\Delta t) = \frac{\|\studymeasure\|}{\|\studymeasure\| + \|\mu_{\text{competitors}}(\Delta t)\|}
+\end{equation}
+Forgetting rate depends on amount of interference.
+
+\subsubsection{Distinctiveness Loss: Compression of Metric $\to$ Density Diffusion}
+
+\textbf{Mathematical Form:}
+
+Temporal compression (SIMPLE-type):
+\begin{equation}
+d\mu_{\text{compressed}}(f, t) = d_\lambda(t_{\text{probe}}, t) \cdot d\studymeasure(f, t)
+\end{equation}
+where $d_\lambda(t_i, t_j) = e^{-\lambda|\log t_i - \log t_j|}$ is temporal distance metric.
+
+\textbf{Divergence:}
+
+Wasserstein distance:
+\begin{equation}
+D(\studymeasure, \mu_{\text{compressed}}) = \inf_{\gamma} \int c(f, f') \, d\gamma(f, f')
+\end{equation}
+where $c$ is transport cost (e.g., $c(f, f') = \|f - f'\|^2$).
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution \textbf{compresses} in temporal dimension
+    \item Distributions become less discriminable (density diffuses)
+    \item Recognition accuracy decreases as temporal distance increases
+\end{itemize}
+
+\textbf{Empirical Forgetting Function:}
+\begin{equation}
+F(\Delta t) = \left(1 + \frac{\Delta t}{t_0}\right)^{-\alpha}
+\end{equation}
+Power-law forgetting (SIMPLE prediction).
+
+\subsubsection{Context Drift: Push-Forward Divergence}
+
+\textbf{Mathematical Form:}
+
+Context evolution (TCM-type):
+\begin{equation}
+\testmeasure(\Delta t) = \pushforward{T_{\Delta t}}{\studymeasure}
+\end{equation}
+where $T_{\Delta t}(\psi) = \rho^{\Delta t}\psi + \eta \sum_{k=1}^{\Delta t} \rho^{\Delta t - k} f_k$ represents context drift.
+
+\textbf{Divergence:}
+
+KL divergence:
+\begin{equation}
+D(\studymeasure, \testmeasure(\Delta t)) = \text{KL}(\studymeasure \| \testmeasure(\Delta t)) = \int \log\left(\frac{d\studymeasure}{d\testmeasure(\Delta t)}\right) \, d\studymeasure
+\end{equation}
+
+\textbf{SDT Analogue:}
+\begin{itemize}
+    \item Old distribution \textbf{shifts} in context dimension
+    \item Distribution shape changes via push-forward
+    \item Recognition accuracy decreases as context drift increases
+\end{itemize}
+
+\textbf{Empirical Forgetting Function:}
+\begin{equation}
+F(\Delta t) = \rho^{\Delta t} + \eta \sum_{k=1}^{\Delta t} \rho^{\Delta t - k} \langle f_{\text{study}}, f_k \rangle
+\end{equation}
+Forgetting rate depends on drift parameter $\rho$.
+
+\subsection{Unified Forgetting Framework}
+
+\begin{theorem}[Unified Forgetting Principle]
+All forms of forgetting arise from \textbf{measure divergence} $D(\studymeasure, \testmeasure(\Delta t))$, where different forgetting mechanisms correspond to different \textbf{divergence metrics} and \textbf{transformation types}.
+\end{theorem}
+
+\textbf{Formal Statement:}
+
+\begin{enumerate}
+    \item \textbf{Trace Decay:} $D = \text{total variation}$, transformation = density scaling
+    \item \textbf{Interference:} $D = \text{total variation}$, transformation = measure overlap
+    \item \textbf{Distinctiveness Loss:} $D = \text{Wasserstein distance}$, transformation = metric compression
+    \item \textbf{Context Drift:} $D = \text{KL divergence}$, transformation = push-forward
+\end{enumerate}
+
+All forgetting functions $F(\Delta t)$ can be expressed as:
+\begin{equation}
+F(\Delta t) = 1 - \frac{D(\studymeasure, \testmeasure(\Delta t))}{\|\studymeasure\|}
+\end{equation}
+
+\textbf{SDT Connection:}
+
+In SDT, forgetting manifests as changes in the \textbf{old distribution}:
+\begin{itemize}
+    \item Shift: $p_{\text{old}}(f, \Delta t) = p_{\text{old}}(f - \delta(\Delta t), 0)$
+    \item Compression: $p_{\text{old}}(f, \Delta t) = \frac{1}{\sigma(\Delta t)} p_{\text{old}}(\frac{f}{\sigma(\Delta t)}, 0)$
+    \item Mass reduction: $\|\oldmeasure(\Delta t)\| = e^{-\lambda \Delta t} \|\oldmeasure(0)\|$
+\end{itemize}
+
+All can be quantified via divergence: $D(\oldmeasure(0), \oldmeasure(\Delta t))$.
+
+\subsection{Empirical Forgetting Functions}
+
+\begin{proposition}[Forgetting Function Forms]
+Different forgetting mechanisms produce different forgetting function forms:
+
+\begin{enumerate}
+    \item \textbf{Exponential:} $F(\Delta t) = e^{-\lambda \Delta t}$ (trace decay, exponential interference)
+    \item \textbf{Power-law:} $F(\Delta t) = (1 + \frac{\Delta t}{t_0})^{-\alpha}$ (distinctiveness loss, SIMPLE)
+    \item \textbf{Context-dependent:} $F(\Delta t) = \rho^{\Delta t} + \eta \sum_{k} \rho^{\Delta t - k} \langle f_{\text{study}}, f_k \rangle$ (context drift, TCM)
+    \item \textbf{Hyperbolic:} $F(\Delta t) = \frac{1}{1 + \lambda \Delta t}$ (interference-based)
+\end{enumerate}
+
+All emerge as different parameterizations of \textbf{measure divergence} over time.
+\end{proposition}
+
+\textbf{SDT Prediction:}
+
+Forgetting curves in recognition tasks should follow these forms, with parameters depending on:
+\begin{itemize}
+    \item Transformation type (decay, drift, compression, interference)
+    \item Measure structure (separable, joint, probabilistic)
+    \item Task demands (recognition vs. recall)
+\end{itemize}
+
+\section{General Theorem: SDT as the Limit Case of the Unified Operator}
+
+\subsection{The Unified Operator Equation}
+
+From the Unified Operator framework, all memory models can be expressed as:
+\begin{equation}
+W = \sum_{t=1}^{T}\gamma_t f_t \otimes \psi_t, \quad a(i|\text{cue}) = f_i^\top W\psi(\text{cue})
+\end{equation}
+
+This operator defines a \textbf{discrete measure} on the product space:
+\begin{equation}
+\studymeasure(A \times B) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_A(f_t) \mathbb{1}_B(\psi_t)
+\end{equation}
+
+\subsection{Main Theorem: SDT as Limit Case}
+
+\begin{theorem}[SDT as Limit of Unified Operator]
+When:
+
+\begin{enumerate}
+    \item Context manifold collapses to a single dimension: $\dim(\contextspace) = 1$
+    \item Retrieval kernel is Gaussian with fixed bandwidth: $K_\sigma(\psi(\text{cue}), \cdot) = \mathcal{N}(\psi(\text{cue}), \sigma^2)$
+    \item Measures are separable: $\studymeasure(df, d\psi) = \mu_{\mathcal{F}}(df) \otimes \mu_{\mathcal{C}}(d\psi)$
+\end{enumerate}
+
+Then the unified operator retrieval:
+\begin{equation}
+a(i|\text{cue}) = f_i^\top W\psi(\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+reduces to SDT's likelihood ratio test:
+\begin{equation}
+\text{Respond ``old'' if } \frac{d\oldmeasure}{d\newmeasure}(f_i) > c
+\end{equation}
+where $\oldmeasure(df) = \int_{\mathcal{C}} d\studymeasure(f, \psi)$ and $\newmeasure(df)$ is the new-item measure.
+\end{theorem}
+
+\textbf{Proof:}
+
+\textbf{Step 1: Unified Operator as Measure Integral}
+
+From the operator equation:
+\begin{equation}
+a(i|\text{cue}) = f_i^\top W\psi(\text{cue}) = \sum_{t=1}^{T} \gamma_t \langle f_i, f_t \rangle \langle \psi(\text{cue}), \psi_t \rangle
+\end{equation}
+
+This can be written as:
+\begin{equation}
+a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \langle \psi(\text{cue}), \psi \rangle \, d\studymeasure(f, \psi)
+\end{equation}
+
+\textbf{Step 2: Kernel Transformation}
+
+With retrieval kernel $K_\sigma(\psi(\text{cue}), \cdot)$:
+\begin{equation}
+a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+
+\textbf{Step 3: Context Collapse}
+
+As context dimension collapses ($\dim(\contextspace) \to 1$) and kernel bandwidth becomes large ($\sigma^2 \to \infty$), kernel becomes uniform:
+\begin{equation}
+\lim_{\sigma \to \infty} K_\sigma(\psi(\text{cue}), d\psi) = \frac{1}{\|\contextspace\|} d\psi
+\end{equation}
+
+Then:
+\begin{equation}
+a(i|\text{cue}) \to \int_{\contentspace} \langle f_i, f \rangle \, d\mu_{\mathcal{F}}(f)
+\end{equation}
+where $\mu_{\mathcal{F}}(df) = \int_{\mathcal{C}} d\studymeasure(f, \psi)$ is the marginal measure.
+
+\textbf{Step 4: SDT Likelihood Ratio}
+
+For recognition, compare $a(i|\text{probe})$ for studied vs. unstudied items:
+\begin{equation}
+\frac{a(i|\text{probe, old})}{a(i|\text{probe, new})} = \frac{\int_{\contentspace} \langle \text{probe}, f \rangle \, d\oldmeasure(f)}{\int_{\contentspace} \langle \text{probe}, f \rangle \, d\newmeasure(f)}
+\end{equation}
+
+If item vectors $\{f_t\}$ are normalized and probe = item $i$, then:
+\begin{equation}
+\frac{a(i|\text{probe, old})}{a(i|\text{probe, new})} = \frac{\frac{d\oldmeasure}{df}(f_i)}{\frac{d\newmeasure}{df}(f_i)} = \frac{d\oldmeasure}{d\newmeasure}(f_i)
+\end{equation}
+
+\textbf{Step 5: Decision Rule}
+
+Respond ``old'' if:
+\begin{equation}
+\frac{d\oldmeasure}{d\newmeasure}(f_i) > c
+\end{equation}
+which is exactly SDT's likelihood ratio test. \qed
+
+\subsection{Corollaries}
+
+\begin{corollary}[SDT as Marginal Projection]
+SDT is the \textbf{marginal projection} of the unified operator framework when context is marginalized.
+\end{corollary}
+
+\begin{corollary}[Recognition--Recall Continuum]
+Recognition and recall are the same operation at different kernel bandwidths:
+\begin{itemize}
+    \item \textbf{Recognition:} $\sigma^2 > 0$ (broad kernel, marginal measure)
+    \item \textbf{Recall:} $\sigma^2 \to 0$ (narrow kernel, conditional measure)
+\end{itemize}
+\end{corollary}
+
+\begin{corollary}[Model Hierarchy]
+All memory models form a hierarchy from SDT:
+\begin{itemize}
+    \item \textbf{Level 0:} SDT (1D marginal, static measures)
+    \item \textbf{Level 1:} Models with context dimension (joint measures)
+    \item \textbf{Level 2:} Models with transformations (push-forward, kernel, density change)
+    \item \textbf{Level 3:} Models with temporal dynamics (measure evolution)
+\end{itemize}
+\end{corollary}
+
+\begin{corollary}[Theoretical Integration]
+SDT, recognition models (REM, EBRW), and recall models (TCM, CRU) are all \textbf{special cases} of the unified operator framework, differing only in:
+\begin{itemize}
+    \item Context dimensionality
+    \item Transformation type
+    \item Kernel bandwidth
+\end{itemize}
+\end{corollary}
+
+\section{Discussion and Implications}
+
+\subsection{Continuous Hierarchy of Measure Transformations}
+
+\textbf{Key Insight:} SDT and all modern memory models form a \textbf{continuous hierarchy} of measure transformations:
+
+\begin{enumerate}
+    \item \textbf{SDT (Foundation):} Compare two probability measures on 1D familiarity space
+    \item \textbf{Recognition Models (REM, EBRW):} Kernel transformations on joint measures
+    \item \textbf{Temporal Models (TCM, CRU):} Push-forward transformations on evolving measures
+    \item \textbf{Attention Models (SOB, Primacy):} Density changes on weighted measures
+    \item \textbf{Full Unified Framework:} Composition of all transformation types
+\end{enumerate}
+
+\textbf{Geometric Foundation:}
+
+Recognition, recall, forgetting, and context drift are different \textbf{directions of measure deformation} in the same space:
+\begin{itemize}
+    \item \textbf{Recognition:} Measure comparison along familiarity axis
+    \item \textbf{Recall:} Conditional measure restriction along context axis
+    \item \textbf{Forgetting:} Measure divergence over time
+    \item \textbf{Context Drift:} Measure push-forward in context space
+\end{itemize}
+
+\subsection{Experimental Paradigms as Measure Transformations}
+
+\textbf{Implication:} Experimental paradigms manipulate \textbf{transformations of $\mu$}, not separate ``processes.''
+
+\textbf{Examples:}
+
+\begin{enumerate}
+    \item \textbf{Recognition Task:} Compare $\studymeasure$ vs. $\mu_{\text{new}}$ (marginal measures)
+    \item \textbf{Cued Recall:} Conditional measure $\studymeasure(\cdot \mid \psi(\text{cue}))$
+    \item \textbf{Free Recall:} Sequential sampling from conditional measures
+    \item \textbf{Forgetting Paradigm:} Measure divergence $D(\studymeasure, \testmeasure(\Delta t))$
+    \item \textbf{Interference Paradigm:} Measure overlap $\text{support}(\studymeasure) \cap \text{support}(\mu_{\text{competitors}})$
+\end{enumerate}
+
+\textbf{Unified Prediction:}
+
+All paradigms are \textbf{measure comparisons} with different:
+\begin{itemize}
+    \item \textbf{Dimensions:} Familiarity (1D) vs. content $\times$ context (2D+)
+    \item \textbf{Kernel bandwidths:} Recognition (broad) vs. recall (narrow)
+    \item \textbf{Transformation types:} Push-forward, kernel, density change
+\end{itemize}
+
+\subsection{Bridge to Perception, Decision Theory, and Bayesian Inference}
+
+\textbf{Perception as Measure Transformation:}
+
+Perception = transport map from physical to psychological space:
+\begin{equation}
+\mu_{\text{psychological}} = \pushforward{T}{\mu_{\text{physical}}}
+\end{equation}
+
+\textbf{Decision Theory as Measure Comparison:}
+
+Decision = comparison of expected utility measures:
+\begin{equation}
+\text{Choose action $a$ if } \int U(x) \, d\mu_a(x) > \int U(x) \, d\mu_b(x)
+\end{equation}
+
+\textbf{Bayesian Inference as Conditional Measure:}
+
+Posterior = conditional measure given data:
+\begin{equation}
+\mu(\theta \mid \text{data}) = \frac{\mu(\text{data} \mid \theta) \cdot \mu(\theta)}{\int \mu(\text{data} \mid \theta) \, d\mu(\theta)}
+\end{equation}
+
+\textbf{Unified Framework:}
+
+All cognitive processes involve \textbf{measure transformations}:
+\begin{itemize}
+    \item \textbf{Perception:} Push-forward from physical to psychological
+    \item \textbf{Memory:} Transformations within psychological space
+    \item \textbf{Decision:} Comparison of transformed measures
+    \item \textbf{Inference:} Conditional measures given evidence
+\end{itemize}
+
+\subsection{Theoretical Integration}
+
+\textbf{Connection to Unified Operator Framework:}
+
+The measure-theoretic framework from SDT \textbf{complements} the Unified Operator framework:
+\begin{itemize}
+    \item \textbf{Unified Operator:} Algebraic structure (operators, compositions)
+    \item \textbf{Measure Theory:} Probabilistic structure (measures, transformations)
+\end{itemize}
+
+Together, they provide:
+\begin{enumerate}
+    \item \textbf{Algebraic foundation:} How memory processes compose (operators)
+    \item \textbf{Probabilistic foundation:} How memory states evolve (measures)
+\end{enumerate}
+
+\textbf{Connection to Existing Models:}
+
+All major memory models can be expressed as:
+\begin{enumerate}
+    \item \textbf{Measure construction:} How study measure $\studymeasure$ is formed
+    \item \textbf{Transformation type:} Push-forward, kernel, or density change
+    \item \textbf{Decision rule:} How transformed measure is compared
+\end{enumerate}
+
+\subsection{Empirical Predictions}
+
+\textbf{Prediction 1: Kernel Bandwidth Hypothesis}
+
+Recognition--recall differences should correlate with contextual precision (kernel bandwidth $\sigma^2$):
+\begin{itemize}
+    \item \textbf{High $\sigma^2$:} Recognition-like behavior (broad matching)
+    \item \textbf{Low $\sigma^2$:} Recall-like behavior (narrow matching)
+\end{itemize}
+
+\textbf{Prediction 2: Measure Divergence Hypothesis}
+
+Forgetting rate should correlate with measure divergence $D(\studymeasure, \testmeasure(\Delta t))$:
+\begin{itemize}
+    \item \textbf{Exponential decay:} $D = \text{total variation}$ (trace decay)
+    \item \textbf{Power-law decay:} $D = \text{Wasserstein distance}$ (distinctiveness loss)
+    \item \textbf{Context drift:} $D = \text{KL divergence}$ (TCM-type)
+\end{itemize}
+
+\textbf{Prediction 3: Transformation Type Hypothesis}
+
+Different forgetting mechanisms (decay, drift, interference) should produce different forgetting function forms but same underlying \textbf{measure misalignment}.
+
+\textbf{Prediction 4: Model Hierarchy Hypothesis}
+
+Models should transition between levels as task demands change:
+\begin{itemize}
+    \item \textbf{SDT level:} Simple recognition (1D familiarity)
+    \item \textbf{Recognition level:} Context-mediated recognition (2D content $\times$ context)
+    \item \textbf{Recall level:} Conditional retrieval (narrow kernel bandwidth)
+\end{itemize}
+
+\section{Conclusion}
+
+\subsection{Memory Judgments as Measure Comparisons}
+
+\textbf{Central Claim:} Memory judgments = measure comparisons across representational manifolds.
+
+\textbf{SDT Foundation:} SDT provides the \textbf{simplest measure-comparison form}---comparing two probability measures on 1D familiarity space.
+
+\textbf{General Framework:} The Unified Operator extends SDT into a \textbf{general algebra of measure transformation}:
+\begin{itemize}
+    \item Joint measures over content $\times$ context space
+    \item Three transformation types: push-forward, kernel, density change
+    \item Temporal dynamics via measure evolution
+\end{itemize}
+
+\subsection{Geometry of Measure Transformations}
+
+\textbf{Key Insight:} Memory can be defined not by its mechanisms, but by the \textbf{geometry of its measure transformations}.
+
+\textbf{Geometric Structure:}
+\begin{itemize}
+    \item \textbf{Recognition:} Measure comparison along familiarity axis
+    \item \textbf{Recall:} Conditional measure restriction along context axis
+    \item \textbf{Forgetting:} Measure divergence over time
+    \item \textbf{Context Drift:} Measure push-forward in context space
+\end{itemize}
+
+\textbf{Unified Perspective:} All memory processes are \textbf{different directions of measure deformation} in the same space.
+
+\subsection{Theoretical Contributions}
+
+\begin{enumerate}
+    \item \textbf{Unification:} SDT and all memory models are special cases of measure-transformation framework
+    \item \textbf{Generativity:} Framework enables construction of new models by combining transformation types
+    \item \textbf{Clarity:} Separates what memory models do (transform measures) from how they do it (specific mechanisms)
+    \item \textbf{Integration:} Links memory to perception, decision theory, and Bayesian inference
+\end{enumerate}
+
+\subsection{Future Directions}
+
+\begin{enumerate}
+    \item \textbf{Optimal Transport:} Binding as optimal transport between marginal measures
+    \item \textbf{Information Geometry:} Forgetting as entropy increase under measure diffusion
+    \item \textbf{Category Theory:} Memory processes as morphisms in category of measurable spaces
+    \item \textbf{Differential Geometry:} Context evolution as flows on manifolds
+\end{enumerate}
+
+\subsection{Final Statement}
+
+\textbf{SDT $\to$ Unified Framework:}
+
+SDT's simple but powerful structure---\textbf{comparing two probability measures}---provides the foundation for a complete theory of memory. By extending SDT's measure-comparison structure to higher-dimensional spaces and richer transformations, we reveal that all memory processes (encoding, retrieval, forgetting, generalization) are \textbf{measure transformations} between content and context spaces.
+
+Memory is not defined by its mechanisms, but by the \textbf{geometry of its measure transformations}.
+
+\section*{References}
+
+[To be added: citations to SDT (Green \& Swets, 1966; Macmillan \& Creelman, 2005), TCM, REM, SIMPLE, CRU, and related measure-theoretic and optimal transport literature]
+
+\section*{Key Notation Summary}
+
+\begin{itemize}
+    \item $\oldmeasure$, $\newmeasure$: SDT's old and new probability measures
+    \item $\studymeasure$, $\testmeasure$: Joint measures on content $\times$ context space
+    \item $K_\sigma(\psi, \cdot)$: Retrieval kernel with bandwidth $\sigma^2$
+    \item $\pushforward{T}{\mu}$: Push-forward of measure $\mu$ via map $T$
+    \item $\radonnikodym$: Radon--Nikodym derivative (density change)
+    \item $D(\mu, \nu)$: Measure divergence (KL, total variation, Wasserstein)
+    \item $\mu(\cdot \mid \psi)$: Conditional measure given context $\psi$
+\end{itemize}
+
+\end{document}
+

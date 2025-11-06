@@ -5,6 +5,11 @@
 \usepackage{booktabs}
 \usepackage{enumitem}
 \usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ltxtable}
+\usepackage{pdflscape}
+\usepackage{graphicx}
 
 % Theorem environments
 \theoremstyle{definition}
@@ -18,8 +23,8 @@
 \newcommand{\testmeasure}{\mu_{\text{test}}}
 \newcommand{\oldmeasure}{\mu_{\text{old}}}
 \newcommand{\newmeasure}{\mu_{\text{new}}}
-\newcommand{\omegacontentspace}{\omegacontentspace}
-\newcommand{\omegacontextspace}{\omegacontextspace}
+\newcommand{\omegacontentspace}{\Omega_{\mathcal{F}}}
+\newcommand{\omegacontextspace}{\Omega_{\mathcal{C}}}
 \newcommand{\contentspace}{\mathcal{F}}
 \newcommand{\contextspace}{\mathcal{C}}
 \newcommand{\pushforward}[2]{#1_{\#}#2}
@@ -33,35 +38,46 @@
 
 \maketitle
 
-\section{Introduction: From Models to Measures}
+\section{Introduction}
 
-Decades of memory research have produced a rich collection of computational models---TCM, SIMPLE, REM, CRU, OSCAR, Burgess--Hitch, SOB, and many others---each capturing different aspects of encoding, retrieval, forgetting, and serial order. These models appear diverse: some emphasize temporal context drift, others focus on positional coding, still others rely on similarity-based accumulation or stochastic sampling. Yet at their core, they all solve the same fundamental problem: \textbf{how to transform and reweight information between study and test phases.}
+At first glance the memory literature reads like a set of incompatible stories. Context-drift models, similarity samplers, rehearsal-based theories, and positional codes appear to explain different phenomena using unrelated mathematics. The central claim of this paper is that they all implement the same blueprint: experience is treated as representational mass, encoding pushes that mass into memory space, retrieval samples it with kernels, and attentional processes reweight it.
 
-This paper argues that the entire field of memory modeling can be reformulated as a \textbf{measure transformation problem}. Each memory model defines a particular way to transform or reweight a joint measure $\mu(x, y)$ between content space (items, features) and context space (temporal positions, contextual states). The differences between models are not differences in fundamental ontology---they are differences in \textbf{measure transformation rules}.
+Once that perspective is made explicit, familiar constructs fall into place. Deterministic context drift is just a push-forward of the study measure, stochastic evidence accumulation is an integral transform with a retrieval kernel, and primacy or rehearsal effects are density changes on an otherwise fixed geometry. Even the variety of similarity formulas—dot products, cosine, Gaussian kernels, collision counts—are nothing more than discrete or parametric approximations to the same quantity: the amount of local measure mass shared by two cues.
 
-\subsection{The Central Thesis}
+This observation also clarifies what decision rules such as Luce choice or competitive queuing really compute. Their purpose is to estimate the relative density of two measures, i.e. the probability that an observed cue arose from one source rather than another: $P(	ext{source}=i\mid x) \propto \frac{d\mu_i}{d\lambda}(x)$. All similarity scores therefore exist to supply that density ratio, after which the choice rule merely normalises it into a probability simplex.
 
-\textbf{All forms of memory operation (encoding, retrieval, forgetting, generalization) can be expressed as transformations of a measure between content and context spaces---through kernels, push-forward mappings, or density changes.}
+These observations motivate a concise measure-theoretic synthesis. The remainder of the paper sets out the minimal machinery required to express all major short-term memory models within that framework, shows how their predictions arise from the three core operators, and explains how forgetting, familiarity, and recall reduce to different placements of mass loss or kernel narrowing.
 
-This measure-theoretic perspective provides:
-\begin{itemize}
-    \item \textbf{Unification:} A common mathematical language linking seemingly disparate models
-    \item \textbf{Generativity:} A framework for constructing new models by combining transformation types
-    \item \textbf{Clarity:} Explicit separation of what memory models do (transform measures) from how they do it (specific mechanisms)
-\end{itemize}
+The study of human memory has generated an extraordinary diversity of computational models. Consider, for example, the Temporal Context Model (TCM), which emphasizes how context drifts over time; SIMPLE, which focuses on temporal compression and scale invariance; REM, which relies on stochastic similarity-based sampling; or models like OSCAR and Burgess--Hitch that emphasize positional coding. Each model appears to tell a different story about how memory works, using different mathematical machinery and emphasizing different psychological phenomena.
 
-\subsection{From Operators to Measures}
+Yet despite this apparent diversity, these models share something fundamental: they all describe ways of transforming and reweighting information between the moment of encoding (study) and the moment of retrieval (test). This observation suggests that there might be a deeper mathematical structure underlying memory models---one that reveals their essential unity while preserving their distinctive features.
 
-The unified operator equation $W = \sum_{t=1}^{T}\gamma_t f_t \otimes \psi_t$ can be recast as the construction of a \textbf{discrete measure} on the product space $\contentspace \times \contextspace$ of items and contexts:
+To make this structure accessible, we begin with a familiar starting point: Signal Detection Theory (SDT). SDT provides perhaps the simplest and most intuitive framework for understanding recognition memory. At its heart, SDT compares two probability distributions---one for old (studied) items and one for new (unstudied) items---and makes recognition decisions based on which distribution is more likely to have generated the observed familiarity value. This simple comparison of probability measures has proven remarkably powerful for understanding recognition memory.
+
+What if we could extend this measure-comparison structure to encompass not just recognition, but all of memory? What if encoding, retrieval, forgetting, and context-dependent recall could all be understood as different ways of transforming and comparing probability measures? This paper develops exactly such a framework, showing how SDT's simple measure comparison generalizes naturally to a rich mathematical structure that unifies diverse memory models.
+
+\subsection{The Measure-Theoretic Perspective}
+
+The central insight of this paper is that all memory processes can be understood as \textbf{transformations of probability measures} between content space (items, features) and context space (temporal positions, contextual states). Just as SDT compares two measures (old vs. new) along a single familiarity dimension, more complex memory models transform measures in richer ways: they evolve measures over time, sample from them stochastically, or reweight them selectively.
+
+This measure-theoretic perspective provides several advantages. First, it offers \textbf{unification}: a common mathematical language that reveals the essential similarities between seemingly disparate models. Second, it provides \textbf{generativity}: a framework for constructing new models by systematically combining different types of measure transformations. Third, it brings \textbf{conceptual clarity}: by separating what memory models do (transform measures) from how they do it (specific mechanisms), we can see the forest for the trees.
+
+\subsection{From Familiarity Distributions to Measure Transformations}
+
+In SDT, recognition memory is modeled by comparing two probability distributions on a one-dimensional familiarity space. The decision to respond ``old'' or ``new'' depends on whether the observed familiarity value is more likely under the old-item distribution or the new-item distribution. This is, at its core, a comparison of two probability measures.
+
+We can extend this structure in several natural ways. First, we can move from one-dimensional familiarity to a richer joint space that includes both content (items, features) and context (temporal positions, contextual states). Second, we can allow measures to evolve over time, rather than remaining static. Third, we can introduce different types of transformations: deterministic shifts (push-forward mappings), stochastic sampling (kernel transformations), or selective reweighting (density changes).
+
+When we do this, we find that memory models fall naturally into a unified framework. The study-phase measure $\studymeasure$ encodes what was learned, and retrieval involves transforming this measure in various ways. For example, we might construct a discrete measure on the product space $\contentspace \times \contextspace$:
 \begin{equation}
 \studymeasure(A \times B) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_A(f_t) \mathbb{1}_B(\psi_t)
 \end{equation}
-where $\mathbb{1}_A$ is the indicator function for set $A$. Retrieval then becomes:
+where $\{f_t\}$ are item vectors, $\{\psi_t\}$ are context vectors, $\gamma_t$ are encoding strengths, and $\mathbb{1}_A$ is the indicator function. Retrieval then becomes an integral over this transformed measure:
 \begin{equation}
 a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \langle \psi(\text{cue}), \psi \rangle \, d\studymeasure(f, \psi)
 \end{equation}
 
-This measure-theoretic view naturally extends to continuous models, probabilistic frameworks, and neural network representations.
+This measure-theoretic view naturally extends to continuous models, probabilistic frameworks, and neural network representations, providing a common foundation for understanding memory across different levels of analysis.
 
 \section{Mathematical Foundations}
 
@@ -124,7 +140,27 @@ a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rang
 
 As $\sigma^2 \to 0$, the kernel approaches a Dirac delta, yielding deterministic context matching.
 
-\subsubsection{Push-Forward Mapping (Deterministic Transformation)}
+\textbf{Simulation Demonstration:}
+
+To illustrate kernel transformation concretely, we implemented a computational simulation\footnote{Code and visualizations available at \url{https://github.com/naszhu/measure-t-simulation}} that demonstrates how kernel bandwidth controls retrieval precision. The simulation creates a discrete study-phase measure $\studymeasure$ on a 2D context space by storing 8 items, each with an associated context vector. During retrieval, a cue $\psi(\text{cue})$ activates stored memories according to the Gaussian kernel $K_\sigma(\psi(\text{cue}), \cdot)$.
+
+Figure~\ref{fig:kernel-visualization} shows how different bandwidth values $\sigma^2 \in \{0.1, 0.5, 2.0, 5.0\}$ affect the activation pattern. The contour heatmap visualizes the kernel activation field $K_\sigma(\psi(\text{cue}), \cdot)$ across context space, while the colored circles show the activation strength for each stored item (size proportional to activation). With small bandwidth ($\sigma^2 = 0.1$), activation is highly focused around the cue, demonstrating recall-like precision. As bandwidth increases, activation spreads more broadly, capturing recognition-like behavior where many items contribute to familiarity.
+
+Figure~\ref{fig:bandwidth-comparison} compares activation patterns across bandwidths, showing how the distribution of activation across items changes systematically. Small bandwidths produce sparse, focused activation (high precision), while large bandwidths produce diffuse activation across many items (high recall). This visualization demonstrates the recognition--recall equivalence principle: both processes use the same kernel transformation, differing only in bandwidth precision.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{images/kernel_transformation_visualization.png}
+\caption{Kernel transformation visualization showing how bandwidth $\sigma^2$ controls retrieval precision. Each panel shows the kernel activation field (contour heatmap), stored contexts (black dots), retrieval cue (red star), and item activations (colored circles, size proportional to activation). Small bandwidth ($\sigma^2 = 0.1$) produces focused, recall-like activation; large bandwidth ($\sigma^2 = 5.0$) produces diffuse, recognition-like activation.}
+\label{fig:kernel-visualization}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{images/bandwidth_comparison.png}
+\caption{Comparison of activation patterns across bandwidths. Left panel: Heatmap showing activation strength across items (columns) and bandwidths (rows). Right panel: Activation profiles for each bandwidth, demonstrating how bandwidth controls the precision--recall trade-off.}
+\label{fig:bandwidth-comparison}
+\end{figure}
 
 \begin{definition}[Push-Forward Measure]
 Given a measurable map $T: \Omega \to \Omega'$ and a measure $\mu$ on $\Omega$, the \textbf{push-forward measure} $\pushforward{T}{\mu}$ on $\Omega'$ is defined as:
@@ -348,138 +384,187 @@ d\mu_{\text{sampled}}(f, \psi) = K(\psi(\text{cue}), d\psi) \cdot w(f, \psi) \, 
 \caption{Memory processes as measure transformations}
 \end{table}
 
-\section{Associative Memory as Operator Composition}
+\section{Memory Models Through the Lens of Measure Transformations}
 
-The unified operator equation $W = \sum_{t=1}^{T}\gamma_t f_t \otimes \psi_t$ defines a \textbf{discrete measure} on the product space. Different memory regimes (product space, embedding, joint embedding) correspond to different \textbf{constraints on the measure structure}.
+The three fundamental measure transformations---push-forward, kernel transformation, and density change---provide a natural way to understand and classify memory models. Rather than organizing models by abstract ``space types,'' we can see how different models employ these transformations, either individually or in combination. This perspective reveals that what appear to be fundamentally different approaches are often just different ways of applying the same basic transformations.
 
-\subsection{Product Space: Separable Measure}
+\subsection{Models Based on Push-Forward Transformations}
 
-\textbf{Mathematical Constraint:} The study measure factors as a product of marginals:
+Push-forward transformations represent deterministic evolution of measures over time. These models emphasize how context or representations change in a predictable way during encoding or retrieval.
+
+\subsubsection{Temporal Context Model (TCM)}
+
+TCM uses push-forward to model context drift. The context evolution equation $\psi_{t+1} = \rho\psi_t + \eta f_t$ defines a family of push-forward maps $T_t(\psi) = \rho\psi + \eta f_t$. The study-phase measure evolves as:
 \begin{equation}
-\studymeasure = \mu_{\mathcal{F}} \otimes \mu_{\mathcal{C}}
+\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, T_t(\psi_t))}
 \end{equation}
-where $\mu_{\mathcal{F}}(A) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_A(f_t)$ and $\mu_{\mathcal{C}}(B) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_B(\psi_t)$.
+where each time step pushes the measure forward according to the context drift. This captures how context gradually changes over time, creating sequential dependencies between items.
 
-\textbf{Operator Form:} Retrieval becomes bilinear:
+\subsubsection{Context Retrieval and Updating (CRU)}
+
+CRU uses push-forward to model context as a transformed aggregation of previous items. The context is defined as $\psi_t = \sum_{k<t} \alpha_{tk} f_k$, which can be viewed as a push-forward transformation $T_t: \contentspace^{t-1} \to \contextspace$ that maps previous items into context space. The measure evolves as:
 \begin{equation}
-a(i|\text{cue}) = \int_{\contentspace} \langle f_i, f \rangle \, d\mu_{\mathcal{F}}(f) \cdot \int_{\contextspace} \langle \psi(\text{cue}), \psi \rangle \, d\mu_{\mathcal{C}}(\psi)
+\mu_t = \pushforward{T_t}{\mu_{t-1}} + \delta_{(f_t, T_t(\{f_j\}_{j<t}))}
 \end{equation}
+This transformation captures how context is constructed from the history of items.
 
-\textbf{Representative Models:}
-\begin{itemize}
-    \item \textbf{Burgess-Hitch (SEM):} $\mu_{\mathcal{C}} = \sum_{t=1}^{T} \delta_{e_{p(t)}}$ (positional measure)
-    \item \textbf{OSCAR:} $\mu_{\mathcal{C}} = \sum_{t=1}^{T} \delta_{[\cos(\omega_k t), \sin(\omega_k t)]_k}$ (oscillatory measure)
-    \item \textbf{Henson Start-End:} $\mu_{\mathcal{C}} = \sum_{t=1}^{T} \delta_{[\psi_{\text{start}}(t), \psi_{\text{end}}(t)]}$ (dual anchor measure)
-\end{itemize}
+\subsubsection{SIMPLE (Temporal Compression)}
 
-\textbf{Measure-Theoretic Interpretation:} Item and context spaces are \textbf{statistically independent} under the study measure. This enables explicit positional coding but lacks sequential dependencies captured by joint measures.
+SIMPLE uses push-forward via a log-transform to compress temporal distances. The transformation $T: t \mapsto \log(t)$ pushes the temporal measure forward into log space:
+\begin{equation}
+\mu_{\text{compressed}} = \pushforward{\log}{\mu_{\text{temporal}}}
+\end{equation}
+This transformation captures scale-invariant forgetting by compressing the temporal metric.
 
-\subsection{Embedding Space: Marginalization Over Context}
+\subsubsection{Embedding Models}
 
-\textbf{Mathematical Constraint:} Context is absorbed into item space via embedding map $E: \contextspace \to \contentspace$.
-
-\textbf{Measure Transformation:} Push-forward of context measure into item space:
+Models that embed context into item space use push-forward to transform the context measure. For example, in the Page \& Norris Primacy Model, an embedding map $E: \contextspace \to \contentspace$ pushes the context measure forward into item space:
 \begin{equation}
 \mu_{\mathcal{F}}^{\text{embedded}} = \pushforward{E}{\mu_{\mathcal{C}}}
 \end{equation}
+This transformation absorbs context into the item similarity metric, eliminating the need for separate context representation.
 
-The joint measure becomes:
+\subsection{Models Based on Kernel Transformations}
+
+Kernel transformations represent stochastic retrieval processes, where activation is computed as an expectation over a probability distribution defined by the kernel.
+
+\subsubsection{REM (Retrieving Effectively from Memory)}
+
+REM uses kernel transformation for similarity-based stochastic sampling. The retrieval kernel $K_\sigma(\psi(\text{cue}), d\psi') = \mathcal{N}(\psi(\text{cue}), \sigma^2 I)(d\psi')$ defines a probability distribution over context space. Retrieval activation becomes:
 \begin{equation}
-d\studymeasure(f, \psi) = \delta_{E(\psi)}(df) \, d\mu_{\mathcal{C}}(\psi)
+a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
 \end{equation}
+The kernel bandwidth $\sigma^2$ controls the precision of retrieval---larger values lead to broader sampling, smaller values to more precise matching.
 
-\textbf{Operator Form:} Retrieval is unary (operates on item space only):
+\subsubsection{EBRW (Exemplar-Based Random Walk)}
+
+EBRW uses a similarity kernel for evidence accumulation. The similarity kernel $K_s(f_i, df) = s(f_i, f) \, d\mu_{\text{items}}(f)$ accumulates evidence over time:
 \begin{equation}
-a(i|\text{cue}) = \int_{\contentspace} \langle f_i, f \rangle \, d(\pushforward{E}{\mu_{\mathcal{C}}})(f) = \int_{\contextspace} \langle f_i, E(\psi) \rangle \, d\mu_{\mathcal{C}}(\psi)
+\nu_n(df) = \sum_{m=1}^{n} K_s(f_{\text{probe}}, df)
 \end{equation}
+This kernel-based accumulation captures how familiarity builds up stochastically during recognition decisions.
 
-\textbf{Representative Models:}
-\begin{itemize}
-    \item \textbf{Page \& Norris Primacy:} $E(\psi) = \text{primacy-weighted position vector}$ with density $w(t) = e^{-\lambda t}$
-\end{itemize}
+\subsubsection{Global Matching Models}
 
-\textbf{Measure-Theoretic Interpretation:} Context measure is \textbf{transformed into item metric}---no separate context representation exists. Forgetting appears as metric distortion rather than measure contraction.
-
-\subsection{Joint Embedding Space: Co-evolving Measures}
-
-\textbf{Mathematical Constraint:} Context measure evolves dynamically with items via push-forward:
+Global matching models use kernel transformation to compute familiarity across the entire study measure:
 \begin{equation}
-\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, \psi_{t+1})}
+F = \int_{\contentspace \times \contextspace} K(\text{probe}, df) \, d\studymeasure(f, \psi)
 \end{equation}
-where $T_t(\psi) = \rho\psi + \eta f_t + \epsilon_t$.
+where $K(\text{probe}, df)$ is an item similarity kernel. This captures how recognition depends on global similarity to all studied items.
 
-\textbf{Operator Form:} Retrieval depends on full item--context trajectory:
+\subsection{Models Based on Density Change (Radon--Nikodym Derivative)}
+
+Density changes represent selective reweighting of the measure, capturing attentional effects, decay, or novelty weighting.
+
+\subsubsection{SOB (Serial Order in a Box)}
+
+SOB uses density change to weight encoding by novelty. The novelty-weighted measure is:
 \begin{equation}
-a(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \langle \psi(\text{cue}), \psi \rangle \, d\mu_T(f, \psi)
+d\mu_{\text{weighted}}(f, \psi) = n(f, \psi) \cdot d\studymeasure(f, \psi)
 \end{equation}
-where $\mu_T$ is the measure after $T$ time steps of evolution.
+where $n(f, \psi)$ is the novelty function. This density change captures how novel items receive stronger encoding weights.
 
-\textbf{Representative Models:}
-\begin{itemize}
-    \item \textbf{TCM:} $T_t(\psi) = \rho\psi + \eta f_t$ (deterministic drift)
-    \item \textbf{CRU:} Context as mixture: $\psi_t = \sum_{k<t} \alpha_{tk} f_k$ (linear combination of item measures)
-    \item \textbf{SOB:} Novelty-weighted: $d\mu_t = n_t \cdot d\mu_{\text{base},t}$ (density change)
-\end{itemize}
+\subsubsection{Page \& Norris Primacy Model}
 
-\textbf{Measure-Theoretic Interpretation:} The joint measure has \textbf{non-trivial correlations} between items and contexts---sequential dependencies emerge naturally. This regime captures contiguity effects and temporal structure but lacks explicit positional coding.
-
-\subsection{Pure Summation Space: Item-Only Measure}
-
-\textbf{Mathematical Constraint:} No explicit context representation; measure exists only on item space:
+The primacy model uses density change to weight items by their position:
 \begin{equation}
-\studymeasure = \mu_{\mathcal{F}} = \sum_{t=1}^{T} \gamma_t \delta_{f_t}
+d\mu_{\text{primacy}}(f, \psi) = e^{-\lambda t(f, \psi)} \cdot d\studymeasure(f, \psi)
 \end{equation}
+where the density decreases exponentially with position, giving early items higher weight.
 
-\textbf{Operator Form:} Direct item similarity accumulation:
+\subsubsection{Trace Decay Models}
+
+Trace decay models use density change to model forgetting:
 \begin{equation}
-a(i|\text{cue}) = \int_{\contentspace} s(f_i, f) \, d\mu_{\mathcal{F}}(f) = \sum_{t=1}^{T} \gamma_t s(f_i, f_t)
+d\mu_{\text{decayed}}(f, \psi) = e^{-\lambda(T-t)} \cdot d\studymeasure(f, \psi)
 \end{equation}
+The density decreases exponentially over time, reducing the total mass of the measure.
 
-\textbf{Representative Models:}
-\begin{itemize}
-    \item \textbf{Davelaar et al.:} $\gamma_t = \rho^{T-t}$ (exponential decay)
-    \item \textbf{Basic EBRW:} Pure similarity accumulation with $\gamma_t = 1$
-\end{itemize}
+\subsection{Models Using Combinations of Transformations}
 
-\textbf{Measure-Theoretic Interpretation:} Context is \textbf{implicit in the probe}---no separate context measure exists. Recognition and recall collapse into the same operation.
+Many models combine multiple transformation types, showing how the three fundamental operations can work together.
 
-\subsection{Probabilistic Space: Stochastic Measures}
+\subsubsection{TCM with Retrieval Noise}
 
-\textbf{Mathematical Constraint:} The study measure is a \textbf{random measure} (or measure-valued random variable):
+TCM can be extended to include stochastic retrieval by combining push-forward (context drift) with kernel transformation (stochastic sampling):
 \begin{equation}
-\studymeasure(\omega) = \sum_{t=1}^{T} \gamma_t(\omega) \delta_{(f_t(\omega), \psi_t(\omega))}
+\mu_{\text{retrieval}} = K_\sigma(\psi(\text{cue}), \cdot) \circ \pushforward{T_T \circ \cdots \circ T_1}{\mu_0}
 \end{equation}
-where $\omega$ indexes random realizations.
+The measure first evolves via push-forward, then retrieval samples stochastically via the kernel.
 
-\textbf{Operator Form:} Retrieval is expectation over measure realizations:
+\subsubsection{SOB with Context Evolution}
+
+SOB combines density change (novelty weighting) with push-forward (context evolution):
 \begin{equation}
-a(i|\text{cue}) = \mathbb{E}_\omega \left[ \int \langle f_i, f \rangle K(\psi(\text{cue}), d\psi) \, d\studymeasure(\omega)(f, \psi) \right]
+\mu_{t+1} = \pushforward{T_t}{\mu_t} + n_{t+1} \delta_{(f_{t+1}, \psi_{t+1})}
 \end{equation}
+where the density change weights new items by novelty, and push-forward evolves the context.
 
-\textbf{Representative Models:}
-\begin{itemize}
-    \item \textbf{REM:} Stochastic sampling from similarity distributions---each retrieval samples a realization $\omega$
-    \item \textbf{Monte Carlo STM:} Probabilistic retrieval with measure uncertainty
-\end{itemize}
+\subsubsection{Weighted Stochastic Sampling}
 
-\textbf{Measure-Theoretic Interpretation:} Memory is \textbf{inherently stochastic}---each retrieval samples from a distribution over possible study measures. This captures retrieval variability and uncertainty.
+Models can combine density change with kernel transformation for weighted stochastic sampling:
+\begin{equation}
+d\mu_{\text{sampled}}(f, \psi) = K(\psi(\text{cue}), d\psi) \cdot w(f, \psi) \, d\studymeasure(f, \psi)
+\end{equation}
+The density change $w(f, \psi)$ selectively weights parts of the measure, and the kernel transformation samples stochastically from the weighted measure.
 
-\subsection{Measure Constraints Summary}
+\subsection{Summary: Transformation Types Across Models}
 
 \begin{table}[h]
 \centering
-\begin{tabular}{llll}
+\begin{tabular}{lll}
 \toprule
-\textbf{Regime} & \textbf{Measure Constraint} & \textbf{Mathematical Form} & \textbf{Models} \\
+\textbf{Transformation Type} & \textbf{Key Models} & \textbf{Psychological Process} \\
 \midrule
-\textbf{Product Space} & Separable: $\mu = \mu_{\mathcal{F}} \otimes \mu_{\mathcal{C}}$ & $a(i|\text{cue}) = \int_{\contentspace} \langle f_i, f \rangle \, d\mu_{\mathcal{F}}(f) \cdot \int_{\contextspace} \langle \psi(\text{cue}), \psi \rangle \, d\mu_{\mathcal{C}}(\psi)$ & Burgess-Hitch, OSCAR, Henson Start-End \\
-\textbf{Embedding Space} & Context marginalized: $\mu_{\mathcal{F}}^{\text{embedded}} = \pushforward{E}{\mu_{\mathcal{C}}}$ & $a(i|\text{cue}) = \int_{\contextspace} \langle f_i, E(\psi) \rangle \, d\mu_{\mathcal{C}}(\psi)$ & Page \& Norris Primacy \\
-\textbf{Joint Embedding} & Dynamic push-forward: $\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, \psi_{t+1})}$ & $a(i|\text{cue}) = \int \langle f_i, f \rangle \langle \psi(\text{cue}), \psi \rangle \, d\mu_T(f, \psi)$ & TCM, CRU, SOB \\
-\textbf{Pure Summation} & Item-only: $\mu = \mu_{\mathcal{F}}$ & $a(i|\text{cue}) = \int_{\contentspace} s(f_i, f) \, d\mu_{\mathcal{F}}(f)$ & Davelaar et al., Basic EBRW \\
-\textbf{Probabilistic} & Random measure: $\mu(\omega)$ & $a(i|\text{cue}) = \mathbb{E}_\omega[\int \langle f_i, f \rangle K(\psi(\text{cue}), d\psi) \, d\mu(\omega)(f, \psi)]$ & REM, Monte Carlo STM \\
+\textbf{Push-Forward} & TCM, CRU, SIMPLE, Embedding models & Context drift, temporal compression, encoding mapping \\
+\textbf{Kernel} & REM, EBRW, Global matching & Stochastic retrieval, similarity-based sampling \\
+\textbf{Density Change} & SOB, Primacy, Trace decay & Novelty weighting, attentional effects, forgetting \\
+\textbf{Combinations} & TCM+noise, SOB+evolution, Weighted sampling & Complex memory dynamics \\
 \bottomrule
 \end{tabular}
-\caption{Measure constraints by memory regime}
+\caption{Memory models organized by measure transformation type}
+\end{table}
+
+This organization reveals that memory models differ not in their fundamental operations, but in which transformations they employ and how they combine them. The same three transformations---push-forward, kernel, and density change---appear across all models, just applied in different ways and contexts.
+
+\subsection{Comprehensive Comparison of Transformation Types}
+
+Tables~\ref{tab:transformation-basic} and~\ref{tab:transformation-predictions} provide a detailed comparison of the three fundamental measure transformations. Table~\ref{tab:transformation-basic} covers mathematical forms, psychological interpretations, and core assumptions, while Table~\ref{tab:transformation-predictions} covers predictive strengths, limitations, and when to use each approach.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{p{1.5cm}p{2.5cm}p{3cm}p{3.5cm}p{1.5cm}p{1.5cm}p{2.5cm}}
+\toprule
+\textbf{Type} & \textbf{Math Form} & \textbf{Psychological Meaning} & \textbf{Core Assumptions} & \textbf{Changes} & \textbf{Fixed} & \textbf{Models} \\
+\midrule
+\textbf{Push-forward} & $\nu = \pushforward{T}{\mu}$; $(\pushforward{T}{\mu})(A) = \mu(T^{-1}(A))$ & Context \textbf{drifts deterministically}; geometric transformations in psychological space. & 1. Smooth/linear evolution. 2. Homogeneous dynamics. 3. No retrieval noise. & \textbf{Support/geometry} (location, orientation). & Total mass; relative weights. & TCM, CRU, SIMPLE, positional models. \\
+\midrule
+\textbf{Kernel} & $\nu(A) = \int K(x, A) \, d\mu(x)$; $K(x, \cdot)$ is prob. dist. & \textbf{Probabilistic sampling} from similarity field; stochastic evidence accumulation. & 1. Similarity-based sampling. 2. Stationary, isotropic noise (Gaussian/exponential). 3. Items independent given cue. & \textbf{Location + dispersion} (blurring). & Expected mass. & REM, EBRW, global-matching, noisy-accumulator. \\
+\midrule
+\textbf{Density change} & $d\nu = w(x) \, d\mu(x)$; $w > 0$ & \textbf{Selective emphasis} (attention, rehearsal, decay, novelty). & 1. Stable geometry. 2. Weights reflect priority/salience. 3. Multiplicative reweighting. & \textbf{Mass intensity} (relative importance). & Support; geometry. & SOB, primacy/recency, rehearsal/decay, attention gating. \\
+\bottomrule
+\end{tabular}
+\caption{Basic Properties of Measure Transformation Types}
+\label{tab:transformation-basic}
+\end{table}
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{p{1.5cm}p{3.5cm}p{3.5cm}p{3.5cm}}
+\toprule
+\textbf{Type} & \textbf{Predictive Strengths} & \textbf{Predictive Limits} & \textbf{When to Use} \\
+\midrule
+\textbf{Push-forward} & • \textbf{Temporal contiguity}, \textbf{context reinstatement}, \textbf{lag-recency gradients}. • Captures \textbf{systematic temporal drift}. • Strong parametric fits for serial order. & • Cannot explain trial-to-trial variability. • Overpredicts smooth context recovery. • Misses attention weighting/uncertainty. & \textbf{Deterministic evolution} (list context, time compression). Ideal for \textbf{recall sequences} or \textbf{context reinstatement} studies. \\
+\midrule
+\textbf{Kernel} & • \textbf{Response variability}, \textbf{confidence distributions}, \textbf{false alarms}. • Links directly to SDT and diffusion-type measures. • Captures \textbf{probabilistic recognition}. & • Less suited to long-range temporal structure. • Cannot naturally explain contiguity gradients without extra dynamics. & \textbf{Uncertainty/variability}, \textbf{probabilistic decision behavior}. Captures \textbf{recognition accuracy, ROC shapes, confidence}. \\
+\midrule
+\textbf{Density change} & • \textbf{Serial-position effects} (primacy/recency), \textbf{rehearsal gains}, \textbf{forgetting curves} due to decay. • Useful for \textbf{strength-based} phenomena and attentional modulation. & • Cannot account for contextual drift. • No probabilistic noise. • No mechanism for content-context misalignment. & \textbf{Strength allocation, attentional focus}, or \textbf{decay processes} within a fixed representational structure. \\
+\bottomrule
+\end{tabular}
+\caption{Predictive Properties and Applications of Measure Transformation Types}
+\label{tab:transformation-predictions}
 \end{table}
 
 \section{Unifying Forgetting, Familiarity, and Recall}
@@ -777,7 +862,7 @@ The framework generates testable predictions:
     
     \item \textbf{Transformation Type Hypothesis:} Different forgetting mechanisms (decay, drift, interference) should produce different forgetting function forms but same underlying measure misalignment
     
-    \item \textbf{Regime Transition Hypothesis:} Models should transition between regimes (product $\to$ joint embedding) as task demands change (explicit position $\to$ sequential contiguity)
+    \item \textbf{Transformation Combination Hypothesis:} Models should transition between different transformation types or combinations as task demands change (e.g., from push-forward to kernel transformation as retrieval becomes more stochastic)
 \end{enumerate}
 
 \subsection{Generative Model Space}
@@ -870,20 +955,22 @@ This unifies perception, encoding, and retrieval as \textbf{measure transformati
 
 \section{Conclusion}
 
-The measure-theoretic framework provides a \textbf{deep meta-level unification} across all existing memory theories. By recasting memory processes as transformations of measures---via kernels, push-forwards, or density changes---we reveal:
+This paper has developed a measure-theoretic framework for understanding memory that begins with the familiar structure of Signal Detection Theory and extends it naturally to encompass the full range of memory phenomena. By viewing memory processes as transformations of probability measures---through kernels, push-forwards, or density changes---we have revealed a deeper unity underlying the apparent diversity of memory models.
 
-\begin{enumerate}
-    \item \textbf{Structural unity:} All models perform the same fundamental operation (measure transformation) in different ways
-    \item \textbf{Generative power:} Continuous model manifold enables systematic exploration and new model construction
-    \item \textbf{Theoretical integration:} Links memory models to probability theory, geometry, and functional analysis
-    \item \textbf{Empirical leverage:} Generates testable predictions about recognition--recall equivalence, forgetting functions, and regime transitions
-\end{enumerate}
+The framework provides several key contributions. First, it offers \textbf{structural unity}: by showing that all models perform the same fundamental operation (measure transformation) in different ways, we can see past surface-level differences to the essential mathematical structure. Second, it provides \textbf{generative power}: the continuous model manifold defined by different transformation types enables systematic exploration of the space of possible models and suggests new combinations that have not yet been explored. Third, it brings \textbf{theoretical integration}: by linking memory models to probability theory, geometry, and functional analysis, we connect memory research to broader mathematical frameworks. Finally, it offers \textbf{empirical leverage}: the framework generates testable predictions about recognition--recall equivalence, forgetting functions, and transitions between different memory regimes.
 
-This is not merely a reformulation---it is a \textbf{conceptual synthesis} that exposes the algebraic and measure-theoretic skeleton underlying all memory models, providing a foundation for future theory development and empirical investigation.
+Perhaps most importantly, this framework makes memory models more accessible. By starting from SDT's simple measure comparison and showing how it generalizes, we provide an intuitive entry point into what might otherwise seem like an impenetrable forest of mathematical machinery. The measure-theoretic perspective does not replace existing models---it reveals their essential structure, showing how they relate to each other and to the fundamental problem of transforming information between encoding and retrieval.
+
+Looking forward, this framework opens several promising directions. The connection to optimal transport theory suggests new ways of thinking about binding and forgetting. Information-theoretic measures provide quantitative tools for understanding memory capacity and forgetting. And the geometric perspective offers new ways of visualizing and understanding memory dynamics. By providing a common mathematical language, the measure-theoretic framework enables these connections and suggests new avenues for theoretical development and empirical investigation.
 
 \section*{References}
 
 [To be added: citations to TCM, SIMPLE, REM, CRU, OSCAR, Burgess--Hitch, SOB, and related measure-theoretic and optimal transport literature]
+
+\textbf{Simulation Code:}
+\begin{itemize}
+    \item Kernel transformation simulation: \url{https://github.com/naszhu/measure-t-simulation} (demonstrates kernel bandwidth effects on retrieval activation)
+\end{itemize}
 
 \section*{Key Notation Summary}
 

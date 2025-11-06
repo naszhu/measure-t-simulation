@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "model summary/SIMPLE.md",
+                "file": "Question.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SIMPLE"
+              "title": "Question"
             }
           },
           {
@@ -384,34 +384,34 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "dcf0770fe4111caf",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "extract_pdf_text.py",
     "Myideas/measure-t-simulation/measure_theory_demo.tex",
-    "Myideas/kernel_transformation_visualization.png",
     "Myideas/bandwidth_comparison.png",
+    "Myideas/kernel_transformation_visualization.png",
+    "ROC curve.md",
     "Myideas/measure-t-simulation/bandwidth_comparison.png",
     "Myideas/measure-t-simulation/kernel_transformation_visualization.png",
     "Myideas/measure-t-simulation/IMPROVEMENTS.md",
     "Myideas/measure-t-simulation/README.md",
+    "Myideas/measure-t-simulation/kernel_tutorial_beginner.jl",
     "Myideas/measure-t-simulation/KERNEL_PACKAGE_SUMMARY.md",
+    "Myideas/measure-t-simulation/kernel_transformation_sim.jl",
     "Myideas/measure-t-simulation/KERNEL_SIM_README.md",
     "Myideas/measure-t-simulation/test_kernel_sim.jl",
     "Myideas/measure-t-simulation/run_kernel_sim.jl",
-    "Myideas/measure-t-simulation/kernel_tutorial_beginner.jl",
-    "Myideas/measure-t-simulation/kernel_transformation_sim.jl",
     "Myideas/measure-t-simulation",
     "Myideas/KERNEL_PACKAGE_SUMMARY.md",
-    "Myideas/test_kernel_sim.jl",
     "Myideas/kernel_tutorial_beginner.jl",
+    "Myideas/test_kernel_sim.jl",
     "Myideas/KERNEL_SIM_README.md",
     "Myideas/run_kernel_sim.jl",
     "Myideas/kernel_transformation_sim.jl",
-    "Question.md",
     "class notes for students/lesson6-assignment.md",
     "class notes for students/lesson2_class_notes John.md",
     "class notes for students/lesson2_class_notes.md",
     "Myideas/memory/similarity in measure.md",
-    "Myideas/measure theory model.tex",
     "Myideas/measure theory model from SDT.md",
     "Myideas/measure theory model.md",
     "Myideas/memory/what if no measure based memory.md",

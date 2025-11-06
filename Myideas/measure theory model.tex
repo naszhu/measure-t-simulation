@@ -735,6 +735,109 @@ which is exactly recall activation.
 \end{itemize}
 \end{theorem}
 
+\subsection{Dual-Process Extensions: Separating Familiarity and Recollection}
+
+While the kernel bandwidth framework unifies recognition and recall as precision differences, dual-process theory suggests a more fundamental distinction: \textbf{familiarity} (continuous strength signal) versus \textbf{recollection} (thresholded content retrieval). This distinction can be naturally accommodated within the measure-theoretic framework by distinguishing between different measure spaces and transformation types.
+
+\textbf{Dual-Process Theory Distinctions:}
+
+Dual-process models (e.g., Yonelinas) propose that recognition memory involves two independent processes:
+\begin{itemize}
+    \item \textbf{Familiarity:} A continuous, graded strength signal that provides a sense of prior encounter without retrieving specific contextual details
+    \item \textbf{Recollection:} A thresholded, all-or-none process that retrieves specific episodic details (context, source, associated information)
+\end{itemize}
+
+These processes can be selectively impaired (e.g., hippocampal damage affects recollection more than familiarity) and show different neural correlates, suggesting they operate on different underlying structures.
+
+\textbf{Measure-Theoretic Dual-Process Formulation:}
+
+\begin{definition}[Familiarity Measure]
+Familiarity operates on the \textbf{marginal content measure}, integrating over context space:
+\begin{equation}
+\mu_{\mathcal{F}}^{\text{fam}}(A) = \studymeasure(A \times \contextspace) = \int_{\contextspace} \studymeasure(A \times d\psi)
+\end{equation}
+Familiarity is the kernel-smoothed projection onto content space:
+\begin{equation}
+\text{Familiarity}(i|\text{cue}) = \int_{\contentspace} \langle f_i, f \rangle \, d\mu_{\mathcal{F}}^{\text{fam}}(f) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \, d\studymeasure(f, \psi)
+\end{equation}
+\end{definition}
+
+\textbf{Psychological Interpretation:} Familiarity integrates similarity over the entire measure without requiring contextual match, producing a continuous strength signal.
+
+\begin{definition}[Recollection Measure]
+Recollection requires the \textbf{joint measure} with thresholded access to specific content-context pairs:
+\begin{equation}
+\text{Recollection}(i|\text{cue}) = \begin{cases}
+  1 & \text{if } \studymeasure(\{f_i\} \times B_{\epsilon}(\psi(\text{cue}))) > \theta \\
+  0 & \text{otherwise}
+\end{cases}
+\end{equation}
+where $B_{\epsilon}(\psi(\text{cue})) = \{\psi' \in \contextspace : \|\psi' - \psi(\text{cue})\| < \epsilon\}$ is an $\epsilon$-ball around the cue context and $\theta$ is the recollection threshold.
+\end{definition}
+
+\textbf{Psychological Interpretation:} Recollection checks for existence of specific episodic content (item $f_i$ bound to context near $\psi(\text{cue})$), producing a binary outcome.
+
+\textbf{Alternative Formulation via Different Transformation Types:}
+
+The dual-process distinction can also be expressed using different measure transformation types:
+
+\begin{itemize}
+    \item \textbf{Familiarity:} Kernel transformation (continuous, stochastic)
+    \begin{equation}
+    \text{Familiarity}(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \, K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+    \end{equation}
+    where $K_\sigma$ is a broad kernel ($\sigma^2 > 0$) that smooths over context space.
+    
+    \item \textbf{Recollection:} Push-forward with threshold (deterministic, all-or-none)
+    \begin{equation}
+    \text{Recollection}(i|\text{cue}) = \begin{cases}
+      1 & \text{if } (\pushforward{T_{\text{cue}}}{\studymeasure})(\{f_i\} \times \{\psi(\text{cue})\}) > \theta \\
+      0 & \text{otherwise}
+    \end{cases}
+    \end{equation}
+    where $T_{\text{cue}}$ is a deterministic mapping that projects onto the cue context.
+\end{itemize}
+
+\textbf{Compositional Recognition:}
+
+Recognition decisions can combine both processes:
+\begin{equation}
+\text{Recognition}(i|\text{cue}) = \max\left\{\text{Familiarity}(i|\text{cue}), \text{Recollection}(i|\text{cue})\right\}
+\end{equation}
+or as a weighted mixture:
+\begin{equation}
+\text{Recognition}(i|\text{cue}) = \alpha \cdot \text{Familiarity}(i|\text{cue}) + (1-\alpha) \cdot \text{Recollection}(i|\text{cue})
+\end{equation}
+where $\alpha \in [0,1]$ controls the relative contribution of each process.
+
+\textbf{Connection to Neural Substrates:}
+
+The measure-theoretic distinction maps naturally to neural substrates:
+\begin{itemize}
+    \item \textbf{Familiarity measure} ($\mu_{\mathcal{F}}^{\text{fam}}$): Operates on marginal content space $\rightarrow$ perirhinal cortex (item-based processing)
+    \item \textbf{Recollection measure} ($\studymeasure$ on joint space): Requires content-context binding $\rightarrow$ hippocampus (episodic binding)
+\end{itemize}
+
+Selective impairments (e.g., hippocampal damage) can be understood as affecting the joint measure transformation while preserving the marginal measure transformation.
+
+\textbf{Reconciliation with Kernel Bandwidth Framework:}
+
+The kernel bandwidth view (recognition vs. recall as $\sigma^2$ differences) can be seen as a special case where:
+\begin{itemize}
+    \item \textbf{Large $\sigma^2$:} Familiarity dominates (broad kernel $\approx$ marginal measure)
+    \item \textbf{Small $\sigma^2$:} Recollection-like precision (narrow kernel $\approx$ joint measure with threshold)
+\end{itemize}
+
+However, the dual-process formulation provides additional structure:
+\begin{itemize}
+    \item Explains \textbf{selective dissociations} (different measure spaces can be independently impaired)
+    \item Accounts for \textbf{qualitative differences} (continuous vs. thresholded)
+    \item Maps to \textbf{different neural substrates} (different measure spaces $\rightarrow$ different brain regions)
+    \item Maintains \textbf{mathematical unity} (both are measure transformations, just on different spaces)
+\end{itemize}
+
+\textbf{Key Insight:} The measure-theoretic framework can accommodate both single-process (kernel bandwidth) and dual-process (different measure spaces) views within the same mathematical language, revealing that the debate concerns \textbf{which measure space} is accessed rather than \textbf{whether} measures are transformed.
+
 \subsection{Measure-Theoretic Forgetting Functions}
 
 \begin{definition}[Forgetting Function]

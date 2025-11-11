@@ -56,13 +56,13 @@
 
 #### **4. Comparison to Traditional Models**
 
-| Feature | SIMPLE | Context/Associative (e.g., TCM) |
-|----------|---------|--------------------------------|
-| Representation | Items in log-compressed temporal space | Items bound to context vector |
-| Mechanism | Discriminability among temporal neighbors | Association between item and drifting context |
-| Update | No weight storage; purely positional geometry | Additive outer products ($W_{t+1} = W_t + f_t \otimes \psi_t$) |
-| Space type | Temporal–metric embedding | Product-space operator |
-| Rationale | Memory loss = interference from temporal crowding | Memory = decay or context drift over encoded weights |
+| Feature        | SIMPLE                                            | Context/Associative (e.g., TCM)                                |
+| -------------- | ------------------------------------------------- | -------------------------------------------------------------- |
+| Representation | Items in log-compressed temporal space            | Items bound to context vector                                  |
+| Mechanism      | Discriminability among temporal neighbors         | Association between item and drifting context                  |
+| Update         | No weight storage; purely positional geometry     | Additive outer products ($W_{t+1} = W_t + f_t \otimes \psi_t$) |
+| Space type     | Temporal–metric embedding                         | Product-space operator                                         |
+| Rationale      | Memory loss = interference from temporal crowding | Memory = decay or context drift over encoded weights           |
 
 ---
 

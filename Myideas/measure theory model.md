@@ -734,3 +734,4 @@ This is not merely a reformulation—it is a **conceptual synthesis** that expos
 - $\mu_{\mathcal{F}} \otimes \mu_{\mathcal{C}}$: Product measure (separable case)
 - $\mu(\cdot|\psi)$: Conditional measure given context $\psi$
 
+

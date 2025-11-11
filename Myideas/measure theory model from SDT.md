@@ -1082,3 +1082,4 @@ Memory is not defined by its mechanisms, but by the **geometry of its measure tr
 - $D(\mu, \nu)$: Measure divergence (KL, total variation, Wasserstein)
 - $\mu(\cdot \mid \psi)$: Conditional measure given context $\psi$
 
+

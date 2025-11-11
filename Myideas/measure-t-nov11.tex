@@ -1,0 +1,677 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+% Theorem environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+
+% Custom commands
+\newcommand{\studymeasure}{\mu_{\text{study}}}
+\newcommand{\testmeasure}{\mu_{\text{test}}}
+\newcommand{\physicalspace}{\mathcal{X}}
+\newcommand{\internalspace}{\mathcal{H}}
+\newcommand{\measurespace}{\Delta(\mathcal{H})}
+\newcommand{\activationspace}{\mathcal{A}}
+\newcommand{\responsespace}{\mathcal{R}}
+\newcommand{\contentspace}{\mathcal{F}}
+\newcommand{\contextspace}{\mathcal{C}}
+\newcommand{\pushforward}[2]{#1_{\#}#2}
+\newcommand{\radonnikodym}{\frac{d\nu}{d\mu}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\pr}[1]{\left(#1\right)}
+
+% Color for colleague's additions
+\newcommand{\jy}[1]{\textcolor{blue}{#1}}
+\newcommand{\issue}[1]{\textcolor{red}{\textbf{Issue:} #1}}
+
+\title{A Hierarchical Measure-Theoretic Framework for Memory Models: \\
+From Physical Stimuli to Behavioral Responses}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Memory models appear to employ vastly different mathematical machinery: context drift equations, similarity-based sampling, evidence accumulation, positional codes. We show that these differences conceal a common structure. All models implement a chain of measure transformations through a hierarchy of spaces: from physical stimuli to internal representations, from representations to memory states (measures), from memory states to activation, and from activation to observable responses. By explicitly separating these layers and identifying three fundamental transformation types---pushforward (deterministic mapping), kernel transformation (stochastic evolution), and nonlinear functionals (activation and decision)---we provide a unified operator framework that encompasses models as diverse as REM, TCM, SIMPLE, EBRW, and LBA. This framework clarifies what memory models compute, reveals their essential similarities and differences, and provides a principled way to construct new models by composing transformations across layers.
+\end{abstract}
+
+\section{Introduction}
+
+The memory literature presents an overwhelming diversity of computational models. The Temporal Context Model (TCM) describes context as drifting continuously through time via linear dynamics. REM treats retrieval as likelihood-based sampling from stochastic feature distributions. SIMPLE compresses temporal distances logarithmically and computes familiarity from psychological distance. EBRW models recognition as random walk evidence accumulation. Each model appears to tell a fundamentally different story, using different mathematics and emphasizing different phenomena.
+
+Yet beneath this diversity lies a common blueprint. Every memory model answers the same sequence of questions: How does external information become internal representation? How do these representations evolve and persist? How does a retrieval cue activate stored information? How does activation become a behavioral response? 
+
+The central insight of this paper is that these questions correspond to transformations between distinct spaces, and that all memory models can be understood as specific choices of operators linking these spaces. The key is to maintain a clear hierarchy:
+
+\begin{enumerate}
+    \item \textbf{Physical space} $\physicalspace$: External stimuli (features, contexts, events)
+    \item \textbf{Internal representational space} $\internalspace$: Neural/cognitive encoding space
+    \item \textbf{Measure space} $\measurespace$: Probability measures on $\internalspace$ (memory states)
+    \item \textbf{Activation space} $\activationspace$: Evidence, familiarity, or activation values
+    \item \textbf{Response space} $\responsespace$: Observable behavior (old/new, RT, confidence)
+\end{enumerate}
+
+The transformation chain is:
+\[
+\physicalspace \xrightarrow{\text{encoding}} \internalspace \xrightarrow{\text{aggregation}} \measurespace \xrightarrow{\text{activation}} \activationspace \xrightarrow{\text{decision}} \responsespace
+\]
+
+By explicitly separating these layers, we avoid the conceptual confusion that has plagued memory theory: mixing representation with activation, conflating encoding with retrieval, or treating decision processes as if they were memory processes. Each layer has its own mathematical structure, and different models make different choices about the operators at each stage.
+
+\subsection{Why This Framework Matters}
+
+This hierarchical operator perspective provides several advantages:
+
+\textbf{Conceptual clarity:} By separating representation ($\measurespace$), activation ($\activationspace$), and decision ($\responsespace$), we see clearly what each model assumes and where models differ.
+
+\textbf{Unification without loss:} Models like TCM (context drift), REM (stochastic sampling), SIMPLE (temporal compression), and EBRW (evidence accumulation) are revealed as different operator choices at different layers, not fundamentally incompatible theories.
+
+\textbf{Systematic model construction:} The framework defines a space of possible models by systematically varying operators at each layer. Existing models occupy specific corners of this space; unexplored regions suggest new model variants.
+
+\textbf{Natural extension to nonlinearity:} Unlike previous attempts to unify memory models through linear transformations, our framework explicitly accommodates the nonlinear operations (likelihood ratios, exponentials, normalizations, thresholds) that are essential to many models.
+
+\subsection{Relation to Previous Work}
+
+Our framework extends and clarifies several previous theoretical efforts. Signal Detection Theory (SDT) provides the foundation: comparing probability measures to make decisions. We generalize this from one-dimensional familiarity to rich joint spaces and explicit transformation chains. 
+
+The "unified operator model" tradition (e.g., models attempting to encompass multiple phenomena) typically focuses on representation structure but leaves transformation operators implicit or informal. We make these operators explicit mathematical objects.
+
+Recent work on measure-theoretic memory models (including our own previous version) focused on transformations within a single joint space $\contentspace \times \contextspace$. The current framework clarifies that this joint space is actually $\internalspace$, and that memory states are probability measures on this space, not points in it. This resolves several conceptual difficulties and naturally accommodates the stochastic and distributional aspects of memory.
+
+\section{The Hierarchical Space Structure}
+
+We now define each layer of the hierarchy precisely.
+
+\subsection{Physical Space $\physicalspace$}
+
+\begin{definition}[Physical Space]
+The \textbf{physical space} $\physicalspace$ is a measurable space representing the space of all possible external stimuli that can be presented to the organism. This includes:
+\begin{itemize}
+    \item Content features (visual features, semantic attributes, perceptual properties)
+    \item Contextual features (temporal position, environmental context, task context)
+    \item Any other stimulus properties
+\end{itemize}
+\end{definition}
+
+$\physicalspace$ is the objective event space. It is independent of any particular organism's internal representation. Two different individuals presented with the same physical stimulus $x \in \physicalspace$ will process it through different encoding mappings.
+
+\subsection{Internal Representational Space $\internalspace$}
+
+\begin{definition}[Internal Representational Space]
+The \textbf{internal representational space} $\internalspace$ is a measurable space representing the cognitive/neural coordinate system used to encode stimuli. 
+\end{definition}
+
+For concrete memory models, $\internalspace$ often has additional structure:
+
+\begin{itemize}
+    \item \textbf{Vector space structure:} $\internalspace = \contentspace \times \contextspace$ where $\contentspace$ is the content/item space and $\contextspace$ is the context space, both typically finite-dimensional vector spaces (e.g., $\mathbb{R}^d \times \mathbb{R}^k$)
+    
+    \item \textbf{Hilbert space structure:} $\internalspace$ equipped with inner product $\langle \cdot, \cdot \rangle$, enabling similarity computation
+    
+    \item \textbf{Discrete structure:} $\internalspace$ as a discrete/finite space (e.g., binary feature vectors in REM)
+\end{itemize}
+
+\textbf{Key point:} $\internalspace$ is the space of possible representations, not the space of memory states. A memory state is not a single point in $\internalspace$, but a distribution over $\internalspace$.
+
+\subsection{Measure Space $\measurespace = \Delta(\internalspace)$}
+
+\begin{definition}[Measure Space / Memory State Space]
+The \textbf{measure space} $\measurespace = \Delta(\internalspace)$ is the space of all probability measures on $\internalspace$. An element $\mu \in \measurespace$ represents a complete memory state: which representations are present and with what strength.
+\end{definition}
+
+\textbf{Psychological interpretation:} A memory state is not a single trace but a distribution over possible traces. This naturally accommodates:
+
+\begin{itemize}
+    \item \textbf{Multiple items:} Discrete measures with point masses at each encoded representation
+    \item \textbf{Uncertainty:} Continuous distributions representing uncertainty about stored features
+    \item \textbf{Strength variation:} Weighted measures where different traces have different strengths
+    \item \textbf{Interference:} Overlapping distributions in $\internalspace$
+\end{itemize}
+
+\begin{example}[Discrete Study-Phase Measure]
+During a study phase, items $x_1, \ldots, x_T \in \physicalspace$ are presented. Each is encoded as $(f_t, \psi_t) \in \contentspace \times \contextspace = \internalspace$ with strength $\gamma_t > 0$. The resulting memory state is:
+
+\jy{For fixed sequences $\{f_t\}_{t=1}^T \subset \contentspace$ and $\{\psi_t\}_{t=1}^T \subset \contextspace$, we define $\studymeasure \in \measurespace$ via}
+\begin{equation}
+\studymeasure(A \times B) = \sum_{t=1}^{T} \gamma_t \mathbb{1}_A(f_t) \mathbb{1}_B(\psi_t)
+\end{equation}
+\jy{for any measurable sets $A \subset \contentspace$ and $B \subset \contextspace$, where $\gamma_t \in \mathbb{R}^+$ are encoding strengths and $\mathbb{1}_A$ is the indicator function. In other words, $\studymeasure$ is a sum of Dirac $\delta$ functions on the product space weighted by $\gamma_t$'s, i.e., for any continuous function $G$ on $\contentspace \times \contextspace$,
+\begin{align*}
+    \int_{\contentspace \times \contextspace} G(f,\psi) \, d\studymeasure(f,\psi) &:= \int_{\contentspace \times \contextspace} G(f,\psi) \pr{\sum_{t = 1}^T \gamma_t\delta_{f_t}(df) \delta_{\psi_t}(d\psi)}\\
+    &=\sum_{t = 1}^T \gamma_t G(f_t, \psi_t).
+\end{align*}
+}
+\end{example}
+
+\begin{example}[Continuous Memory State]
+\jy{For example, suppose $\contentspace = \contextspace = [0,1]$, which are continua, and let $dx$ be Lebesgue's measure on $[0,1]$. For any non-negative measurable function $S$ on $[0,1]^2$, we may define}
+\begin{align*}
+    d\mu_S(f,\psi):= S(f,\psi) \, df \, d\psi.
+\end{align*}
+This represents uncertainty or noise in the stored representations.
+\end{example}
+
+\subsection{Activation Space $\activationspace$}
+
+\begin{definition}[Activation Space]
+The \textbf{activation space} $\activationspace$ is the space of internal evidence values used for decision-making. Typically $\activationspace = \mathbb{R}$ (scalar familiarity), $\mathbb{R}^n$ (multiple accumulators), or more complex structures.
+\end{definition}
+
+\textbf{Key distinction:} Activation is not representation. Activation is computed FROM the memory state $\mu \in \measurespace$ and a retrieval cue. It is the output of a retrieval process, not the memory state itself.
+
+\subsection{Response Space $\responsespace$}
+
+\begin{definition}[Response Space]
+The \textbf{response space} $\responsespace$ is the space of observable behavioral outputs. Examples:
+\begin{itemize}
+    \item Binary: $\responsespace = \{\text{old}, \text{new}\}$
+    \item Continuous: $\responsespace = \mathbb{R}^+$ (reaction time)
+    \item Discrete choice: $\responsespace = \{1, 2, \ldots, n\}$ (item selection)
+    \item Joint: $\responsespace = \{\text{old}, \text{new}\} \times [1, 6]$ (decision + confidence)
+\end{itemize}
+\end{definition}
+
+\subsection{Summary: The Transformation Chain}
+
+The complete memory process is a composition of transformations:
+\[
+\boxed{\physicalspace \xrightarrow{f_{\text{enc}}} \internalspace \xrightarrow{\text{aggregate}} \measurespace \xrightarrow{F(\cdot, \text{probe})} \activationspace \xrightarrow{D} \responsespace}
+\]
+
+Different memory models make different choices at each arrow. The next section formalizes the types of operators available at each stage.
+
+\section{The Three Fundamental Transformation Types}
+
+We now define the three types of operators that appear in memory models. These operate at different layers of the hierarchy.
+
+\subsection{Pushforward (Deterministic Mapping)}
+
+Pushforward operators map measures from one space to another via deterministic functions. They appear in encoding and in deterministic context evolution.
+
+\begin{definition}[Push-Forward Measure]
+Given a measurable map $T: \Omega \to \Omega'$ and a measure $\mu$ on $\Omega$, the \textbf{push-forward measure} \jy{of $\mu$ under the map $T$, for which we call} $\pushforward{T}{\mu}$, on $\Omega'$ is defined as:
+\begin{equation}
+(\pushforward{T}{\mu})(B) = \mu(T^{-1}(B))
+\end{equation}
+for all measurable sets $B \subseteq \Omega'$.
+\end{definition}
+
+\textbf{Psychological Interpretation:} Pushforward represents deterministic transformation of representations. Examples:
+
+\begin{itemize}
+    \item \textbf{Encoding:} Map from physical to internal space
+    \item \textbf{Context drift:} Deterministic evolution of context
+    \item \textbf{Temporal compression:} Logarithmic transformation of time axis
+\end{itemize}
+
+\textbf{Memory Applications:}
+\begin{itemize}
+    \item \textbf{Encoding layer:} $f_{\text{enc}}: \physicalspace \to \internalspace$ maps stimuli to representations
+    \item \textbf{TCM context drift:} $T_t: \contextspace \to \contextspace$ via $T_t(\psi) = \rho\psi + \eta f_t$
+    \item \textbf{SIMPLE temporal compression:} $T: t \mapsto \log(t)$ compresses time
+\end{itemize}
+
+\begin{remark}
+In the context of TCM, the context evolution $\psi_{t+1} = \rho\psi_t + \eta f_t$ defines a family of transformations $T_t: \contentspace \times \contextspace \to \contentspace \times \contextspace$ via $T_t(f, \psi) = (f, \rho\psi + \eta f_t)$. The measure evolves as:
+\begin{equation}
+\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, \psi_{t+1})}
+\end{equation}
+where $\delta_{(f, \psi)}$ is a point mass (Dirac measure) at $(f, \psi)$.
+\end{remark}
+
+\subsection{Kernel Transformation (Stochastic Evolution)}
+
+Kernel transformations represent stochastic or probabilistic evolution of measures. They are central to retrieval and evidence accumulation processes.
+
+\jy{
+\begin{definition}[Integral Kernel]
+Let $(\mathbb{X}, \mathcal{X})$ be a measurable space. An \textbf{integral kernel} $K$ on $\mathbb{X}$ is a map on $\mathbb{X} \times \mathcal{X}$ such that:
+\begin{itemize}
+    \item For each $x \in \mathbb{X}$, $K(x,\cdot)$ is a probability measure on $\mathcal{X}$.
+    \item For each measurable set $A \in \mathcal{X}$, the function $x \mapsto K(x, A)$ is measurable.
+\end{itemize}
+\end{definition}
+}
+
+\begin{definition}[Kernel Transformation]
+\jy{Let $K$ be a probability integral kernel on $(\Omega, \mathcal{B}_\Omega)$. The} \textbf{kernel transformation} of a measure $\mu$, \jy{denoted by $K\mu$, is a measure on $(\Omega, \mathcal{B}_\Omega)$ such that for each $A \in \mathcal{B}_\Omega$,}
+\begin{equation}
+(K\mu)(A) := \nu(A) = \int_{\Omega} K(x, A) \, d\mu(x).
+\end{equation}
+\end{definition}
+
+\textbf{Psychological Interpretation:} Kernel transformations represent:
+\begin{itemize}
+    \item \textbf{Stochastic retrieval:} Probabilistic sampling based on similarity
+    \item \textbf{Context uncertainty:} Broad matching when exact context is unavailable
+    \item \textbf{Evidence accumulation:} Sequential stochastic sampling
+\end{itemize}
+
+\textbf{Memory Applications:}
+\begin{itemize}
+    \item \textbf{REM:} Stochastic feature sampling with noise
+    \item \textbf{EBRW:} Sequential evidence accumulation via random walk
+    \item \textbf{Recognition with context uncertainty:} Broad kernel over context space
+\end{itemize}
+
+\subsubsection{Example: Gaussian Kernel for Context-Based Retrieval}
+
+For retrieval under cue $\psi(\text{cue}) \in \contextspace$, we define a Gaussian kernel over context space:
+
+\begin{equation}
+K_\sigma(\psi(\text{cue}), d\psi') = \frac{1}{Z} \exp\left(-\frac{\|\psi(\text{cue}) - \psi'\|^2}{2\sigma^2}\right) d\psi'
+\end{equation}
+\jy{where $Z$ is a normalization constant so that 
+\begin{align*}
+    \int_{\contextspace} K_\sigma(\psi(\text{cue}), d\psi') = 1.
+\end{align*}
+}
+
+\jy{Observe that if $\contentspace$ comes with an inner product structure, we can define an integral kernel $\mathcal{K}_{\sigma}$ on $\contentspace \times \contextspace$ via $\delta_f(df') \otimes K_\sigma(\psi, d\psi')$, meaning $\mathcal{K}_{\sigma}((f,\psi), df' \times d\psi') := \delta_f(df') \otimes K_\sigma(\psi, d\psi')$. Then,
+\begin{align*}
+   \int_{\contentspace\times \contextspace} G(f,\psi) \, d(\mathcal{K}_\sigma \studymeasure)(f,\psi)
+   &= \int_{\contentspace\times \contextspace}G(f,\psi) \int_{\contentspace\times \contextspace}\delta_{f'}(df) K_\sigma(\psi', d\psi) \, d\studymeasure(f',\psi')\\
+    &=\int_{\contentspace\times \contextspace} \int_{\contentspace\times \contextspace}G(f,\psi) \delta_{f'}(df) K_\sigma(\psi', d\psi) \, d\studymeasure(f',\psi')\\
+    &=\int_{\contentspace\times \contextspace} G(f', \psi) K_\sigma(\psi', d\psi) \, d\studymeasure(f',\psi').
+\end{align*}
+}
+
+\subsection{Activation Functionals (Nonlinear Operators)}
+
+Unlike pushforward and kernel transformations, which map measures to measures, activation functionals map (measure, probe) pairs to real-valued evidence.
+
+\begin{definition}[Activation Functional]
+An \textbf{activation functional} is a map $F: \measurespace \times \internalspace \to \activationspace$ that takes a memory state $\mu$ and a probe representation $h_{\text{probe}}$ and produces an activation value:
+\begin{equation}
+a = F(\mu, h_{\text{probe}})
+\end{equation}
+\end{definition}
+
+Activation functionals are typically \textbf{nonlinear}. Common forms include:
+
+\subsubsection{Inner Product / Similarity-Based Activation}
+
+\jy{If $\internalspace = \contentspace \times \contextspace$ with both spaces equipped with inner products, we may define for each probe item $i$ with representation $f_i \in \contentspace$ and cue context $\psi(\text{cue}) \in \contextspace$ the function $A_{i,\psi(\text{cue})}:\contentspace \times \contextspace \mapsto \mathbb{R}$ via 
+\begin{align*}
+    A_{i,\psi(\text{cue})}(f,\psi):= \langle f_i,f\rangle\cdot \langle\psi(\text{cue}), \psi\rangle.
+\end{align*}
+}
+
+\jy{Then, r}etrieval activation is computed as an integral over the memory measure:
+\begin{equation}
+a(i|\text{cue}) := \int_{\contentspace \times \contextspace} \langle f_i, f \rangle \langle \psi(\text{cue}), \psi \rangle \, d\studymeasure(f, \psi)
+\end{equation}
+
+\jy{The retrieval function can be constructed via the following method:
+\begin{align*}
+     a(i|\text{cue}) &:= \int_{\contentspace \times \contextspace} A_{i,\psi(\text{cue})}(f,\psi) \, d\studymeasure(f,\psi)\\
+     &=\sum_{t = 1}^T \gamma_t \langle f_i,f_t\rangle\cdot \langle\psi(\text{cue}), \psi_t\rangle
+\end{align*}
+when $\studymeasure$ is a discrete measure as defined earlier.
+}
+
+\subsubsection{Kernel-Smoothed Activation}
+
+Combining kernel transformation with activation:
+
+\jy{For a probe item $i$ with representation $f_i$ and retrieval cue $\psi(\text{cue})$, define $G_{i,\text{cue}}(f,\psi):= \langle f_i,f\rangle$. Then}
+\begin{equation}
+a(i|\text{cue}) := \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+
+This can be written as:
+\begin{equation}
+a(i|\text{cue}) = \int_{\contentspace \times \contextspace} G_{i,\text{cue}}(f,\psi) \, d(\mathcal{K}_{\sigma}\studymeasure)(f,\psi)
+\end{equation}
+
+As $\sigma^2 \to 0$, the kernel $K_\sigma$ approaches a Dirac delta $\delta_{\psi(\text{cue})}$, yielding deterministic context matching (recall). For large $\sigma^2$, activation integrates broadly over context (recognition/familiarity).
+
+\subsubsection{Likelihood Ratio (REM-type)}
+
+In REM and related models, activation is a likelihood ratio:
+\begin{equation}
+a(\text{probe}) = \frac{P(\text{probe} | \mu_{\text{old}})}{P(\text{probe} | \mu_{\text{new}})}
+\end{equation}
+or the log-likelihood ratio. This is a \textbf{nonlinear functional} of the measures $\mu_{\text{old}}$ and $\mu_{\text{new}}$.
+
+\subsubsection{Distance-Based Activation (SIMPLE-type)}
+
+SIMPLE computes activation from psychological distance:
+\begin{equation}
+a(i | \text{cue}) = \exp(-\lambda \cdot d_{\text{psych}}(i, \text{cue}))
+\end{equation}
+where $d_{\text{psych}}$ is the psychological distance after temporal compression.
+
+\subsection{Decision Operators}
+
+Finally, decision operators map activation to observable responses.
+
+\begin{definition}[Decision Operator]
+A \textbf{decision operator} is a map $D: \activationspace \to \responsespace$ (possibly stochastic) that converts internal evidence to observable behavior.
+\end{definition}
+
+Examples:
+\begin{itemize}
+    \item \textbf{Threshold rule:} $D(a) = \begin{cases} \text{old} & \text{if } a > \theta \\ \text{new} & \text{otherwise} \end{cases}$
+    
+    \item \textbf{Luce choice rule:} $P(\text{choose } i) = \frac{a_i}{\sum_j a_j}$
+    
+    \item \textbf{Diffusion/Race models:} Sequential sampling with stochastic boundaries
+    
+    \item \textbf{Confidence mapping:} $D(a) = (\text{decision}, \text{conf}(a))$ where confidence depends on evidence strength
+\end{itemize}
+
+\section{Mapping Existing Memory Models to the Framework}
+
+We now show how major memory models map onto the hierarchical operator framework. Each model makes specific choices about operators at each layer.
+
+\subsection{REM (Retrieving Effectively from Memory)}
+
+\textbf{Space Structure:}
+\begin{itemize}
+    \item $\internalspace$: Discrete feature vector space (binary or categorical features)
+    \item Memory state $\mu$: Discrete measure over stored feature vectors
+\end{itemize}
+
+\textbf{Encoding ($\physicalspace \to \internalspace \to \measurespace$):}
+\begin{itemize}
+    \item Pushforward: Stimulus features $\to$ trace parameters (feature distributions)
+    \item Storage: Each item becomes a point mass in measure space
+\end{itemize}
+
+\textbf{Activation ($\measurespace \to \activationspace$):}
+\begin{itemize}
+    \item Nonlinear functional: Likelihood ratio $\lambda = \frac{P(\text{probe}|\mu_{\text{old}})}{P(\text{probe}|\mu_{\text{new}})}$
+    \item This is a nonlinear function of the memory measure $\mu_{\text{old}}$
+\end{itemize}
+
+\textbf{Decision ($\activationspace \to \responsespace$):}
+\begin{itemize}
+    \item Threshold on likelihood ratio or log-likelihood
+\end{itemize}
+
+\textbf{Framework classification:} \textbf{Pushforward encoding + Nonlinear activation functional}
+
+\subsection{TCM (Temporal Context Model)}
+
+\textbf{Space Structure:}
+\begin{itemize}
+    \item $\internalspace = \contentspace \times \contextspace$ (item vectors × context vectors)
+    \item Context space: $\contextspace \subset \mathbb{R}^k$ with linear dynamics
+\end{itemize}
+
+\textbf{Encoding and Evolution ($\physicalspace \to \internalspace \to \measurespace$):}
+\begin{itemize}
+    \item Context evolution: $c_{t+1} = \rho c_t + \beta f_t$ (linear recurrence)
+    \item This defines a kernel operator or linear operator on context space
+    \item Measure evolution: $\mu_{t+1} = \pushforward{T_t}{\mu_t} + \delta_{(f_{t+1}, c_{t+1})}$
+\end{itemize}
+
+\textbf{Activation ($\measurespace \to \activationspace$):}
+\begin{itemize}
+    \item Inner product-based: $a(i|\text{cue}) = \sum_t \gamma_t \langle f_i, f_t \rangle \langle c_{\text{cue}}, c_t \rangle$
+    \item Bilinear (hence nonlinear) functional of memory state and cue
+\end{itemize}
+
+\textbf{Decision ($\activationspace \to \responsespace$):}
+\begin{itemize}
+    \item Luce choice rule: $P(\text{recall } i) \propto a(i|\text{cue})$
+\end{itemize}
+
+\textbf{Framework classification:} \textbf{Kernel operator for context dynamics + Bilinear activation}
+
+\subsection{SIMPLE (Scale-Invariant Memory, Perception, and Learning)}
+
+\textbf{Space Structure:}
+\begin{itemize}
+    \item Physical time axis $\to$ Psychological (log-compressed) time axis
+    \item $\internalspace$: Items with psychological temporal positions
+\end{itemize}
+
+\textbf{Encoding ($\physicalspace \to \internalspace$):}
+\begin{itemize}
+    \item Pushforward: $T: t \mapsto \log(t)$ compresses temporal distances
+    \item Measure: $\mu_{\text{psych}} = \pushforward{T}{\mu_{\text{physical}}}$
+\end{itemize}
+
+\textbf{Activation ($\measurespace \to \activationspace$):}
+\begin{itemize}
+    \item Nonlinear: $a(i|\text{cue}) = \exp(-\lambda \cdot |\log t_i - \log t_{\text{cue}}|)$
+    \item Distance-based exponential decay
+\end{itemize}
+
+\textbf{Decision ($\activationspace \to \responsespace$):}
+\begin{itemize}
+    \item Luce choice based on activation
+\end{itemize}
+
+\textbf{Framework classification:} \textbf{Pushforward (log compression) + Nonlinear distance-based activation}
+
+\subsection{EBRW (Exemplar-Based Random Walk) and Decision Models}
+
+\textbf{Space Structure:}
+\begin{itemize}
+    \item $\internalspace$: Exemplar feature space
+    \item $\activationspace$: Evidence accumulator state space
+\end{itemize}
+
+\textbf{Activation to Decision ($\measurespace \to \activationspace \to \responsespace$):}
+\begin{itemize}
+    \item Sequential sampling: Activation is accumulated over time via stochastic kernel
+    \item Kernel transformation: $\nu_n = \sum_{m=1}^{n} K_s(\text{probe}, \cdot) \ast \mu$
+    \item Decision: Race/diffusion with stochastic boundaries
+\end{itemize}
+
+\textbf{Framework classification:} \textbf{Iterated kernel transformation + Stochastic decision operator}
+
+\subsection{Summary Table: Models as Operator Compositions}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lllll}
+\toprule
+\textbf{Model} & \textbf{Encoding} & \textbf{Evolution} & \textbf{Activation} & \textbf{Decision} \\
+\midrule
+REM & Pushforward & — & Likelihood ratio (nonlinear) & Threshold \\
+TCM & Pushforward & Kernel/Linear & Inner product (bilinear) & Luce choice \\
+SIMPLE & Log pushforward & — & Distance-exp (nonlinear) & Luce choice \\
+EBRW & Pushforward & — & Sequential kernel & Random walk \\
+LBA & — & — & Evidence accum. & Race model \\
+\bottomrule
+\end{tabular}
+\caption{Memory models as compositions of operators at different layers}
+\end{table}
+
+\textbf{Key insight:} Models differ not in fundamental ontology but in which operators they choose at each layer. The framework reveals that:
+
+\begin{itemize}
+    \item TCM and SIMPLE both use pushforward but at different layers (context evolution vs. temporal compression)
+    \item REM and EBRW both involve stochastic processes but at different layers (sampling features vs. accumulating evidence)
+    \item Nonlinearity appears in activation/decision layers, not in representation transformations
+\end{itemize}
+
+\section{Unifying Recognition, Familiarity, and Recall}
+
+The hierarchical framework provides a natural account of the relationships between different retrieval phenomena.
+
+\subsection{Recognition vs. Recall as Kernel Bandwidth}
+
+\textbf{Core Principle:} Recognition and recall differ in the precision of the contextual retrieval kernel.
+
+\begin{theorem}[Recognition--Recall as Kernel Precision]
+Let $K_\sigma(\psi(\text{cue}), \cdot)$ be a family of kernels on context space with bandwidth parameter $\sigma^2$. Define activation as:
+\begin{equation}
+a_\sigma(i|\text{cue}) = \int_{\contentspace \times \contextspace} \langle f_i, f \rangle K_\sigma(\psi(\text{cue}), d\psi) \, d\studymeasure(f, \psi)
+\end{equation}
+
+Then:
+\begin{itemize}
+    \item \textbf{Recognition} (large $\sigma^2$): Broad kernel $\to$ many contexts contribute
+    \item \textbf{Recall} (small $\sigma^2 \to 0$): Narrow kernel $\to$ only matching contexts contribute
+\end{itemize}
+
+As $\sigma \to 0$, $K_\sigma \to \delta_{\psi(\text{cue})}$ and:
+\begin{equation}
+\lim_{\sigma \to 0} a_\sigma(i|\text{cue}) = \int_{\contentspace} \langle f_i, f \rangle \, d\studymeasure(f|\psi(\text{cue}))
+\end{equation}
+where $\studymeasure(\cdot|\psi(\text{cue}))$ is the conditional measure given context $\psi(\text{cue})$.
+\end{theorem}
+
+\textbf{Psychological interpretation:} Recognition can succeed when context is uncertain or degraded (broad kernel). Recall requires precise context reinstatement (narrow kernel).
+
+\subsection{Familiarity as Marginal Measure Activation}
+
+\textbf{Dual-Process Extension:} Dual-process theories distinguish familiarity (graded, context-free) from recollection (thresholded, context-specific).
+
+\begin{definition}[Familiarity Measure]
+Familiarity operates on the \textbf{marginal content measure}, integrating over context:
+\begin{equation}
+\mu_{\contentspace}(A) = \studymeasure(A \times \contextspace) = \int_{\contextspace} \studymeasure(A \times d\psi)
+\end{equation}
+
+Familiarity activation:
+\begin{equation}
+\text{Familiarity}(i) = \int_{\contentspace} \langle f_i, f \rangle \, d\mu_{\contentspace}(f)
+\end{equation}
+\end{definition}
+
+\begin{definition}[Recollection as Thresholded Joint Activation]
+Recollection requires joint content-context match above threshold:
+\begin{equation}
+\text{Recollection}(i|\text{cue}) = \begin{cases}
+  1 & \text{if } \studymeasure(\{f_i\} \times B_{\epsilon}(\psi(\text{cue}))) > \theta \\
+  0 & \text{otherwise}
+\end{cases}
+\end{equation}
+where $B_{\epsilon}(\psi(\text{cue}))$ is an $\epsilon$-neighborhood of the cue context.
+\end{definition}
+
+\textbf{Framework interpretation:}
+\begin{itemize}
+    \item Familiarity: Activation functional on marginal measure (context-free)
+    \item Recollection: Activation functional on joint measure with context precision
+\end{itemize}
+
+Both are different activation functionals operating on the same underlying memory measure $\mu \in \measurespace$.
+
+\subsection{Forgetting as Measure Transformation}
+
+Forgetting arises from transformations that reduce the alignment between study-phase and test-phase measures.
+
+\textbf{Forgetting Mechanisms:}
+
+\begin{enumerate}
+    \item \textbf{Density decay:} $d\mu_{\text{forgotten}} = e^{-\lambda t} \, d\studymeasure$ (multiplicative reweighting)
+    
+    \item \textbf{Context drift:} Pushforward $\mu_{\text{test}} = \pushforward{T_{\text{drift}}}{\studymeasure}$ moves measure away from retrieval cue
+    
+    \item \textbf{Temporal compression:} Pushforward $\pushforward{\log}{\mu}$ compresses temporal distances (SIMPLE)
+    
+    \item \textbf{Interference:} Addition of competing measures reduces discriminability
+\end{enumerate}
+
+All mechanisms reduce the effective activation:
+\begin{equation}
+a(i|\text{cue}, t) = F(\mu_{\text{transformed}}(t), h_{\text{probe}})
+\end{equation}
+where $\mu_{\text{transformed}}(t)$ depends on retention interval and intervening events.
+
+\section{Discussion: Implications and Future Directions}
+
+\subsection{What This Framework Clarifies}
+
+\textbf{1. Separation of Representation, Activation, and Decision}
+
+Previous confusion in memory theory often stemmed from conflating these layers. The framework makes explicit:
+\begin{itemize}
+    \item Memory state $\mu \in \measurespace$ (what is stored)
+    \item Activation $a \in \activationspace$ (internal evidence from retrieval)
+    \item Response $r \in \responsespace$ (observable behavior)
+\end{itemize}
+
+\textbf{2. The Role of Nonlinearity}
+
+Earlier unification attempts focused on linear transformations. The framework accommodates nonlinearity explicitly:
+\begin{itemize}
+    \item Pushforward and kernel transformations map measures to measures (can be linear)
+    \item Activation functionals map (measure, probe) to evidence (typically nonlinear)
+    \item Decision operators map evidence to responses (often nonlinear or stochastic)
+\end{itemize}
+
+\textbf{3. Model Compatibility}
+
+Models that appeared incompatible (TCM vs. REM, SIMPLE vs. EBRW) are revealed as making different operator choices at different layers. They can be combined:
+\begin{itemize}
+    \item TCM context drift + REM likelihood activation
+    \item SIMPLE temporal compression + EBRW sequential sampling
+    \item Any encoding model + any decision model
+\end{itemize}
+
+\subsection{Constructing New Models}
+
+The framework defines a systematic model space:
+
+\textbf{Encoding operators:} Identity, linear map, nonlinear embedding, stochastic encoder
+
+\textbf{Evolution operators:} None (static), linear dynamics (TCM), nonlinear drift, stochastic diffusion
+
+\textbf{Activation functionals:} Inner product, kernel-smoothed, likelihood ratio, distance-based
+
+\textbf{Decision operators:} Threshold, Luce choice, race/diffusion, confidence mapping
+
+Any combination yields a model. Existing models occupy specific corners; unexplored combinations suggest novel models.
+
+\subsection{Connection to Broader Frameworks}
+
+\textbf{Optimal Transport:} Binding as optimal transport between content and context marginal measures
+
+\textbf{Information Theory:} Forgetting as entropy increase; capacity limits as measure constraints
+
+\textbf{Neural Implementation:} Synaptic weights as Radon-Nikodym derivatives; activation as measure integrals
+
+\textbf{Category Theory:} Memory processes as morphisms in category of measurable spaces
+
+\subsection{Open Questions}
+
+\textbf{1. Identifying Natural Operators:} Which operators at each layer are psychologically plausible? What constraints (e.g., biological, computational) limit the operator space?
+
+\textbf{2. Learning and Adaptation:} How do operators themselves change with experience? Meta-learning as operator optimization?
+
+\textbf{3. Neural Correspondence:} Precise mapping between measure-theoretic operators and neural circuit operations?
+
+\textbf{4. Individual Differences:} Do individuals differ in operators at specific layers (encoding vs. retrieval vs. decision)?
+
+\section{Conclusion}
+
+We have presented a hierarchical measure-theoretic framework that unifies diverse memory models by explicitly separating the layers through which information flows: from physical stimuli to internal representations, from representations to probabilistic memory states, from memory states to activation, and from activation to observable responses.
+
+The key insight is maintaining this hierarchy while identifying three fundamental transformation types: pushforward (deterministic mapping), kernel transformation (stochastic evolution), and nonlinear functionals (activation and decision). Different models make different choices at each layer, but all implement the same basic blueprint.
+
+This framework provides conceptual clarity (by separating representation, activation, and decision), theoretical unification (by revealing commonalities across models), and generative power (by defining a space of possible models through operator composition). It naturally accommodates the nonlinear operations essential to memory models while preserving mathematical rigor.
+
+Most importantly, the framework shows that apparent incompatibilities between models often reflect different perspectives on the same underlying structure. By making operators explicit, we can understand what each model assumes, where models truly differ, and how models can be combined or extended. This moves memory theory toward a principled, compositional science where models are not isolated proposals but systematic explorations of a unified operator landscape.
+
+\section*{Acknowledgments}
+
+We thank our colleague for rigorous mathematical clarifications that substantially improved the formal definitions (indicated in blue throughout the text).
+
+\end{document}
+
+

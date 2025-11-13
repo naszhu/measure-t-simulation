@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class notes for students/min_lesson1_class_notes.md",
+                "file": "Question.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "min_lesson1_class_notes"
+              "title": "Question"
             }
           },
           {
@@ -384,12 +384,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "dcf0770fe4111caf",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "class notes for students/Class 3 note Nov 13 John.md",
+    "class notes for students/note john.md",
     "class notes for students/min_lesson1_class_notes 2.md",
-    "class notes for students/min_lesson1_class_notes.md",
     "class notes for students/min_lesson1_class_notes 1.md",
-    "Question.md",
+    "class notes for students/min_lesson1_class_notes.md",
     "Myideas/measure-t-nov7-johhny-edit-saveup.md",
     "Myideas/measure-t-johhny-edit-saveup.md",
     "Myideas/measure-t-nov11.tex",
@@ -426,7 +427,6 @@
     "Myideas/KERNEL_SIM_README.md",
     "class notes for students/lesson6-assignment.md",
     "class notes for students/lesson2_class_notes John.md",
-    "class notes for students/lesson2_class_notes.md",
     "Pasted image 20251101185301.png",
     "Pasted image 20251101184953.png",
     "Pasted image 20251101184751.png",

@@ -106,105 +106,47 @@
             }
           },
           {
-            "id": "b52b8c165a2b2667",
+            "id": "11dcef61fab1765b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "function space.md",
+                "file": "class notes for students/analysis, why mistaken.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "function space"
+              "title": "analysis, why mistaken"
             }
           },
           {
-            "id": "5c1d3a51174073d4",
+            "id": "d1b3bfbac5438ab7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "generator.md",
+                "file": "class notes for students/critique of paper 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "generator"
+              "title": "critique of paper 2"
             }
           },
           {
-            "id": "e8ccbcc678e21ad0",
+            "id": "4a927699e90d8da7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "parallel processing.md",
-                "mode": "source",
-                "source": false
+                "currentVersion": "1.10.3"
               },
-              "icon": "lucide-file",
-              "title": "parallel processing"
-            }
-          },
-          {
-            "id": "0ffe74f87991f237",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "memory models.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "memory models"
-            }
-          },
-          {
-            "id": "3f6b2aca67ce6ad9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "writing ideas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "writing ideas"
-            }
-          },
-          {
-            "id": "55c7b2fff08b4f04",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "embedded space.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "embedded space"
-            }
-          },
-          {
-            "id": "c6ed460df0d468bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "factorized.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "factorized"
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -236,7 +178,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "exchangability",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -383,7 +325,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 354.5
+    "width": 467.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -398,28 +340,39 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "82bb5c0340d76181",
+  "active": "4a927699e90d8da7",
   "lastOpenFiles": [
-    "class notes for students/Class 3 note Nov 13 John.md",
-    "class notes for students/min_lesson1_class_notes 2.md",
-    "class notes for students/min_lesson1_class_notes.md",
-    "class notes for students/min_lesson1_class_notes 1.md",
-    "Question.md",
-    "Myideas/measure-t-nov7-johhny-edit-saveup.md",
-    "Myideas/measure-t-johhny-edit-saveup.md",
+    "class notes for students/Min Nov 17 Note and assignment.md",
+    "class notes for students/Untitled.md",
+    "class notes for students/Bin Assignment Nov 16.md",
+    "Untitled 3.md",
+    "class notes for students/analysis, why mistaken.md",
+    "functional 泛函.md",
+    "function space.md",
+    "GCM.md",
+    "generator.md",
+    "finite system.md",
+    "feature vector.md",
+    "factorized.md",
+    "bootstrap.md",
+    "class notes for students/critique of paper 2.md",
+    "Untitled 18.base",
+    "class notes for students/mediator moderator.md",
+    "event.md",
+    "function.md",
+    "outer product.md",
+    "product space.md",
+    "Space.md",
+    "data space x.md",
+    "decision rules.md",
+    "countable.md",
+    "class notes for students/lesson1_class_notes.md",
+    "Untitled 17.base",
+    "Myideas/critique of AIM.md",
+    "HCI.md",
     "Myideas/measure-t-nov11.tex",
-    "Myideas/measure-t-nov11-originalnote.md",
     "Myideas/measure-t-nov11",
-    "class notes for students/Nov 9 note chongba lesson 3.md",
-    "class notes for students/Mandarin_Syllabus.md",
-    "class notes for students/Vishnu_Mandarin_Syllabus.md",
-    "model summary/context representation in each model.md",
-    "model summary/content representation in each model.md",
-    "model summary/Untitled.md",
-    "model summary/Davelarr.md",
     "Pasted image 20251107163300.png",
-    "model summary/what to caluclate.md",
-    "model summary/OSCAR.md",
     "process_pdfs.py",
     "read_one_pdf.py",
     "read_pdf_one_by_one.py",
@@ -427,20 +380,9 @@
     "Myideas/measure-t-simulation/measure_theory_demo.tex",
     "Myideas/bandwidth_comparison.png",
     "Myideas/kernel_transformation_visualization.png",
-    "ROC curve.md",
     "Myideas/measure-t-simulation/bandwidth_comparison.png",
     "Myideas/measure-t-simulation/kernel_transformation_visualization.png",
-    "Myideas/measure-t-simulation/IMPROVEMENTS.md",
-    "Myideas/measure-t-simulation/README.md",
     "Myideas/measure-t-simulation/kernel_tutorial_beginner.jl",
-    "Myideas/measure-t-simulation/KERNEL_PACKAGE_SUMMARY.md",
-    "Myideas/measure-t-simulation/kernel_transformation_sim.jl",
-    "Myideas/measure-t-simulation/KERNEL_SIM_README.md",
-    "Myideas/measure-t-simulation/test_kernel_sim.jl",
-    "Myideas/KERNEL_PACKAGE_SUMMARY.md",
-    "Myideas/KERNEL_SIM_README.md",
-    "class notes for students/lesson6-assignment.md",
-    "class notes for students/lesson2_class_notes John.md",
     "Pasted image 20251101185301.png",
     "Pasted image 20251101184953.png",
     "Pasted image 20251101184751.png",

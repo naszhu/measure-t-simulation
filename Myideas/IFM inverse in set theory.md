@@ -1,5 +1,5 @@
 [[what can set memory theory solve]]
-# The Invertible Function Memory (IFM) Model
+# The Invertible Function Memory ([[IFM]]) Model
 
 ## Abstract
 

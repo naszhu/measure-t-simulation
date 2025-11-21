@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "product space.md",
+                "file": "class notes for students/Class Note - November 19th John.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "product space"
+              "title": "Class Note - November 19th John"
             }
           },
           {
@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "surjective.md",
+                "file": "class notes for students/Class Notes – November 19, 2025 Chongba.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "surjective"
+              "title": "Class Notes – November 19, 2025 Chongba"
             }
           },
           {
@@ -137,16 +137,74 @@
             "id": "4a927699e90d8da7",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.10.3"
+                "file": "Saved Commands.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.10.3"
+              "icon": "lucide-file",
+              "title": "Saved Commands"
+            }
+          },
+          {
+            "id": "2ccb66b54706c671",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "measurement model.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "measurement model"
+            }
+          },
+          {
+            "id": "2a19791beb1888e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Myideas/IFM inverse in set theory.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IFM inverse in set theory"
+            }
+          },
+          {
+            "id": "d950d71b621d57eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IFM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IFM"
+            }
+          },
+          {
+            "id": "e506509f21e692d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Myideas/Measure Model general thinking.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Measure Model general thinking"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -178,7 +236,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "IFM",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -203,7 +261,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 311.5
+    "width": 351.5
   },
   "right": {
     "id": "d1de6df18cf5282b",
@@ -267,13 +325,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Question.md",
+                "file": "class notes for students/Class Notes – November 19, 2025 Chongba.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Question"
+              "title": "Outline of Class Notes – November 19, 2025 Chongba"
             }
           },
           {
@@ -321,11 +379,11 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 467.5
+    "width": 587.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -340,12 +398,35 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4a927699e90d8da7",
+  "active": "25d011be83242af2",
   "lastOpenFiles": [
-    "class notes for students/Min Nov 17 Note and assignment.md",
-    "class notes for students/Untitled.md",
-    "class notes for students/Bin Assignment Nov 16.md",
+    "surjective.md",
+    "class notes for students/Class Notes – November 19, 2025 Chongba.md",
+    "Untitled 4.md",
+    "class notes for students/Class Note - November 19th John.md",
+    "class notes for students/c.md",
+    "Myideas/someting.md",
+    "Myideas/Measure Model general thinking.md",
+    "journal/2025/11/2025-11-21.md",
+    "Pasted image 20251121160124.png",
+    "product space.md",
+    "Untitled 25.base",
+    "Untitled 24.base",
+    "Untitled 23.base",
     "Untitled 3.md",
+    "IFM.md",
+    "Pasted image 20251121140604.png",
+    "Myideas/IFM inverse in set theory.md",
+    "process model.md",
+    "measurement model.md",
+    "Saved Commands.md",
+    "Untitled 22.base",
+    "Untitled 21.base",
+    "Untitled 20.base",
+    "Untitled 19.base",
+    "class notes for students/explain.md",
+    "class notes for students/Min Nov 17 Note and assignment.md",
+    "class notes for students/Bin Assignment Nov 16.md",
     "class notes for students/analysis, why mistaken.md",
     "functional 泛函.md",
     "function space.md",
@@ -354,40 +435,17 @@
     "finite system.md",
     "feature vector.md",
     "factorized.md",
-    "bootstrap.md",
-    "class notes for students/critique of paper 2.md",
     "Untitled 18.base",
-    "class notes for students/mediator moderator.md",
-    "event.md",
-    "function.md",
-    "outer product.md",
-    "product space.md",
-    "Space.md",
-    "data space x.md",
-    "decision rules.md",
-    "countable.md",
-    "class notes for students/lesson1_class_notes.md",
     "Untitled 17.base",
-    "Myideas/critique of AIM.md",
-    "HCI.md",
     "Myideas/measure-t-nov11.tex",
-    "Myideas/measure-t-nov11",
     "Pasted image 20251107163300.png",
-    "process_pdfs.py",
-    "read_one_pdf.py",
-    "read_pdf_one_by_one.py",
-    "extract_pdf_text.py",
-    "Myideas/measure-t-simulation/measure_theory_demo.tex",
     "Myideas/bandwidth_comparison.png",
     "Myideas/kernel_transformation_visualization.png",
     "Myideas/measure-t-simulation/bandwidth_comparison.png",
     "Myideas/measure-t-simulation/kernel_transformation_visualization.png",
-    "Myideas/measure-t-simulation/kernel_tutorial_beginner.jl",
     "Pasted image 20251101185301.png",
     "Pasted image 20251101184953.png",
     "Pasted image 20251101184751.png",
-    "Pasted image 20251101183747.png",
-    "Pasted image 20251101183148.png",
     "Untitled.canvas"
   ]
 }

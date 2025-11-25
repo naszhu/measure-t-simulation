@@ -4,6 +4,25 @@
 You can say, that the original [[Measure - P]] on [[Sample space - Omega]] is P, and then you say the pushforward measure after pushing P through X onto x ([[state space - mathcal{X}]]), would be written as P_X; 
 
 ![[Pasted image 20251025153247.png]]
+
+#### **Pushforward (Measure Theory)**
+
+- Definition: Let $(X, \Sigma_X)$ and $(Y, \Sigma_Y)$ be measurable spaces. Let $\mu$ be a measure (probability mass) on $X$. A function $T: X \to Y$ creates a Pushforward Measure $T_* \mu$ on $Y$, defined as:
+    
+    $$(T_* \mu)(B) = \mu(T^{-1}(B))$$
+    
+    - _Meaning:_ The "weight" of a region in the new space $Y$ is strictly determined by how much "mass" from $X$ lands there.
+        
+- **Application in REM:** [[REM]] is a **Pushforward**.
+    
+    - $X$ = The Environment (Real World statistics).
+        
+    - $\mu$ = The frequency of features in the world (The Geometric Distribution).
+        
+    - $Y$ = The Memory Trace (Discrete Feature Space).
+        
+    - **Crucial Difference:** Pushforward does **not** preserve topology. It only preserves **Mass** (Probability). Two items can be "close" in the world (conceptually) but mapped to totally different feature integers in REM, as long as the probability math works out.
+
 # definition
 - $P_X$ is the **pushforward measure** on $\mathcal{X}$ (the state space of ). It is defined as $P_X(A)=P(X^{−1}(A))$.
 or 

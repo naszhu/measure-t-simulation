@@ -1,3 +1,8 @@
+
+
+[[MIS LBA fitting explain]]
+
+----
 Grunbumn et al., 2012
 about [[intention]]
 This is = [[Theory of Visual Attention (TVA)]] model

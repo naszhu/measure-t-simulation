@@ -337,7 +337,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -356,8 +356,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "90722a20b5781c52",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
+    "Myideas/fitting.md",
+    "Pasted image 20251204091004.png",
+    "keyboard proposal.md",
     "Myideas/Global Matching (1).md",
     "class notes for students/Global Matching (1).md",
     "journal/2025/12/2025-12-01.md",
@@ -390,8 +393,6 @@
     "concentration of measure.md",
     "set.md",
     "Metric Space.md",
-    "feature space.md",
-    "MIS experiment prompt.md",
     "Pasted image 20251124195916.png",
     "Myideas/measure-t",
     "Untitled 26.base",
@@ -403,7 +404,6 @@
     "Pasted image 20251121140604.png",
     "Pasted image 20251107163300.png",
     "Myideas/bandwidth_comparison.png",
-    "Myideas/measure-t-simulation/bandwidth_comparison.png",
     "Untitled.canvas"
   ]
 }

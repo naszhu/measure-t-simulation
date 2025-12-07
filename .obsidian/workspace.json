@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2025/12/2025-12-01.md",
+                "file": "product space.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-12-01"
+              "title": "product space"
             }
           },
           {
@@ -153,12 +153,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2025/12/2025-12-06.md",
+                "file": "journal/2025/11/2025-11-30.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-12-06"
+              "title": "2025-11-30"
             }
           }
         ],
@@ -337,11 +337,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 455.5
+    "width": 467.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -356,18 +356,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "90722a20b5781c52",
+  "active": "e84469d12c5f831f",
   "lastOpenFiles": [
-    "Appendix - REM deduction.md",
-    "AC my model Chat.md",
-    "journal/2025/12/2025-12-01.md",
-    "journal/2025/11/2025-11-30.md",
-    "journal/2025/12/2025-12-06.md",
     "Myideas/fitting.md",
     "Pasted image 20251204091004.png",
     "keyboard proposal.md",
     "Myideas/Global Matching (1).md",
     "class notes for students/Global Matching (1).md",
+    "journal/2025/12/2025-12-01.md",
     "journal/2025/12",
     "class notes for students/CPE Article Writing Notes - Lesson 10 (Slides 1-7).md",
     "Untitled 30.base",
@@ -388,11 +384,15 @@
     "Pasted image 20251130151859.png",
     "Untitled 28.base",
     "Quantum.md",
+    "journal/2025/11/2025-11-30.md",
     "Untitled 27.base",
     "Myideas/Untitled.md",
     "Pasted image 20251129202947.png",
     "class notes for students/Advanced Academic Argumentation - Nov 26 Class John.md",
     "class notes for students/Class Note - November 19th John.md",
+    "concentration of measure.md",
+    "set.md",
+    "Metric Space.md",
     "Pasted image 20251124195916.png",
     "Myideas/measure-t",
     "Untitled 26.base",

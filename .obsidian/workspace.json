@@ -125,12 +125,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "journal/2026/01/2026-01-01.md",
+                "file": "Myideas/measure-t/measure theory model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-01-01"
+              "title": "measure theory model"
+            }
+          },
+          {
+            "id": "4cbe6418eff916d0",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "journal/2026/01/2026-01-19.md",
+                "bFile": "journal/2026/01/2026-01-19.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: 2026-01-19"
             }
           },
           {
@@ -176,7 +190,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -370,8 +384,22 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e84469d12c5f831f",
+  "active": "4cbe6418eff916d0",
   "lastOpenFiles": [
+    "prospective memory.md",
+    "Pasted image 20260120092103.png",
+    "journal/2026/01/2026-01-19.md",
+    "journal/2026/01/2026-01-13.md",
+    "Myideas/measure-t/email2.md",
+    "Myideas/measure-t/the email.md",
+    "Myideas/measure-t/measure theory model from SDT.md",
+    "Myideas/measure-t/measure theory model.md",
+    "Myideas/measure-t/Initial space definitoin.md",
+    "Myideas/measure-t/GPT summary.md",
+    "Myideas/measure-t/Global Matching.md",
+    "Myideas/measure-t/Gemini summary.md",
+    "Myideas/measure-t/familrity versus recall.md",
+    "Myideas/measure-t/critique of measure theoretic.md",
     "journal/2026/01/2026-01-01.md",
     "journal/2026/01",
     "journal/2026",
@@ -388,20 +416,7 @@
     "Myideas/normalization/draft1.md",
     "Myideas/inverse problem Nov rethink summary.md",
     "Myideas/normalization/weakness.md",
-    "Myideas/normalization/reason why draft 2 works.md",
-    "Myideas/AIM model.md",
-    "journal/2025/12/2025-12-06.md",
     "Myideas/normalization",
-    "Myideas/normalization/RAW inverse proof.md",
-    "Myideas/REM Projection.md",
-    "Myideas/product_proof.md",
-    "class notes for students/analysis, why mistaken.md",
-    "class notes for students/critique of paper 2.md",
-    "journal/2025/11/2025-11-25.md",
-    "journal/2025/12/2025-12-01.md",
-    "Myideas/normalization/TAV plus REM.md",
-    "journal/2025/12/2025-12-07.md",
-    "Appendix - REM deduction.md",
     "Pasted image 20251204091004.png",
     "journal/2025/12",
     "Untitled 30.base",
@@ -417,7 +432,6 @@
     "Pasted image 20251121160124.png",
     "Pasted image 20251121140604.png",
     "Pasted image 20251107163300.png",
-    "Myideas/bandwidth_comparison.png",
     "Untitled.canvas"
   ]
 }

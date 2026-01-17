@@ -1,4 +1,4 @@
-[[event-based prospective memory]]
+[[prospective memory]]
 
 [[Prospective Memory Decision Control (PMDC)]]
 

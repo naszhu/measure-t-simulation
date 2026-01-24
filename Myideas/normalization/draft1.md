@@ -44,11 +44,11 @@ For any object $x \in L$, its representation is the subset of features it posses
 
 $$Def(x) = \{j \in R \mid \eta(x, j) > 0\}$$
 
-where $\eta(x, j)$ represents the sensory evidence that object $x$ belongs to category $j$555.
+where $\eta(x, j)$ represents the sensory evidence that object $x$ belongs to category $j$.
 
 Theorem 1 (One-to-Many Expansion): A single element $x \in L$ maps to multiple disjoint elements in $R$.
 
-Proof: Physically, an object $x$ may be both "red" and "round". Thus, $|Def(x)| \ge 1$. This establishes the "One-to-Many" relationship where the unitary source $x$ is distributed across multiple representational channels in $R$6666.
+Proof: Physically, an object $x$ may be both "red" and "round". Thus, $|Def(x)| \ge 1$. This establishes the "One-to-Many" relationship where the unitary source $x$ is distributed across multiple representational channels in $R$.
 
 ## 3. Measure-Theoretic Formulation: Weights and Bias
 
